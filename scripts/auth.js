@@ -44,8 +44,6 @@ export function updateNavUI() {
     const pb = document.getElementById('navPlan');
     pb.style.display = currentUser.plan === 'premium' ? 'inline' : 'none';
   }
-  // Mise à jour de la visibilité des pubs
-  document.dispatchEvent(new Event('user-updated'));
 }
 
 let authTab = 'login';
@@ -98,7 +96,7 @@ export async function submitAuth() {
       okEl.innerHTML = '✓ Compte créé ! <button id="goPremiumFromRegister" style="margin-left:8px;background:var(--accent);border:none;color:#fff;font-weight:700;cursor:pointer;font-size:12px;font-family:inherit;padding:5px 14px;border-radius:100px">Activer Premium →</button>';
       okEl.style.display = 'block';
       document.getElementById('goPremiumFromRegister').onclick = () => openModal('premium');
-      setTimeout(closeModal, 4000);
+      setTimeout(closeModal, 2000);
     }
   } catch (e) {
     errEl.textContent = e.message;

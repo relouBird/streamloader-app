@@ -21,13 +21,6 @@ document
   .addEventListener("click", theme.toggleTheme);
 document.getElementById("langBtn").addEventListener("click", toggleLang);
 
-// Auth
-auth.loadUser().then(() => {
-  // Après chargement, on met à jour la visibilité des pubs
-  document.dispatchEvent(new Event("user-updated"));
-});
-auth.initAuthListeners();
-
 // Nav CTA
 document
   .getElementById("navCta")
@@ -88,3 +81,4 @@ window.addEventListener("scroll", () => {
 auth.loadUser().then(() => {
   updateAdVisibility(); // importé depuis ui.js
 });
+auth.initAuthListeners();

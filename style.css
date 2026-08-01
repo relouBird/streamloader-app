@@ -1765,3 +1765,41 @@ footer {
   top: 15%;
   left: -8px;
 }
+
+/* Telegram footer button */
+/* ----------------------------------------------------- */
+.footer-telegram-container {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.telegram-pill-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #1e293b;
+  color: #38bdf8;
+  border: 1px solid rgba(56, 189, 248, 0.2);
+  padding: 8px 16px;
+  border-radius: 9999px;
+  font-size: 13px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+.telegram-pill-btn:hover {
+  background: #0f172a;
+  border-color: rgba(56, 189, 248, 0.5);
+  transform: translateY(-1px);
+}
+.tg-icon {
+  flex-shrink: 0;
+  fill: #38bdf8;
+}
+
+/* Bouton simulation */
+#simBtn {
+  border-style: dashed;
+}

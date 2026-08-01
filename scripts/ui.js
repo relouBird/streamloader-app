@@ -20,8 +20,6 @@ export function updateAdVisibility() {
     }
   });
 }
-// Appel immédiat après le chargement initial
-document.addEventListener("user-updated", updateAdVisibility);
 
 /* ─── Status ─────────────────────────────────────────────────── */
 export function showStatus(msg, type = "info") {
