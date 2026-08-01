@@ -17,19 +17,21 @@ Authorization: Bearer <token>
 ```
 
 Deux niveaux d'auth selon les routes :
+
 - **`authMiddleware`** — token **obligatoire**, la requête est rejetée (401) sans token valide.
 - **`optionalAuth`** — token **facultatif** : si présent et valide, `req.user` est peuplé (utile pour associer un téléchargement à un compte) ; sinon la requête continue en anonyme.
 
 ## Rate limiting
 
-| Groupe de routes | Fenêtre | Limite |
-|---|---|---|
-| Toutes les routes `/api/*` | 15 min | 200 requêtes / IP |
-| `/auth/register`, `/auth/login` | 15 min | 10 tentatives / IP |
-| `/media/analyze` | 1 min | 15 requêtes / IP |
-| `/media/download/start`, `/payment/initiate` | 1 min | 8 requêtes / IP |
+| Groupe de routes                             | Fenêtre | Limite             |
+| -------------------------------------------- | ------- | ------------------ |
+| Toutes les routes `/api/*`                   | 15 min  | 200 requêtes / IP  |
+| `/auth/register`, `/auth/login`              | 15 min  | 10 tentatives / IP |
+| `/media/analyze`                             | 1 min   | 15 requêtes / IP   |
+| `/media/download/start`, `/payment/initiate` | 1 min   | 8 requêtes / IP    |
 
 Réponse en cas de dépassement : `429 Too Many Requests`
+
 ```json
 { "error": "Trop de requêtes. Réessaie dans 15 minutes." }
 ```
@@ -39,12 +41,14 @@ Réponse en cas de dépassement : `429 Too Many Requests`
 ## 🔐 Auth
 
 ### `POST /api/auth/register`
+
 Crée un nouveau compte utilisateur.
 
 **Auth** : aucune
 **Rate limit** : `authLimiter`
 
 **Requête**
+
 ```json
 {
   "email": "user@example.com",
@@ -53,6 +57,7 @@ Crée un nouveau compte utilisateur.
 ```
 
 **Réponse `201 Created`**
+
 ```json
 {
   "success": true,
@@ -76,12 +81,14 @@ Crée un nouveau compte utilisateur.
 ---
 
 ### `POST /api/auth/login`
+
 Authentifie un utilisateur existant.
 
 **Auth** : aucune
 **Rate limit** : `authLimiter`
 
 **Requête**
+
 ```json
 {
   "email": "user@example.com",
@@ -90,6 +97,7 @@ Authentifie un utilisateur existant.
 ```
 
 **Réponse `200 OK`**
+
 ```json
 {
   "success": true,
@@ -112,16 +120,19 @@ Authentifie un utilisateur existant.
 ---
 
 ### `GET /api/auth/me`
+
 Retourne le profil de l'utilisateur connecté.
 
 **Auth** : `authMiddleware` (obligatoire)
 
 **Headers**
+
 ```
 Authorization: Bearer <token>
 ```
 
 **Réponse `200 OK`**
+
 ```json
 {
   "user": {
@@ -145,7 +156,8 @@ Authorization: Bearer <token>
 Toutes les routes ci-dessous font office de **proxy** vers le microservice Python (`video-service`) — le client n'a jamais connaissance de son existence.
 
 ### `GET /api/media/analyze`
-Analyse une URL vidéo et retourne ses métadonnées + formats disponibles.
+
+Analyse une URL vidéo et retourne ses métadonnées, ses formats disponibles, ainsi que les **langues de sous-titres disponibles** (sous-titres manuels + générés automatiquement, fusionnés et dédupliqués).
 
 **Auth** : `optionalAuth` (facultatif)
 **Rate limit** : `analyzeLimiter`
@@ -156,11 +168,13 @@ Analyse une URL vidéo et retourne ses métadonnées + formats disponibles.
 | `url` | string | ✅ | URL de la vidéo à analyser |
 
 **Exemple**
+
 ```
 GET /api/media/analyze?url=https://www.youtube.com/watch?v=dQw4w9WgXcQ
 ```
 
 **Réponse `200 OK`**
+
 ```json
 {
   "success": true,
@@ -171,6 +185,7 @@ GET /api/media/analyze?url=https://www.youtube.com/watch?v=dQw4w9WgXcQ
     "thumbnail": "https://i.ytimg.com/vi/.../maxresdefault.jpg",
     "extractor": "Youtube",
     "webpage": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+    "subtitles": ["en", "fr", "es-419", "pt", "ar"],
     "formats": [
       {
         "id": "137",
@@ -188,6 +203,10 @@ GET /api/media/analyze?url=https://www.youtube.com/watch?v=dQw4w9WgXcQ
 }
 ```
 
+| Champ       | Type     | Description                                                                                                                                                                                                    |
+| ----------- | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `subtitles` | string[] | Liste triée des codes langue disponibles (ex. `"fr"`, `"en"`, `"es-419"`). Fusion des sous-titres manuels et automatiques fournis par la plateforme source. Tableau vide si aucun sous-titre n'est disponible. |
+
 **Erreurs**
 | Code | Cas |
 |---|---|
@@ -198,27 +217,36 @@ GET /api/media/analyze?url=https://www.youtube.com/watch?v=dQw4w9WgXcQ
 ---
 
 ### `POST /api/media/download/start`
+
 Démarre un job de téléchargement en arrière-plan. Retourne immédiatement un `jobId` — le client suit la progression via `/progress/:jobId`.
 
 **Auth** : `optionalAuth` (facultatif — si connecté, le téléchargement est associé au compte)
 **Rate limit** : `downloadLimiter`
 
 **Requête**
+
 ```json
 {
   "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
   "format": "bestvideo+bestaudio/best",
-  "title": "Rick Astley - Never Gonna Give You Up"
+  "title": "Rick Astley - Never Gonna Give You Up",
+  "sublang": "fr"
 }
 ```
 
-| Champ | Type | Requis | Défaut |
-|---|---|---|---|
-| `url` | string | ✅ | — |
-| `format` | string | ❌ | `"bestvideo+bestaudio/best"` |
-| `title` | string | ❌ | `"video"` |
+| Champ     | Type   | Requis | Défaut                       | Description                                                                                                                                                                                     |
+| --------- | ------ | ------ | ---------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `url`     | string | ✅     | —                            | URL de la vidéo à télécharger                                                                                                                                                                   |
+| `format`  | string | ❌     | `"bestvideo+bestaudio/best"` | Sélecteur de format yt-dlp                                                                                                                                                                      |
+| `title`   | string | ❌     | `"video"`                    | Nom de fichier souhaité (assaini côté service vidéo)                                                                                                                                            |
+| `sublang` | string | ❌     | —                            | Code de langue des sous-titres à **incruster (embed)** dans le fichier vidéo (ex. `"fr"`, `"en"`, `"pt-BR"`). Doit respecter le format `^[a-zA-Z-]{2,8}$`, sinon il est ignoré silencieusement. |
+
+> ℹ️ **Sous-titres** : `sublang` n'a d'effet que pour les téléchargements **vidéo** (formats incluant `bestvideo`). Il est ignoré pour les téléchargements audio uniquement (`bestaudio` seul), puisque le conteneur MP3 final n'a pas de piste sous-titres. Quand `sublang` est fourni et valide, le service vidéo récupère les sous-titres manuels et, à défaut, les sous-titres générés automatiquement pour cette langue, puis les incruste directement dans le MP4 (`--embed-subs`) — aucun fichier `.srt`/`.vtt` séparé n'est renvoyé.
+>
+> Les langues valides pour une vidéo donnée sont celles renvoyées par le champ `subtitles` de `/api/media/analyze` pour cette même URL.
 
 **Réponse `200 OK`**
+
 ```json
 {
   "success": true,
@@ -235,7 +263,8 @@ Démarre un job de téléchargement en arrière-plan. Retourne immédiatement un
 ---
 
 ### `GET /api/media/progress/:jobId`
-Flux **Server-Sent Events (SSE)** de la progression du téléchargement. Se consomme côté client via `EventSource` (GET uniquement, pas de body).
+
+Flux **Server-Sent Events (SSE)** de la progression du téléchargement, relayé (proxy transparent, stream à stream) depuis le microservice Python. Se consomme côté client via `EventSource` (GET uniquement, pas de body).
 
 **Auth** : aucune (le `jobId` fait office de token d'accès temporaire)
 
@@ -245,12 +274,14 @@ Flux **Server-Sent Events (SSE)** de la progression du téléchargement. Se cons
 | `jobId` | Identifiant retourné par `/download/start` |
 
 **Exemple client**
+
 ```js
 const evtSource = new EventSource(`/api/media/progress/${jobId}`);
 evtSource.onmessage = (e) => console.log(JSON.parse(e.data));
 ```
 
 **Messages envoyés** (`Content-Type: text/event-stream`)
+
 ```
 data: {"type":"progress","percent":45.3,"total":"78.50MiB","speed":"1.23MiB/s","eta":"00:45"}
 
@@ -268,7 +299,8 @@ data: {"type":"error","message":"Vidéo indisponible (supprimée ou retirée)."}
 ---
 
 ### `GET /api/media/file/:jobId`
-Télécharge le fichier final. **Usage unique** — le fichier est supprimé côté serveur une fois livré.
+
+Télécharge le fichier final (proxy en stream depuis le microservice Python). **Usage unique** — le fichier est supprimé côté service vidéo une fois livré. Si `sublang` avait été fourni au démarrage du job et que la piste était disponible, les sous-titres sont déjà incrustés dans le fichier vidéo livré ici.
 
 **Auth** : aucune (le `jobId` fait office de token d'accès temporaire)
 
@@ -279,6 +311,7 @@ Télécharge le fichier final. **Usage unique** — le fichier est supprimé cô
 
 **Réponse `200 OK`**
 Flux binaire (`video/mp4` ou `audio/mpeg`), avec :
+
 ```
 Content-Disposition: attachment; filename="titre.mp4"
 Content-Type: video/mp4
@@ -295,12 +328,14 @@ Content-Length: 15728640
 ## 💳 Payment
 
 ### `POST /api/payment/initiate`
+
 Démarre une transaction de paiement (accès Premium) auprès d'un des 3 prestataires.
 
 **Auth** : `authMiddleware` (obligatoire)
 **Rate limit** : `downloadLimiter`
 
 **Requête**
+
 ```json
 {
   "provider": "cinetpay",
@@ -308,12 +343,13 @@ Démarre une transaction de paiement (accès Premium) auprès d'un des 3 prestat
 }
 ```
 
-| Champ | Type | Requis | Valeurs |
-|---|---|---|---|
-| `provider` | string | ❌ (défaut `"cinetpay"`) | `"cinetpay"` \| `"campay"` \| `"wave"` |
-| `phone` | string | ❌ (requis par certains providers pour Mobile Money) | — |
+| Champ      | Type   | Requis                                               | Valeurs                                |
+| ---------- | ------ | ---------------------------------------------------- | -------------------------------------- |
+| `provider` | string | ❌ (défaut `"cinetpay"`)                             | `"cinetpay"` \| `"campay"` \| `"wave"` |
+| `phone`    | string | ❌ (requis par certains providers pour Mobile Money) | —                                      |
 
 **Réponse `200 OK`**
+
 ```json
 {
   "success": true,
@@ -321,6 +357,7 @@ Démarre une transaction de paiement (accès Premium) auprès d'un des 3 prestat
   "transaction_id": "SL-A1B2C3D4E5F6G7H8"
 }
 ```
+
 Le client redirige l'utilisateur vers `payment_url`.
 
 **Erreurs**
@@ -333,7 +370,9 @@ Le client redirige l'utilisateur vers `payment_url`.
 ---
 
 ### `POST /api/payment/webhook/cinetpay`
+
 ### `POST /api/payment/webhook/campay`
+
 ### `POST /api/payment/webhook/wave`
 
 Webhooks appelés par les prestataires de paiement (pas par le client/navigateur) pour notifier la complétion d'une transaction. Déclenchent l'activation Premium du compte associé.
@@ -341,10 +380,13 @@ Webhooks appelés par les prestataires de paiement (pas par le client/navigateur
 **Auth** : aucune (validation faite via la vérification serveur-à-serveur auprès du prestataire pour CinetPay ; à sécuriser davantage pour Campay/Wave si le prestataire le permet — ex : vérification de signature)
 
 **Réponse `200 OK`** (toujours, pour accuser réception au prestataire)
+
 ```json
 { "code": 0 }
 ```
+
 ou
+
 ```json
 { "status": "OK" }
 ```
@@ -352,6 +394,7 @@ ou
 ---
 
 ### `GET /api/payment/status/:txId`
+
 Consulte le statut d'une transaction.
 
 **Auth** : `authMiddleware` (obligatoire — la transaction doit appartenir à l'utilisateur connecté)
@@ -362,12 +405,14 @@ Consulte le statut d'une transaction.
 | `txId` | Identifiant de transaction (`transaction_id` retourné par `/initiate`) |
 
 **Réponse `200 OK`**
+
 ```json
 {
   "status": "completed",
   "is_premium": true
 }
 ```
+
 `status` : `"pending"` \| `"completed"` \| `"failed"`
 
 **Erreurs**
@@ -382,22 +427,27 @@ Consulte le statut d'une transaction.
 > ⚠️ Ces routes sont prévues pour tester le flux de paiement en local sans dépendre des vrais prestataires. À désactiver ou protéger en production.
 
 ### `POST /payment-test/webhook/cinetpay`
+
 Simule un webhook CinetPay réussi, sans appel réel au prestataire.
 
 **Requête**
+
 ```json
 { "transaction_id": "SL-A1B2C3D4E5F6G7H8" }
 ```
 
 **Réponse `200 OK`**
+
 ```json
 { "success": true, "simulated": true }
 ```
 
 ### `GET /payment-test/success`
+
 Page HTML de retour "paiement réussi" (redirection automatique après 3s).
 
 ### `GET /payment-test/cancel`
+
 Page HTML de retour "paiement annulé" (redirection automatique après 3s).
 
 ---
@@ -405,11 +455,13 @@ Page HTML de retour "paiement annulé" (redirection automatique après 3s).
 ## 🩺 Health
 
 ### `GET /api/health`
+
 Vérifie l'état du serveur et des dépendances.
 
 **Auth** : aucune
 
 **Réponse `200 OK`**
+
 ```json
 {
   "status": "ok",
@@ -427,3 +479,18 @@ Vérifie l'état du serveur et des dépendances.
 ```
 
 > Note : `ytdlp` reflète l'état du yt-dlp **local** à l'app Node (probablement absent puisque le téléchargement est délégué au `video-service` Python) — ce champ mériterait d'être mis à jour pour interroger `/health` du `video-service` à la place.
+
+---
+
+## 🔧 Architecture interne — `video-service` (Python)
+
+Pour référence, le microservice Python appelé en interne par les contrôleurs Node (`analyze`, `downloadStart`, `progress`, `file`) expose les routes suivantes, protégées par un secret partagé (`X-Service-Secret`) — **jamais exposées directement au client** :
+
+| Route interne            | Rôle                                                                                                                                    |
+| ------------------------ | --------------------------------------------------------------------------------------------------------------------------------------- |
+| `POST /analyze`          | Analyse yt-dlp : métadonnées, formats, et fusion `subtitles` (manuels + `automatic_captions`)                                           |
+| `POST /download/start`   | Démarre le job yt-dlp ; si `sublang` valide et format vidéo, ajoute `--write-subs --write-auto-subs --sub-langs <sublang> --embed-subs` |
+| `GET /progress/<job_id>` | SSE de progression, relayé tel quel par `GET /api/media/progress/:jobId`                                                                |
+| `GET /file/<job_id>`     | Stream du fichier fini, supprimé du disque une fois livré                                                                               |
+
+Le contrôleur Node (`media.controller.ts`) reste un **proxy fin** : il ne fait aucune transformation des données de `/analyze` ou `/download/start` (y compris le champ `subtitles` et le paramètre `sublang`, transmis tels quels), et relaie les flux `/progress` et `/file` en streaming (pipe) sans les bufferiser.

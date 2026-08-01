@@ -1,3 +1,7 @@
+/* ═══════════════════════════════════════════════════════════════
+   StreamLoader — style.css
+   ═══════════════════════════════════════════════════════════════ */
+
 /* ─── Reset ────────────────────────────────────────────────────── */
 *,
 *::before,
@@ -20,7 +24,7 @@ img {
   --surface: rgba(255, 255, 255, 0.8);
   --nav-bg: rgba(14, 14, 22, 0.93);
   --text: #0c0c14;
-  --text-ghost: #9b8fe0; /* Violet doux — bien visible sur blanc */
+  --text-ghost: #9b8fe0;
   --text-dim: #6b6b88;
   --text-muted: #a0a0b8;
   --border: rgba(0, 0, 0, 0.08);
@@ -42,7 +46,6 @@ img {
   --r-xl: 100px;
 }
 
-/* Dark mode — twilight (pas trop sombre, bleu-violet profond) */
 @media (prefers-color-scheme: dark) {
   :root {
     --is-dark: 1;
@@ -57,7 +60,7 @@ img {
   --surface: rgba(22, 22, 46, 0.8);
   --nav-bg: rgba(8, 8, 20, 0.95);
   --text: #eeeef8;
-  --text-ghost: #c8a030; /* Ambre/doré — très lisible sur fond sombre */
+  --text-ghost: #c8a030;
   --text-dim: #9090b8;
   --text-muted: #5858a0;
   --border: rgba(255, 255, 255, 0.07);
@@ -252,7 +255,6 @@ nav {
   opacity: 0.85;
   transform: scale(0.97);
 }
-/* User pill */
 .nav-user-chip {
   display: flex;
   align-items: center;
@@ -363,8 +365,12 @@ nav {
 }
 @media (prefers-reduced-motion: reduce) {
   .orb,
-  .orb-2 {
-    animation: none;
+  .orb-2,
+  .float-logo,
+  .visual-orb,
+  .orbit-ring,
+  .social-badge {
+    animation: none !important;
   }
 }
 
@@ -394,6 +400,12 @@ nav {
   }
   .corner-svg.tr {
     right: 1%;
+  }
+}
+@media (max-width: 480px) {
+  .corner-svg.tl,
+  .corner-svg.tr {
+    display: none;
   }
 }
 
@@ -426,7 +438,7 @@ nav {
 }
 
 .hero-title {
-  font-size: clamp(50px, 10vw, 100px);
+  font-size: clamp(42px, 10vw, 100px);
   font-weight: 800;
   line-height: 0.95;
   letter-spacing: -3.5px;
@@ -521,15 +533,32 @@ nav {
   height: 14px;
 }
 
+/* Mobile: éviter que le bouton "Analyser" écrase l'input sur très petit écran */
+@media (max-width: 400px) {
+  .url-widget {
+    flex-wrap: wrap;
+    padding: 10px 10px 10px 16px;
+    border-radius: var(--r-md);
+  }
+  .url-widget input {
+    flex-basis: 100%;
+    padding-bottom: 6px;
+  }
+  .btn-analyze {
+    flex: 1;
+    justify-content: center;
+  }
+}
+
 .site-chips {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
-  padding-top: 12px;
   flex-wrap: wrap;
 }
 .site-chips-label {
+  padding: 15px 0;
   font-size: 11px;
   color: var(--text-muted);
   font-weight: 500;
@@ -613,7 +642,6 @@ nav {
   display: block;
 }
 
-/* Thumbnail */
 .video-thumb-wrap {
   position: relative;
   width: 100%;
@@ -654,7 +682,6 @@ nav {
   backdrop-filter: blur(4px);
 }
 
-/* Card Body */
 .video-card-body {
   padding: 18px;
 }
@@ -722,6 +749,7 @@ nav {
   transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
   font-family: inherit;
   outline: none;
+  min-height: 44px; /* touch target */
 }
 .fmt-card:hover {
   border-color: rgba(123, 95, 245, 0.4);
@@ -768,9 +796,7 @@ nav {
   margin-top: 2px;
 }
 
-/* Actions */
 .action-row {
-  padding-top: 14px;
   display: flex;
   gap: 8px;
 }
@@ -790,6 +816,7 @@ nav {
   justify-content: center;
   gap: 7px;
   transition: opacity 0.2s;
+  min-height: 44px;
 }
 .btn-dl:hover {
   opacity: 0.8;
@@ -812,6 +839,7 @@ nav {
   align-items: center;
   gap: 7px;
   transition: all 0.2s;
+  min-height: 44px;
 }
 .btn-watch:hover {
   border-color: var(--accent);
@@ -868,6 +896,11 @@ nav {
   max-width: 1200px;
   margin: 0 auto;
 }
+@media (max-width: 640px) {
+  .section {
+    padding: 60px 16px;
+  }
+}
 
 .sec-label {
   display: inline-flex;
@@ -887,7 +920,7 @@ nav {
   background: var(--text-muted);
 }
 .sec-title {
-  font-size: clamp(34px, 5vw, 58px);
+  font-size: clamp(30px, 5vw, 58px);
   font-weight: 800;
   letter-spacing: -2px;
   line-height: 1;
@@ -1175,6 +1208,7 @@ nav {
   transition:
     opacity 0.2s,
     transform 0.15s;
+  min-height: 44px;
 }
 .btn-price:hover {
   opacity: 0.85;
@@ -1238,7 +1272,7 @@ footer {
   color: var(--text-muted);
 }
 
-/* ─── Scroll reveal (AMELIORÉ) ───────────────────────────────────── */
+/* ─── Scroll reveal ───────────────────────────────────────────────── */
 .reveal {
   opacity: 0;
   transform: translateY(50px) scale(0.96);
@@ -1250,6 +1284,13 @@ footer {
 .reveal.in {
   opacity: 1;
   transform: translateY(0) scale(1);
+}
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
 }
 
 /* ─── Spinner ────────────────────────────────────────────────────── */
@@ -1290,45 +1331,6 @@ footer {
   opacity: 0.2;
   animation: floatAnim infinite alternate ease-in-out;
 }
-.float-logo.logo1 {
-  top: 5%;
-  left: 8%;
-  width: 80px;
-  animation-duration: 8s;
-}
-
-.float-logo.logo2 {
-  top: 25%;
-  right: 10%;
-  width: 120px;
-  animation-duration: 12s;
-  animation-delay: -3s;
-}
-
-.float-logo.logo3 {
-  top: 45%;
-  left: 15%;
-  width: 90px;
-  animation-duration: 9s;
-  animation-delay: -5s;
-}
-
-.float-logo.logo4 {
-  top: 65%;
-  right: 8%;
-  width: 150px;
-  animation-duration: 15s;
-  animation-delay: -1s;
-}
-
-.float-logo.logo5 {
-  top: 85%;
-  left: 10%;
-  width: 100px;
-  animation-duration: 11s;
-  animation-delay: -4s;
-}
-
 [data-theme="dark"] .float-logo,
 .theme-dark .float-logo {
   opacity: 0.35;
@@ -1344,6 +1346,16 @@ footer {
   }
   100% {
     transform: translateY(-25px) rotate(10deg) scale(1.05);
+  }
+}
+/* Sur petits écrans, alléger le décor pour la lisibilité et la perf */
+@media (max-width: 640px) {
+  .float-logo {
+    opacity: 0.1;
+  }
+  [data-theme="dark"] .float-logo,
+  .theme-dark .float-logo {
+    opacity: 0.18;
   }
 }
 
@@ -1374,6 +1386,8 @@ footer {
   padding: 32px;
   width: 100%;
   max-width: 420px;
+  max-height: 90vh;
+  overflow-y: auto;
   position: relative;
   box-shadow: var(--shadow-lg);
   transform: scale(0.95);
@@ -1381,6 +1395,12 @@ footer {
 }
 .modal-backdrop.open .modal {
   transform: scale(1);
+}
+@media (max-width: 480px) {
+  .modal {
+    padding: 24px 18px;
+    border-radius: var(--r-md);
+  }
 }
 .modal-close {
   position: absolute;
@@ -1416,7 +1436,6 @@ footer {
   color: var(--text-dim);
   margin-bottom: 24px;
 }
-/* Tabs */
 .auth-tabs {
   display: flex;
   gap: 4px;
@@ -1438,13 +1457,13 @@ footer {
   background: none;
   color: var(--text-muted);
   transition: all 0.2s;
+  min-height: 40px;
 }
 .auth-tab.active {
   background: var(--bg);
   color: var(--text);
   box-shadow: var(--shadow-sm);
 }
-/* Fields */
 .field-group {
   display: flex;
   flex-direction: column;
@@ -1465,7 +1484,7 @@ footer {
   background: var(--bg-2);
   border: 1px solid var(--border-2);
   border-radius: var(--r-sm);
-  font-size: 14px;
+  font-size: 16px;
   font-family: inherit;
   color: var(--text);
   outline: none;
@@ -1473,6 +1492,7 @@ footer {
     border-color 0.2s,
     box-shadow 0.2s;
 }
+/* font-size 16px sur les inputs : évite le zoom auto de Safari iOS au focus */
 .field-input:focus {
   border-color: var(--accent);
   box-shadow: 0 0 0 3px var(--accent-soft);
@@ -1493,6 +1513,7 @@ footer {
   align-items: center;
   justify-content: center;
   gap: 8px;
+  min-height: 46px;
 }
 .btn-submit:hover {
   opacity: 0.87;
@@ -1513,7 +1534,6 @@ footer {
   margin-top: 10px;
   display: none;
 }
-/* Premium confirm */
 .premium-info {
   background: linear-gradient(
     135deg,
@@ -1677,6 +1697,7 @@ footer {
   min-height: 90px;
   padding: 12px;
 }
+
 /* ─── Animation Orbite (Constellation) ───────────────────────── */
 .constellation-wrap {
   position: absolute;
@@ -1715,7 +1736,6 @@ footer {
   }
 }
 
-/* Les badges des réseaux sociaux */
 .social-badge {
   position: absolute;
   width: 36px;
@@ -1727,7 +1747,6 @@ footer {
   align-items: center;
   justify-content: center;
   box-shadow: var(--shadow-sm);
-  /* On applique une contre-rotation pour que les logos restent droits pendant que l'anneau tourne */
   animation: counter-spin 20s linear infinite;
 }
 .social-badge svg {
@@ -1740,7 +1759,6 @@ footer {
   }
 }
 
-/* Positionnement des 6 plateformes sur le cercle */
 .sb-yt {
   top: -18px;
   left: calc(50% - 18px);
@@ -1766,14 +1784,35 @@ footer {
   left: -8px;
 }
 
-/* Telegram footer button */
-/* ----------------------------------------------------- */
+@media (max-width: 480px) {
+  .constellation-wrap {
+    width: 200px;
+    height: 200px;
+  }
+  .constellation-center {
+    width: 50px;
+    height: 50px;
+  }
+  .constellation-center svg {
+    width: 26px;
+    height: 26px;
+  }
+  .social-badge {
+    width: 30px;
+    height: 30px;
+  }
+  .social-badge svg {
+    width: 15px;
+    height: 15px;
+  }
+}
+
+/* ─── Footer — bouton Telegram ────────────────────────────────────── */
 .footer-telegram-container {
-  margin: 0;
+  margin: 16px 0 8px 0;
   display: flex;
   justify-content: center;
 }
-
 .telegram-pill-btn {
   display: inline-flex;
   align-items: center;
@@ -1788,6 +1827,7 @@ footer {
   text-decoration: none;
   transition: all 0.2s ease;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  min-height: 40px;
 }
 .telegram-pill-btn:hover {
   background: #0f172a;
@@ -1799,7 +1839,41 @@ footer {
   fill: #38bdf8;
 }
 
-/* Bouton simulation */
-#simBtn {
-  border-style: dashed;
+/* ─── Sélecteur de sous-titres (langues renvoyées par /media/analyze) ── */
+.sub-block {
+  margin-bottom: 18px;
+}
+.sub-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.sub-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 13px;
+  border: 1.5px solid var(--border-2);
+  border-radius: 100px;
+  background: var(--bg-2);
+  color: var(--text-dim);
+  font-size: 12px;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  transition: all 0.18s;
+  min-height: 36px;
+}
+.sub-chip:hover {
+  border-color: rgba(123, 95, 245, 0.4);
+  color: var(--text);
+}
+.sub-chip.sel {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+.sub-chip svg {
+  width: 13px;
+  height: 13px;
 }

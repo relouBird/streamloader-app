@@ -1,84 +1,41 @@
-// scripts/main.js — Point d'entrée, initialisation globale
-import * as theme from "./theme.js";
-import { detectLang, applyI18n, toggleLang } from "./lang.js";
-import * as auth from "./auth.js";
-import {
-  analyzeUrl,
-  startDownload,
-  openModal,
-  closeModal,
-  updateAdVisibility,
-} from "./ui.js";
+// ─────────────────────────────────────────────────────────────────
+// scripts/main.js — point d'entrée unique de StreamLoader.
+// Chaque module gère un seul aspect de l'app (langue, thème, auth,
+// modale, analyse, téléchargement, paiement, effets visuels) et
+// expose une fonction init*() appelée ici, dans l'ordre. Le partage
+// d'état entre modules passe exclusivement par state.js.
+// ─────────────────────────────────────────────────────────────────
 
-// Initialisation
-detectLang();
-applyI18n();
+import { initI18n } from './i18n.js';
+import { initTheme } from './theme.js';
+import { initModalEvents } from './modal.js';
+import { initAuthEvents, loadUser } from './auth.js';
+import { initMediaEvents } from './media.js';
+import { initDownloadEvents } from './download.js';
+import { initPaymentEvents, handlePaymentReturn } from './payment.js';
+import { initScrollReveal, initParallax } from './app.js';
+import { updateAdVisibility } from './ads.js';
 
-theme.initTheme();
+async function init() {
+  // 1. Réglages d'affichage indépendants du réseau
+  initI18n();
+  initTheme();
+  initScrollReveal();
+  initParallax();
 
-document
-  .getElementById("themeBtn")
-  .addEventListener("click", theme.toggleTheme);
-document.getElementById("langBtn").addEventListener("click", toggleLang);
+  // 2. Câblage des interactions (aucune requête réseau à ce stade)
+  initModalEvents();
+  initAuthEvents();
+  initMediaEvents();
+  initDownloadEvents();
+  initPaymentEvents();
 
-// Nav CTA
-document
-  .getElementById("navCta")
-  .addEventListener("click", () => openModal("login"));
-document
-  .getElementById("navUserChip")
-  .addEventListener("click", () => openModal("profile"));
+  // 3. Session utilisateur, puis dépendances qui en découlent
+  await loadUser();
+  updateAdVisibility();
 
-// Analyze button
-document.getElementById("analyzeBtn").addEventListener("click", analyzeUrl);
-document.getElementById("dlBtn").addEventListener("click", startDownload);
+  // 4. Retour éventuel d'un paiement Premium (?premium=success)
+  await handlePaymentReturn();
+}
 
-// Watch button
-document.getElementById("watchBtn").addEventListener("click", () => {
-  const url = document.getElementById("urlInput").value.trim();
-  if (url) window.open(url, "_blank");
-});
-
-// Free start button
-document.getElementById("freeStartBtn").addEventListener("click", () => {
-  document.getElementById("urlInput").focus();
-});
-
-// Premium button
-document
-  .getElementById("premiumBtn")
-  .addEventListener("click", () => openModal("premium"));
-
-// Modal close
-document.getElementById("modalCloseBtn").addEventListener("click", closeModal);
-document.getElementById("modalBackdrop").addEventListener("click", (e) => {
-  if (e.target === document.getElementById("modalBackdrop")) closeModal();
-});
-
-// Enter key on URL input
-document.getElementById("urlInput").addEventListener("keypress", (e) => {
-  if (e.key === "Enter") analyzeUrl();
-});
-
-// Scroll reveal
-const io = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) entry.target.classList.add("in");
-      else entry.target.classList.remove("in");
-    });
-  },
-  { rootMargin: "0px 0px -50px 0px", threshold: 0.15 },
-);
-document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
-
-// Parallax
-const prlx = document.getElementById("prlxLayer");
-window.addEventListener("scroll", () => {
-  if (prlx) prlx.style.transform = `translateY(${window.scrollY * -0.15}px)`;
-});
-
-auth.loadUser().then(() => {
-  updateAdVisibility(); // importé depuis ui.js
-});
-auth.initAuthListeners();
+init();

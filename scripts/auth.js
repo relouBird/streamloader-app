@@ -1,115 +1,125 @@
-// scripts/auth.js — Authentification et état utilisateur
-import * as api from './api.js';
-import { openModal, closeModal, showStatus } from './ui.js';
+// ─────────────────────────────────────────────────────────────────
+// scripts/auth.js — /api/auth/register, /api/auth/login, /api/auth/me.
+// Met à jour state.js, la nav, et la visibilité des publicités.
+// ─────────────────────────────────────────────────────────────────
 
-export let token = localStorage.getItem('sl-tok') || null;
-export let currentUser = null;
+import { ENDPOINTS } from './config.js';
+import { state, setToken, setCurrentUser } from './state.js';
+import { t } from './i18n.js';
+import { SPINNER_HTML } from './utils.js';
+import { updateAdVisibility } from './ads.js';
+import { openModal, closeModal, getAuthTab } from './modal.js';
 
-export function setToken(t) {
-  token = t;
-  if (t) localStorage.setItem('sl-tok', t);
-  else localStorage.removeItem('sl-tok');
+function el(id) { return document.getElementById(id); }
+
+export function updateNavUser() {
+  const cta = el('navCta');
+  const chip = el('navUserChip');
+
+  if (!state.currentUser) {
+    if (cta) cta.style.display = '';
+    if (chip) chip.style.display = 'none';
+  } else {
+    if (cta) cta.style.display = 'none';
+    if (chip) chip.style.display = 'flex';
+    if (el('navEmail')) el('navEmail').textContent = state.currentUser.email.split('@')[0];
+    if (el('navAvatar')) el('navAvatar').textContent = state.currentUser.email[0].toUpperCase();
+    const pb = el('navPlan');
+    if (pb) pb.style.display = state.currentUser.plan === 'premium' ? 'inline' : 'none';
+  }
+
+  updateAdVisibility();
 }
 
+/** Recharge le profil utilisateur depuis le token stocké (à appeler au démarrage). */
 export async function loadUser() {
-  if (!token) return;
+  if (!state.token) return;
   try {
-    currentUser = await api.getMe();
-    updateNavUI();
+    const r = await fetch(ENDPOINTS.authMe, {
+      headers: { Authorization: 'Bearer ' + state.token },
+    });
+    if (!r.ok) { setToken(null); setCurrentUser(null); return; }
+    const d = await r.json();
+    setCurrentUser(d.user);
+    updateNavUser();
   } catch {
     setToken(null);
-    currentUser = null;
-    updateNavUI();
+    setCurrentUser(null);
   }
 }
 
-export function logout() {
+async function submitAuth() {
+  const email = el('authEmail')?.value.trim();
+  const pwd = el('authPwd')?.value;
+  const pwd2 = el('authPwd2')?.value;
+  const errEl = el('authErr');
+  const okEl = el('authOk');
+  const btn = el('authSubmit');
+  const tab = getAuthTab();
+
+  if (errEl) errEl.style.display = 'none';
+  if (okEl) okEl.style.display = 'none';
+
+  if (!email || !pwd) {
+    if (errEl) { errEl.textContent = t('auth.fill_all'); errEl.style.display = 'block'; }
+    return;
+  }
+  if (tab === 'register' && pwd !== pwd2) {
+    if (errEl) { errEl.textContent = t('auth.pwd_mismatch'); errEl.style.display = 'block'; }
+    return;
+  }
+
+  if (btn) { btn.disabled = true; btn.innerHTML = SPINNER_HTML; }
+
+  const endpoint = tab === 'login' ? ENDPOINTS.authLogin : ENDPOINTS.authRegister;
+  try {
+    const r = await fetch(endpoint, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email, password: pwd }),
+    });
+    const d = await r.json();
+    if (!r.ok) {
+      if (errEl) { errEl.textContent = d.error || 'Erreur'; errEl.style.display = 'block'; }
+      return;
+    }
+
+    setToken(d.token);
+    setCurrentUser(d.user);
+    updateNavUser();
+
+    if (tab === 'login') {
+      if (okEl) { okEl.textContent = t('auth.login_ok'); okEl.style.display = 'block'; }
+      setTimeout(closeModal, 1000);
+    } else {
+      if (okEl) {
+        okEl.innerHTML = `${t('auth.register_ok')} <button id="authGoPremiumBtn" style="margin-left:8px;background:var(--accent);border:none;color:#fff;font-weight:700;cursor:pointer;font-size:12px;font-family:inherit;padding:5px 14px;border-radius:100px">${t('prem.activate')}</button>`;
+        okEl.style.display = 'block';
+        el('authGoPremiumBtn')?.addEventListener('click', () => openModal('premium'));
+      }
+      setTimeout(closeModal, 2500);
+    }
+  } catch {
+    if (errEl) { errEl.textContent = t('auth.network_err'); errEl.style.display = 'block'; }
+  } finally {
+    if (btn) {
+      btn.disabled = false;
+      btn.innerHTML = `<span id="authSubmitLabel">${t(tab === 'login' ? 'auth.login_btn' : 'auth.register_btn')}</span>`;
+    }
+  }
+}
+
+function logout() {
   setToken(null);
-  currentUser = null;
-  updateNavUI();
+  setCurrentUser(null);
+  updateNavUser();
   closeModal();
 }
 
-export function updateNavUI() {
-  const cta = document.getElementById('navCta');
-  const chip = document.getElementById('navUserChip');
-  if (!currentUser) {
-    cta.style.display = '';
-    chip.style.display = 'none';
-  } else {
-    cta.style.display = 'none';
-    chip.style.display = 'flex';
-    document.getElementById('navEmail').textContent = currentUser.email.split('@')[0];
-    document.getElementById('navAvatar').textContent = currentUser.email[0].toUpperCase();
-    const pb = document.getElementById('navPlan');
-    pb.style.display = currentUser.plan === 'premium' ? 'inline' : 'none';
-  }
-}
-
-let authTab = 'login';
-
-export function switchTab(tab) {
-  authTab = tab;
-  document.getElementById('tabLogin').classList.toggle('active', tab === 'login');
-  document.getElementById('tabRegister').classList.toggle('active', tab === 'register');
-  document.getElementById('authPwd2Wrap').style.display = tab === 'register' ? '' : 'none';
-  document.getElementById('authSubmitLabel').textContent = 
-    tab === 'login' ? 'Se connecter' : 'Créer mon compte';
-  document.getElementById('authErr').style.display = 'none';
-  document.getElementById('authOk').style.display = 'none';
-}
-
-export async function submitAuth() {
-  const email = document.getElementById('authEmail').value.trim();
-  const pwd = document.getElementById('authPwd').value;
-  const pwd2 = document.getElementById('authPwd2').value;
-  const errEl = document.getElementById('authErr');
-  const okEl = document.getElementById('authOk');
-  const btn = document.getElementById('authSubmit');
-
-  errEl.style.display = 'none'; okEl.style.display = 'none';
-  if (!email || !pwd) {
-    errEl.textContent = 'Remplis tous les champs.'; errEl.style.display = 'block'; return;
-  }
-  if (authTab === 'register' && pwd !== pwd2) {
-    errEl.textContent = 'Les mots de passe ne correspondent pas.'; errEl.style.display = 'block'; return;
-  }
-
-  btn.disabled = true;
-  btn.innerHTML = '<span class="spin"></span>';
-
-  try {
-    let data;
-    if (authTab === 'login') {
-      data = await api.login(email, pwd);
-    } else {
-      data = await api.register(email, pwd);
-    }
-    setToken(data.token);
-    currentUser = data.user;
-    updateNavUI();
-    if (authTab === 'login') {
-      okEl.textContent = '✓ Connexion réussie !';
-      okEl.style.display = 'block';
-      setTimeout(closeModal, 1000);
-    } else {
-      okEl.innerHTML = '✓ Compte créé ! <button id="goPremiumFromRegister" style="margin-left:8px;background:var(--accent);border:none;color:#fff;font-weight:700;cursor:pointer;font-size:12px;font-family:inherit;padding:5px 14px;border-radius:100px">Activer Premium →</button>';
-      okEl.style.display = 'block';
-      document.getElementById('goPremiumFromRegister').onclick = () => openModal('premium');
-      setTimeout(closeModal, 2000);
-    }
-  } catch (e) {
-    errEl.textContent = e.message;
-    errEl.style.display = 'block';
-  } finally {
-    btn.disabled = false;
-    btn.innerHTML = `<span id="authSubmitLabel">${authTab === 'login' ? 'Se connecter' : 'Créer mon compte'}</span>`;
-  }
-}
-
-export function initAuthListeners() {
-  document.getElementById('tabLogin').addEventListener('click', () => switchTab('login'));
-  document.getElementById('tabRegister').addEventListener('click', () => switchTab('register'));
-  document.getElementById('authSubmit').addEventListener('click', submitAuth);
-  document.getElementById('logoutBtn')?.addEventListener('click', logout);
+/** Câble les interactions liées à l'authentification. */
+export function initAuthEvents() {
+  el('navCta')?.addEventListener('click', () => openModal('login'));
+  el('navUserChip')?.addEventListener('click', () => openModal('profile'));
+  el('authSubmit')?.addEventListener('click', submitAuth);
+  el('logoutBtn')?.addEventListener('click', logout);
 }
