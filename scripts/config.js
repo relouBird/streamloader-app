@@ -3,7 +3,7 @@
 // Si l'API change un jour de préfixe, on ne touche qu'ici.
 // ─────────────────────────────────────────────────────────────────
 
-export const API_BASE = "https://www.streamback.mon-ndem.com/api";
+export const API_BASE = "http://localhost:5101/api";
 
 export const ENDPOINTS = {
   authRegister: `${API_BASE}/auth/register`,

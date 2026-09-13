@@ -135,6 +135,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./style-float.css">
 </head>
 
 <body>
@@ -142,18 +143,17 @@
     <!-- BG LOGOS FLOTTANTS PARALLAX -->
     <div class="bg-floating-logos">
         <div class="parallax-layer" id="prlxLayer">
-            <svg class="float-logo" style="top:5%; left:8%; width:80px; animation-duration:8s;" viewBox="0 0 24 24"
-                fill="none" stroke="currentColor" stroke-width="1.5">
+            <svg class="float-logo float-logo-1" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="1.5">
                 <polygon points="5 3 19 12 5 21 5 3" />
             </svg>
-            <svg class="float-logo"
-                style="top:25%; right:10%; width:120px; animation-duration:12s; animation-delay:-3s;"
-                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <svg class="float-logo float-logo-2" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="1.5">
                 <circle cx="12" cy="12" r="10" />
                 <polygon points="10 8 16 12 10 16 10 8" />
             </svg>
-            <svg class="float-logo" style="top:45%; left:15%; width:90px; animation-duration:9s; animation-delay:-5s;"
-                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <svg class="float-logo float-logo-3" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="1.5">
                 <rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18" />
                 <line x1="7" y1="2" x2="7" y2="22" />
                 <line x1="17" y1="2" x2="17" y2="22" />
@@ -163,14 +163,14 @@
                 <line x1="17" y1="17" x2="22" y2="17" />
                 <line x1="17" y1="7" x2="22" y2="7" />
             </svg>
-            <svg class="float-logo" style="top:65%; right:8%; width:150px; animation-duration:15s; animation-delay:-1s;"
-                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <svg class="float-logo float-logo-4" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="1.5">
                 <path d="M9 18V5l12-2v13" />
                 <circle cx="6" cy="18" r="3" />
                 <circle cx="18" cy="16" r="3" />
             </svg>
-            <svg class="float-logo" style="top:85%; left:10%; width:100px; animation-duration:11s; animation-delay:-4s;"
-                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <svg class="float-logo float-logo-5" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="1.5">
                 <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
                 <polyline points="7 10 12 15 17 10" />
                 <line x1="12" y1="15" x2="12" y2="3" />
@@ -178,7 +178,7 @@
         </div>
     </div>
 
-    <!-- NAV -->
+    <!-- ═══ NAV ═══════════════════════════════════════════════════════ -->
     <nav>
         <a class="nav-logo" href="#">
             <svg viewBox="0 0 24 24" fill="none">
@@ -206,7 +206,9 @@
                 </svg>
             </button>
             <button class="nav-icon-btn" id="langBtn"><span id="langLabel">FR</span></button>
+            <!-- Affiché si non connecté -->
             <button class="nav-cta" id="navCta" data-i18n="nav.cta">Connexion</button>
+            <!-- Affiché si connecté -->
             <div class="nav-user-chip" id="navUserChip" style="display:none">
                 <div class="nav-avatar" id="navAvatar">?</div>
                 <span id="navEmail"></span>
@@ -215,11 +217,12 @@
         </div>
     </nav>
 
-    <!-- HERO -->
+    <!-- ═══ HERO ═══════════════════════════════════════════════════════ -->
     <section class="hero">
         <div class="orb"></div>
         <div class="orb-2"></div>
 
+        <!-- SVG coins -->
         <svg class="corner-svg tl" viewBox="0 0 120 150" fill="none">
             <path d="M60 10 C28 10 10 32 10 58 C10 88 32 112 60 135" stroke="url(#cg)" stroke-width="1.4" fill="none" />
             <circle cx="60" cy="10" r="4" fill="#B09EFF" opacity=".8" />
@@ -261,9 +264,7 @@
                 <span class="solid" data-i18n="hero.line2">sans limite.</span>
             </h1>
 
-            <p class="hero-sub" data-i18n="hero.sub">YouTube, TikTok, Instagram, Twitter, Facebook colle le lien,
-                choisis le
-                format, c'est prêt.</p>
+            <p class="hero-sub" data-i18n="hero.sub">YouTube, TikTok, Instagram, Twitter, Facebook colle le lien, choisis le format, c'est prêt.</p>
 
             <div class="url-widget">
                 <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
