@@ -10,15 +10,28 @@ import { STORAGE_KEYS } from './config.js';
 export const state = {
   // Auth
   token: localStorage.getItem(STORAGE_KEYS.token) || null,
-  currentUser: null, // { id, email, plan, created_at } | null
+  currentUser: null, // { id, email, plan, created_at, trim_trials_used } | null
 
   // i18n
   lang: 'fr',
 
+  // Géo-détection & devise (pricing Premium multi-devises)
+  currentCurrency: 'XAF',
+  currentCountryName: 'Cameroun',
+  currentCountryFlag: '🇨🇲',
+  currentCountryCode: 'CM',
+  selectedPlan: 'monthly', // 'monthly' | 'halfyearly' | 'yearly'
+
   // Analyse / téléchargement en cours
   currentInfo: null,      // dernière réponse de /media/analyze (data)
-  selFmt: 'bestvideo+bestaudio/best',
-  selSublang: null,       // code langue choisi pour l'incrustation des sous-titres (ou null)
+  selQuality: '1080p',    // '4k' | '1080p' | '720p' | '480p' | 'mp3'
+
+  // Sous-titres incrustés à la demande
+  withSubtitles: false,
+  subtitleLang: 'fr',
+
+  // Découpage vidéo sur mesure
+  wantsTrim: false,
 };
 
 export function setToken(tok) {

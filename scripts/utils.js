@@ -14,12 +14,14 @@ const ICONS = {
  * @param {string} msg
  * @param {'info'|'success'|'error'} type
  */
-export function showStatus(msg, type = 'info') {
-  const area = document.getElementById('status-area');
+export function showStatus(msg, type = "info") {
+  const area = document.getElementById("status-area");
   if (!area) return;
   area.innerHTML = `<div class="status-msg status-${type}">${ICONS[type] || ICONS.info}<span>${msg}</span></div>`;
-  if (type !== 'error') {
-    setTimeout(() => { area.innerHTML = ''; }, 6000);
+  if (type !== "error") {
+    setTimeout(() => {
+      area.innerHTML = "";
+    }, 6000);
   }
 }
 
@@ -30,9 +32,40 @@ export function fmtDur(totalSeconds) {
   const m = Math.floor((s % 3600) / 60);
   const ss = s % 60;
   return h
-    ? `${h}:${String(m).padStart(2, '0')}:${String(ss).padStart(2, '0')}`
-    : `${m}:${String(ss).padStart(2, '0')}`;
+    ? `${h}:${String(m).padStart(2, "0")}:${String(ss).padStart(2, "0")}`
+    : `${m}:${String(ss).padStart(2, "0")}`;
 }
 
 /** Petit spinner HTML réutilisable pour les boutons en cours de chargement. */
 export const SPINNER_HTML = '<span class="spin"></span>';
+
+/**
+ * Génère une balise <img> pointant vers flagcdn.com pour un code pays ISO.
+ * Windows (Chrome/Edge) n'a pas de police d'émojis drapeaux et affiche le
+ * code pays dans une boîte (ex. "NG") au lieu du vrai drapeau — on utilise
+ * donc une vraie image, fiable sur tous les systèmes, avec repli sur 🌍
+ * si le code est inconnu ou si l'image ne charge pas.
+ * @param {string} countryCode
+ */
+export function flagImgHtml(countryCode) {
+  if (!countryCode) return "🌍";
+  const cc = countryCode.toLowerCase();
+  return (
+    `<img src="https://flagcdn.com/24x18/${cc}.png" width="16" height="12" alt="${countryCode}" ` +
+    `style="border-radius:2px;vertical-align:middle;display:inline-block" ` +
+    `onerror="this.replaceWith(document.createTextNode('🌍'))">`
+  );
+}
+
+/** Formate une taille en octets en "B / KiB / MiB / GiB" lisible. */
+export function formatFileSize(bytes) {
+  if (!Number.isFinite(bytes) || bytes <= 0) return "";
+  const units = ["B", "KiB", "MiB", "GiB"];
+  let value = bytes;
+  let index = 0;
+  while (value >= 1024 && index < units.length - 1) {
+    value /= 1024;
+    index += 1;
+  }
+  return `${value.toFixed(value >= 100 ? 0 : 1)} ${units[index]}`;
+}

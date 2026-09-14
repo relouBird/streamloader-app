@@ -1,41 +1,58 @@
 // ─────────────────────────────────────────────────────────────────
 // scripts/media.js — GET /api/media/analyze, rendu de la carte vidéo,
-// sélection du format et de la langue de sous-titres.
+// sélection de la qualité, sous-titres incrustés et découpage vidéo.
 // ─────────────────────────────────────────────────────────────────
 
 import { ENDPOINTS } from "./config.js";
 import { state } from "./state.js";
 import { t } from "./i18n.js";
 import { showStatus, fmtDur, SPINNER_HTML } from "./utils.js";
+import { openModal } from "./modal.js";
 
-const FORMAT_PRESETS = [
+const isDev =
+  window.location.hostname === "localhost" ||
+  window.location.hostname === "127.0.0.1";
+
+const QUALITY_PRESETS = [
   {
-    icon: '<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"/><line x1="7" y1="2" x2="7" y2="22"/><line x1="17" y1="2" x2="17" y2="22"/><line x1="2" y1="12" x2="22" y2="12"/><line x1="2" y1="7" x2="7" y2="7"/><line x1="2" y1="17" x2="7" y2="17"/><line x1="17" y1="17" x2="22" y2="17"/><line x1="17" y1="7" x2="22" y2="7"/></svg>',
-    t: "Vidéo Max",
-    sub: "Meilleure qualité (MP4)",
-    v: "bestvideo+bestaudio/best",
-    isAudio: false,
+    id: "4k",
+    icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>',
+    t: "4K Ultra HD",
+    badge: "👑 Premium",
+    sub: "2160p / 1440p (Qualité Max)",
+    premium: true,
   },
   {
+    id: "1080p",
     icon: '<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="7" width="20" height="15" rx="2" ry="2"/><polyline points="17 2 12 7 7 2"/></svg>',
-    t: "1080p",
-    sub: "Full HD (MP4)",
-    v: "bestvideo[height<=1080]+bestaudio/best[height<=1080]",
-    isAudio: false,
+    t: "1080p Full HD",
+    badge: "",
+    sub: "Haute Définition 1080p",
+    premium: false,
   },
   {
+    id: "720p",
     icon: '<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>',
-    t: "720p",
-    sub: "Standard HD (MP4)",
-    v: "bestvideo[height<=720]+bestaudio/best[height<=720]",
-    isAudio: false,
+    t: "720p HD",
+    badge: "",
+    sub: "Standard HD Rapide & Léger",
+    premium: false,
   },
   {
+    id: "480p",
+    icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M10 9l5 3-5 3z"/></svg>',
+    t: "480p SD",
+    badge: "",
+    sub: "Économie de données",
+    premium: false,
+  },
+  {
+    id: "mp3",
     icon: '<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>',
     t: "Audio MP3",
-    sub: "Haute Qualité",
-    v: "bestaudio/best",
-    isAudio: true,
+    badge: "",
+    sub: "Haute Qualité (320 kbps)",
+    premium: false,
   },
 ];
 
@@ -43,74 +60,120 @@ function el(id) {
   return document.getElementById(id);
 }
 
-/** Construit les puces de format et branche leur sélection. */
+function isUserPremium() {
+  return state.currentUser?.plan === "premium";
+}
+
+/** True si l'utilisateur non-Premium a épuisé ses 3 essais gratuits de découpage. */
+export function trimLimitReached() {
+  return (
+    !!state.currentUser &&
+    state.currentUser.plan !== "premium" &&
+    (state.currentUser.trim_trials_used || 0) >= 3
+  );
+}
+
+/** Met à jour le badge de quota et le verrouillage de l'option de découpage. */
+export function updateTrimUI() {
+  const badge = el("trimTrialsBadge");
+  const wrap = el("trimToggleWrap");
+  const toggle = el("trimToggle");
+  const fieldsWrap = el("trimFieldsWrap");
+  if (!badge || !wrap || !toggle) return;
+
+  const premium = isUserPremium();
+  const locked = trimLimitReached();
+
+  if (premium || !state.currentUser) {
+    badge.style.display = "none";
+  } else {
+    const used = state.currentUser.trim_trials_used || 0;
+    const remaining = Math.max(0, 3 - used);
+    badge.textContent = `${remaining}/3 essais restants`;
+    badge.classList.toggle("limit-reached", remaining === 0);
+    badge.style.display = "inline-block";
+  }
+
+  wrap.classList.toggle("locked", locked);
+  if (locked && toggle.checked) {
+    toggle.checked = false;
+    state.wantsTrim = false;
+    fieldsWrap?.classList.remove("open");
+  }
+}
+
+/** Construit les puces de qualité et branche leur sélection. */
 function renderFormats() {
   const container = el("vcFmts");
   if (!container) return;
   container.innerHTML = "";
 
-  FORMAT_PRESETS.forEach((p, i) => {
+  const premium = isUserPremium();
+  const defaultIdx = premium ? 0 : 1; // 4K si Premium, sinon 1080p
+  state.selQuality = QUALITY_PRESETS[defaultIdx].id;
+
+  QUALITY_PRESETS.forEach((p, i) => {
+    const isLocked = p.premium && !premium;
     const btn = document.createElement("button");
-    btn.className = "fmt-card" + (i === 0 ? " sel" : "");
+    btn.className =
+      "fmt-card" +
+      (i === defaultIdx ? " sel" : "") +
+      (isLocked ? " locked" : "");
     btn.type = "button";
-    btn.innerHTML = `<div class="fmt-icon">${p.icon}</div><div class="fmt-info"><div class="fmt-t">${p.t}</div><div class="fmt-sub">${p.sub}</div></div>`;
-    if (i === 0) state.selFmt = p.v;
+    const badgeHtml = p.badge
+      ? `<span class="fmt-badge-prem">${p.badge}</span>`
+      : "";
+    btn.innerHTML = `<div class="fmt-icon">${p.icon}</div><div class="fmt-info"><div class="fmt-t"><span>${p.t}</span>${badgeHtml}</div><div class="fmt-sub">${p.sub}</div></div>`;
 
     btn.addEventListener("click", () => {
-      state.selFmt = p.v;
+      if (isLocked) {
+        openModal("premium");
+        showStatus(t("card.premium_quality_locked"), "info");
+        return;
+      }
+      state.selQuality = p.id;
       container
         .querySelectorAll(".fmt-card")
         .forEach((b) => b.classList.remove("sel"));
       btn.classList.add("sel");
-      renderSubtitles(state.currentInfo); // les sous-titres n'ont de sens que pour la vidéo
+
+      const subtitleOpts = el("subtitleOpts");
+      if (subtitleOpts)
+        subtitleOpts.style.display = p.id === "mp3" ? "none" : "block";
+      if (p.id === "mp3") {
+        state.withSubtitles = false;
+        const toggle = el("subtitleToggle");
+        if (toggle) toggle.checked = false;
+        const langWrap = el("subtitleLangWrap");
+        if (langWrap) langWrap.style.display = "none";
+      }
     });
 
     container.appendChild(btn);
   });
 }
 
-/** Construit le sélecteur de sous-titres à partir de info.subtitles (peut être vide). */
-function renderSubtitles(info) {
-  const container = el("vcSubs");
-  if (!container) return;
+/** Réinitialise les options sous-titres/découpage pour une nouvelle vidéo analysée. */
+function resetPerVideoOptions() {
+  state.withSubtitles = false;
+  const subToggle = el("subtitleToggle");
+  if (subToggle) subToggle.checked = false;
+  const subLangSel = el("subtitleLang");
+  if (subLangSel) subLangSel.value = "fr";
+  state.subtitleLang = "fr";
+  const langWrap = el("subtitleLangWrap");
+  if (langWrap) langWrap.style.display = "none";
+  const subtitleOpts = el("subtitleOpts");
+  if (subtitleOpts)
+    subtitleOpts.style.display = state.selQuality === "mp3" ? "none" : "block";
 
-  const currentPreset = FORMAT_PRESETS.find((p) => p.v === state.selFmt);
-  const isAudioSelected = currentPreset?.isAudio;
-  const subs = info?.subtitles || [];
-
-  state.selSublang = null; // reset à chaque nouveau rendu (changement de format ou de vidéo)
-
-  if (isAudioSelected || subs.length === 0) {
-    container.innerHTML = "";
-    return;
-  }
-
-  const chipsHtml = subs
-    .map(
-      (code) =>
-        `<button type="button" class="sub-chip" data-lang="${code}">${code}</button>`,
-    )
-    .join("");
-  container.innerHTML = `
-    <div class="sub-block">
-      <div class="fmt-label">${t("card.subtitles")}</div>
-      <div class="sub-chips">
-        <button type="button" class="sub-chip sel" data-lang="">${t("card.subtitles_none")}</button>
-        ${chipsHtml}
-      </div>
-    </div>
-  `;
-
-  container.querySelectorAll(".sub-chip").forEach((chip) => {
-    chip.addEventListener("click", () => {
-      container
-        .querySelectorAll(".sub-chip")
-        .forEach((c) => c.classList.remove("sel"));
-      chip.classList.add("sel");
-      const lang = chip.dataset.lang;
-      state.selSublang = lang || null;
-    });
-  });
+  state.wantsTrim = false;
+  const trimToggle = el("trimToggle");
+  if (trimToggle) trimToggle.checked = false;
+  el("trimFieldsWrap")?.classList.remove("open");
+  if (el("trimStart")) el("trimStart").value = "";
+  if (el("trimEnd")) el("trimEnd").value = "";
+  updateTrimUI();
 }
 
 function renderCard(info) {
@@ -171,11 +234,14 @@ function renderCard(info) {
   });
 
   renderFormats();
-  renderSubtitles(info);
 
   el("progressWrap")?.classList.remove("show");
   if (el("progressFill")) el("progressFill").style.width = "0%";
   if (el("progressPct")) el("progressPct").textContent = "";
+
+  if (isDev && el("simBtn")) el("simBtn").style.display = "flex";
+
+  resetPerVideoOptions();
 
   el("videoCard")?.classList.add("show");
   el("videoCard")?.scrollIntoView({ behavior: "smooth", block: "nearest" });
@@ -224,11 +290,52 @@ function openBrowser() {
   if (url) window.open(url, "_blank", "noopener,noreferrer");
 }
 
-/** Câble les interactions liées à l'analyse (bouton, touche Entrée, "Regarder"). */
+/** Câble le toggle sous-titres (avec/sans + langue). */
+function initSubtitleEvents() {
+  el("subtitleToggle")?.addEventListener("change", (e) => {
+    state.withSubtitles = e.target.checked;
+    const langWrap = el("subtitleLangWrap");
+    if (langWrap)
+      langWrap.style.display = state.withSubtitles ? "flex" : "none";
+  });
+  el("subtitleLang")?.addEventListener("change", (e) => {
+    state.subtitleLang = e.target.value;
+  });
+}
+
+/** Câble le toggle découpage vidéo (avec verrouillage sur quota épuisé). */
+function initTrimEvents() {
+  const toggle = el("trimToggle");
+  const fieldsWrap = el("trimFieldsWrap");
+  if (!toggle) return;
+
+  // Un clic alors que le quota est épuisé doit ouvrir la modale Premium
+  // AVANT que la case ne bascule : preventDefault empêche le changement d'état.
+  toggle.addEventListener("click", (e) => {
+    if (trimLimitReached()) {
+      e.preventDefault();
+      openModal("premium");
+      showStatus(t("card.trim_limit_reached"), "info");
+    }
+  });
+
+  toggle.addEventListener("change", () => {
+    if (trimLimitReached()) {
+      toggle.checked = false;
+      return;
+    }
+    state.wantsTrim = toggle.checked;
+    fieldsWrap?.classList.toggle("open", state.wantsTrim);
+  });
+}
+
+/** Câble les interactions liées à l'analyse (bouton, touche Entrée, "Regarder", sous-titres, découpage). */
 export function initMediaEvents() {
   el("analyzeBtn")?.addEventListener("click", analyzeUrl);
   el("urlInput")?.addEventListener("keypress", (e) => {
     if (e.key === "Enter") analyzeUrl();
   });
   el("watchBtn")?.addEventListener("click", openBrowser);
+  initSubtitleEvents();
+  initTrimEvents();
 }

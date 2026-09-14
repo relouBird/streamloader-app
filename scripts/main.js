@@ -12,7 +12,7 @@ import { initModalEvents } from './modal.js';
 import { initAuthEvents, loadUser } from './auth.js';
 import { initMediaEvents } from './media.js';
 import { initDownloadEvents } from './download.js';
-import { initPaymentEvents, handlePaymentReturn } from './payment.js';
+import { initPaymentEvents, handlePaymentReturn, initGeoCurrency } from './payment.js';
 import { initScrollReveal, initParallax } from './app.js';
 import { updateAdVisibility } from './ads.js';
 
@@ -30,7 +30,9 @@ async function init() {
   initDownloadEvents();
   initPaymentEvents();
 
-  // 3. Session utilisateur, puis dépendances qui en découlent
+  // 3. Géo-détection (devise Premium), puis session utilisateur et
+  //    dépendances qui en découlent
+  initGeoCurrency();
   await loadUser();
   updateAdVisibility();
 

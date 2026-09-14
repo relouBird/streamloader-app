@@ -9,6 +9,7 @@ import { t } from './i18n.js';
 import { SPINNER_HTML } from './utils.js';
 import { updateAdVisibility } from './ads.js';
 import { openModal, closeModal, getAuthTab } from './modal.js';
+import { updateTrimUI } from './media.js';
 
 function el(id) { return document.getElementById(id); }
 
@@ -29,6 +30,7 @@ export function updateNavUser() {
   }
 
   updateAdVisibility();
+  updateTrimUI();
 }
 
 /** Recharge le profil utilisateur depuis le token stocké (à appeler au démarrage). */
@@ -45,6 +47,27 @@ export async function loadUser() {
   } catch {
     setToken(null);
     setCurrentUser(null);
+  }
+}
+
+/**
+ * Rafraîchit le profil utilisateur sans invalider la session en cas d'échec
+ * réseau ponctuel (contrairement à loadUser). À appeler après un essai
+ * gratuit de découpage vidéo pour mettre à jour le badge de quota restant.
+ */
+export async function reloadUser() {
+  if (!state.token) return;
+  try {
+    const r = await fetch(ENDPOINTS.authMe, {
+      headers: { Authorization: 'Bearer ' + state.token },
+    });
+    const d = await r.json();
+    if (d.user) {
+      setCurrentUser(d.user);
+      updateNavUser();
+    }
+  } catch {
+    // Échec silencieux : on garde la session en cours.
   }
 }
 
@@ -97,7 +120,7 @@ async function submitAuth() {
         okEl.style.display = 'block';
         el('authGoPremiumBtn')?.addEventListener('click', () => openModal('premium'));
       }
-      setTimeout(closeModal, 2500);
+      setTimeout(closeModal, 2000);
     }
   } catch {
     if (errEl) { errEl.textContent = t('auth.network_err'); errEl.style.display = 'block'; }

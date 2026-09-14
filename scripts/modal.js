@@ -6,6 +6,7 @@
 
 import { state } from './state.js';
 import { t } from './i18n.js';
+import { selectPlan } from './payment.js';
 
 let authTab = 'login';
 
@@ -27,9 +28,11 @@ export function switchTab(tab) {
   });
 }
 
-export function openModal(mode) {
+export function openModal(mode, plan = state.selectedPlan) {
   const backdrop = el('modalBackdrop');
   if (!backdrop) return;
+
+  if (mode === 'premium') selectPlan(plan);
 
   ['panelAuth', 'panelPremium', 'panelProfile'].forEach((id) => {
     const p = el(id);
@@ -45,13 +48,18 @@ export function openModal(mode) {
     switchTab(mode === 'register' ? 'register' : 'login');
   } else if (mode === 'premium') {
     el('panelPremium').style.display = '';
-    const notice = el('premLoginNotice');
-    if (notice) notice.style.display = state.currentUser ? 'none' : '';
-    const pb = el('premBtn');
-    if (pb) {
-      pb.disabled = !state.currentUser;
-      pb.style.opacity = state.currentUser ? '1' : '0.5';
+    const isLogged = !!state.currentUser;
+    const loginNotice = el('premLoginNotice');
+    if (loginNotice) loginNotice.style.display = isLogged ? 'none' : '';
+    const loggedNotice = el('premLoggedNotice');
+    if (loggedNotice) {
+      loggedNotice.style.display = isLogged ? 'flex' : 'none';
+      if (isLogged && el('premLoggedEmail')) {
+        el('premLoggedEmail').textContent = state.currentUser.email;
+      }
     }
+    const pb = el('premBtn');
+    if (pb) pb.disabled = !isLogged;
   } else if (mode === 'profile') {
     el('panelProfile').style.display = '';
     if (el('profEmail')) el('profEmail').textContent = state.currentUser?.email || '';
@@ -83,7 +91,8 @@ export function initModalEvents() {
 
   el('premiumBtn')?.addEventListener('click', () => openModal('premium'));
   el('profUpgradeBtn')?.addEventListener('click', () => openModal('premium'));
-  el('premRegisterLink')?.addEventListener('click', () => openModal('register'));
+  el('premGuestRegisterBtn')?.addEventListener('click', () => openModal('register'));
+  el('premGuestLoginBtn')?.addEventListener('click', () => openModal('login'));
 
   el('freeStartBtn')?.addEventListener('click', () => {
     el('urlInput')?.focus();

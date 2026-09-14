@@ -264,7 +264,8 @@
                 <span class="solid" data-i18n="hero.line2">sans limite.</span>
             </h1>
 
-            <p class="hero-sub" data-i18n="hero.sub">YouTube, TikTok, Instagram, Twitter, Facebook colle le lien, choisis le format, c'est prêt.</p>
+            <p class="hero-sub" data-i18n="hero.sub">YouTube, TikTok, Instagram, Twitter, Facebook colle le lien,
+                choisis le format, c'est prêt.</p>
 
             <div class="url-widget">
                 <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
@@ -337,7 +338,49 @@
                     <div class="fmt-label" data-i18n="card.format">Format</div>
                     <div class="fmt-presets" id="vcFmts"></div>
 
-                    <div id="vcSubs"></div>
+                    <div id="subtitleOpts" class="subtitle-opts">
+                        <label class="subtitle-toggle">
+                            <input type="checkbox" id="subtitleToggle">
+                            <span class="subtitle-switch"></span>
+                            <span class="subtitle-toggle-label" data-i18n="card.withSubs">Télécharger avec
+                                sous-titres</span>
+                        </label>
+                        <div id="subtitleLangWrap" class="subtitle-lang-wrap" style="display:none">
+                            <label class="subtitle-lang-label" for="subtitleLang" data-i18n="card.subsLang">Langue des
+                                sous-titres</label>
+                            <select id="subtitleLang" class="subtitle-lang-select">
+                                <option value="fr">Français</option>
+                                <option value="en">English</option>
+                                <option value="es">Español</option>
+                                <option value="pt">Português</option>
+                                <option value="ar">العربية</option>
+                            </select>
+                            <p class="subtitle-hint" data-i18n="card.subsHint">Les sous-titres seront intégrés à la
+                                vidéo dans la langue choisie, quelle que soit la langue d'origine.</p>
+                        </div>
+                    </div>
+
+                    <div id="trimOpts" class="trim-opts">
+                        <div class="trim-toggle-row">
+                            <label class="trim-toggle" id="trimToggleWrap">
+                                <input type="checkbox" id="trimToggle">
+                                <span class="trim-switch"></span>
+                                <span class="trim-toggle-label" data-i18n="card.trimToggle">Extraire une scène
+                                    précise</span>
+                            </label>
+                            <span class="trim-trials-badge" id="trimTrialsBadge" style="display:none"></span>
+                        </div>
+                        <div id="trimFieldsWrap" class="trim-fields-wrap">
+                            <div class="trim-field">
+                                <label for="trimStart" data-i18n="card.trimStart">Début (ex: 00:10)</label>
+                                <input type="text" id="trimStart" placeholder="00:10" inputmode="numeric">
+                            </div>
+                            <div class="trim-field">
+                                <label for="trimEnd" data-i18n="card.trimEnd">Fin (ex: 00:25)</label>
+                                <input type="text" id="trimEnd" placeholder="00:25" inputmode="numeric">
+                            </div>
+                        </div>
+                    </div>
 
                     <div id="ad-slot-card" class="ad-slot ad-slot-card" role="complementary" aria-label="Publicité">
                         <div class="ad-slot-inner"></div>
@@ -585,30 +628,37 @@
                     data-i18n="price.t2">gratuitement.</span></h2>
         </div>
         <div class="pricing-grid reveal">
-            <div class="price-card">
+            <div class="price-card plan-card">
                 <div class="price-badge" data-i18n="pf.badge">Gratuit</div>
                 <div class="price-num">0<sup>€</sup></div>
                 <div class="price-period" data-i18n="pf.period">Pour toujours</div>
                 <ul class="price-features">
                     <li class="ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
                             <polyline points="20 6 9 17 4 12" />
-                        </svg><span data-i18n="pf.f1">Téléchargements nombreux</span></li>
+                        </svg><span data-i18n="pf.f1">30 téléchargements par jour</span></li>
                     <li class="ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
                             <polyline points="20 6 9 17 4 12" />
                         </svg><span data-i18n="pf.f2">1000+ sites supportés</span></li>
                     <li class="ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
                             <polyline points="20 6 9 17 4 12" />
-                        </svg><span data-i18n="pf.f3">Formats standard</span></li>
+                        </svg><span data-i18n="pf.f3">Qualité maximale 1080p</span></li>
                     <li class="ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
                             <polyline points="20 6 9 17 4 12" />
                         </svg><span data-i18n="pf.f4">Avec publicités</span></li>
+                    <li class="ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                            <polyline points="20 6 9 17 4 12" />
+                        </svg><span data-i18n="pf.f5">Sous-titres : 5 téléchargements par jour</span></li>
+                    <li class="ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                            <polyline points="20 6 9 17 4 12" />
+                        </svg><span data-i18n="pf.f6">Découpage vidéo sur mesure : 3 essais</span></li>
                 </ul>
                 <button class="btn-price outline" id="freeStartBtn" data-i18n="pf.btn">Commencer</button>
             </div>
-            <div class="price-card pro">
+            <div class="price-card pro plan-card">
                 <div class="price-badge" data-i18n="pp.badge">⚡ Premium</div>
-                <div class="price-num">2<sup>€</sup></div>
-                <div class="price-period" data-i18n="pp.period">accès à vie</div>
+                <div class="premium-starting-label" data-i18n="price.starting_from">À partir de</div>
+                <div class="plan-price-value premium-starting-price" data-plan-price="monthly">1,50 $</div>
+                <div class="price-period" data-i18n="pp.period">selon le forfait</div>
                 <ul class="price-features">
                     <li class="ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
                             <polyline points="20 6 9 17 4 12" />
@@ -622,6 +672,12 @@
                     <li class="ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
                             <polyline points="20 6 9 17 4 12" />
                         </svg><span data-i18n="pp.f4">Priorité serveur</span></li>
+                    <li class="ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                            <polyline points="20 6 9 17 4 12" />
+                        </svg><span data-i18n="pp.f5">Sous-titres illimités</span></li>
+                    <li class="ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                            <polyline points="20 6 9 17 4 12" />
+                        </svg><span data-i18n="pp.f6">Découpage vidéo sur mesure illimité</span></li>
                 </ul>
                 <button class="btn-price filled" id="premiumBtn" data-i18n="pp.btn">Passer Premium</button>
             </div>
@@ -636,14 +692,50 @@
                 </svg>
                 StreamLoader
             </a>
-            <div class="footer-telegram-container">
+            <div class="footer-follow-row">
                 <a href="https://t.me/StreamLoade_bot" target="_blank" rel="noopener noreferrer"
                     class="telegram-pill-btn">
-                    <svg class="tg-icon" viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
-                        <path
-                            d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.14.14-.26.26-.534.26l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.121l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.832.943z" />
+                    <svg class="tg-icon" viewBox="0 0 240 240" width="18" height="18">
+                        <circle cx="120" cy="120" r="120" fill="#29A9EA" />
+                        <path fill="#fff"
+                            d="M167.5 72.6 145.9 178c-1.6 7.2-5.9 9-12 5.6l-33-24.3-15.9 15.3c-1.8 1.8-3.3 3.3-6.7 3.3l2.4-33.8L143 83.4c2.7-2.4-.6-3.7-4.2-1.3L74.5 124l-32.6-10.2c-7.1-2.2-7.2-7.1 1.5-10.5L158.4 62c5.9-2.2 11 1.4 9.1 10.6z" />
                     </svg>
                     <span>Rejoindre le Bot Telegram</span>
+                </a>
+                <a href="https://www.tiktok.com/@steamloader01?_r=1&_t=ZS-99h2zS7Ug0i" target="_blank"
+                    rel="noopener noreferrer" class="social-icon-btn" aria-label="TikTok">
+                    <svg viewBox="0 0 24 24" width="18" height="18">
+                        <path fill="#FE2C55"
+                            d="M16.5 3h-3.1v12.6a2.7 2.7 0 1 1-1.9-2.58V9.6a5.7 5.7 0 1 0 4.7 5.62V9.9a7.6 7.6 0 0 0 4.3 1.33V8.05a4.85 4.85 0 0 1-3.4-1.4c-.4-.42-.6-.98-.6-1.63z"
+                            transform="translate(-.45,0)" />
+                        <path fill="#25F4EE"
+                            d="M16.5 3h-3.1v12.6a2.7 2.7 0 1 1-1.9-2.58V9.6a5.7 5.7 0 1 0 4.7 5.62V9.9a7.6 7.6 0 0 0 4.3 1.33V8.05a4.85 4.85 0 0 1-3.4-1.4c-.4-.42-.6-.98-.6-1.63z"
+                            transform="translate(.45,0)" />
+                        <path fill="#fff"
+                            d="M16.5 3h-3.1v12.6a2.7 2.7 0 1 1-1.9-2.58V9.6a5.7 5.7 0 1 0 4.7 5.62V9.9a7.6 7.6 0 0 0 4.3 1.33V8.05a4.85 4.85 0 0 1-3.4-1.4c-.4-.42-.6-.98-.6-1.63z" />
+                    </svg>
+                </a>
+                <a href="https://www.instagram.com/streamloader2026?stkn=d3h0OGNuYjV4b2Zl&utm_source=qr" target="_blank"
+                    rel="noopener noreferrer" class="social-icon-btn" aria-label="Instagram">
+                    <svg viewBox="0 0 448 512" width="16" height="16">
+                        <defs>
+                            <linearGradient id="igGradientFooter" x1="0%" y1="100%" x2="100%" y2="0%">
+                                <stop offset="0%" stop-color="#FED576" />
+                                <stop offset="26%" stop-color="#F47133" />
+                                <stop offset="61%" stop-color="#BC3081" />
+                                <stop offset="100%" stop-color="#4C63D2" />
+                            </linearGradient>
+                        </defs>
+                        <path fill="url(#igGradientFooter)"
+                            d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
+                    </svg>
+                </a>
+                <a href="https://x.com/streamloader?s=11" target="_blank" rel="noopener noreferrer"
+                    class="social-icon-btn" aria-label="X (Twitter)">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="#fff">
+                        <path
+                            d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                    </svg>
                 </a>
             </div>
             <div class="footer-links">
@@ -700,61 +792,110 @@
 
             <!-- Premium panel -->
             <div id="panelPremium" style="display:none">
-                <div style="text-align:center;margin-bottom:22px">
-                    <div
-                        style="width:56px;height:56px;background:var(--accent-soft);border:1px solid rgba(123,95,245,.25);border-radius:16px;display:flex;align-items:center;justify-content:center;margin:0 auto 14px">
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--accent)"
-                            stroke-width="2">
-                            <path d="M13 2L4.5 13.5H11L10.5 22L19.5 10.5H13L13 2Z" />
+                <div class="prem-modal-header">
+                    <div class="prem-glow-icon">
+                        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2.2">
+                            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
                         </svg>
                     </div>
-                    <div style="font-size:26px;font-weight:800;letter-spacing:-1px;color:var(--text)">1 200 <span
-                            style="font-size:15px;font-weight:500;color:var(--text-dim)">FCFA</span> <span
-                            style="font-size:14px;color:var(--text-muted);margin-left:6px">≈ 2€</span></div>
-                    <div style="font-size:12px;color:var(--text-muted);margin-top:4px">Paiement unique · Accès à vie ·
-                        Aucun
-                        abonnement</div>
+                    <div class="prem-pill-badge">⚡ Accès Premium</div>
+                    <div class="prem-price-tag">
+                        <span id="premPriceVal">1 200</span> <span class="fcfa" id="premPriceUnit">FCFA</span>
+                        <span class="approx" id="premPriceApprox">≈ 2€</span>
+                    </div>
+                    <div class="prem-price-sub" id="premPriceSub" data-i18n="prem.sub_monthly">Forfait mensuel ·
+                        Paiement sécurisé</div>
+                    <div id="premGeoIndicator"
+                        style="display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:600;color:var(--text-dim);margin-top:8px;background:var(--bg-2);padding:4px 12px;border-radius:100px;border:1px solid var(--border-2)">
+                        <span id="premGeoFlag">🌍</span> <span id="premGeoCountry" data-i18n="prem.detected">Détecté :
+                            Cameroun</span>
+                    </div>
+                    <!-- La détection auto (fuseau horaire / IP) peut se tromper, notamment
+                         entre pays voisins partageant le même décalage horaire. Ce lien
+                         laisse l'utilisateur corriger lui-même, une fois pour toutes
+                         (choix mémorisé dans localStorage). -->
+                    <button type="button" id="premGeoFixBtn"
+                        style="display:block;margin:6px auto 0;background:none;border:none;color:var(--accent);font-size:11px;font-weight:600;cursor:pointer;text-decoration:underline;font-family:inherit;padding:2px">
+                        Pas le bon pays ?
+                    </button>
+                    <select id="premCountryPicker"
+                        style="display:none;margin:8px auto 0;width:100%;max-width:260px;padding:8px 10px;background:var(--bg);border:1px solid var(--border-2);border-radius:var(--r-sm);font-size:13px;font-family:inherit;color:var(--text)">
+                        <option value="">Choisis ton pays…</option>
+                    </select>
                 </div>
-                <div
-                    style="background:var(--bg-2);border:1px solid var(--border);border-radius:12px;padding:14px;margin-bottom:20px;display:grid;grid-template-columns:1fr 1fr;gap:8px">
-                    <div style="display:flex;align-items:center;gap:6px;font-size:12px;color:var(--text-dim)"><svg
-                            width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="2.5">
-                            <polyline points="20 6 9 17 4 12" />
-                        </svg>Téléchargements illimités</div>
-                    <div style="display:flex;align-items:center;gap:6px;font-size:12px;color:var(--text-dim)"><svg
-                            width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="2.5">
-                            <polyline points="20 6 9 17 4 12" />
-                        </svg>4K + Audio HD</div>
-                    <div style="display:flex;align-items:center;gap:6px;font-size:12px;color:var(--text-dim)"><svg
-                            width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="2.5">
-                            <polyline points="20 6 9 17 4 12" />
-                        </svg>Sans publicités</div>
-                    <div style="display:flex;align-items:center;gap:6px;font-size:12px;color:var(--text-dim)"><svg
-                            width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="2.5">
-                            <polyline points="20 6 9 17 4 12" />
-                        </svg>Priorité serveur</div>
+
+                <div class="plan-switcher" role="tablist" aria-label="Forfait Premium">
+                    <button type="button" data-plan-tab="monthly" class="active">1 mois</button>
+                    <button type="button" data-plan-tab="halfyearly">6 mois</button>
+                    <button type="button" data-plan-tab="yearly">1 an</button>
                 </div>
-                <div id="premLoginNotice"
-                    style="display:none;background:rgba(245,158,11,.10);border:1px solid rgba(245,158,11,.25);border-radius:10px;padding:12px;margin-bottom:14px;font-size:13px;color:#F59E0B;text-align:center">
-                    ⚠️ Tu dois d'abord créer un compte.<br><button id="premRegisterLink"
-                        style="margin-top:7px;background:var(--accent);border:none;color:#fff;font-weight:700;cursor:pointer;font-size:12px;font-family:inherit;padding:6px 16px;border-radius:100px">Créer
-                        mon compte →</button></div>
-                <button class="btn-submit" id="premBtn" style="font-size:15px;padding:14px">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+
+                <div class="prem-benefits-card">
+                    <div class="prem-benefit-item">
+                        <div class="prem-check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="3">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg></div>
+                        <span>Qualité 4K & 1080p</span>
+                    </div>
+                    <div class="prem-benefit-item">
+                        <div class="prem-check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="3">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg></div>
+                        <span>Vitesse Prioritaire Max</span>
+                    </div>
+                    <div class="prem-benefit-item">
+                        <div class="prem-check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="3">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg></div>
+                        <span>100% Sans Publicité</span>
+                    </div>
+                    <div class="prem-benefit-item">
+                        <div class="prem-check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="3">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg></div>
+                        <span>Audio MP3 Haute Fidélité</span>
+                    </div>
+                </div>
+
+                <!-- État 1 : utilisateur non connecté -->
+                <div class="prem-guest-box" id="premLoginNotice">
+                    <div class="prem-guest-txt">⚠️ Tu dois avoir un compte pour activer ton accès Premium.</div>
+                    <div class="prem-guest-actions">
+                        <button class="btn-prem-register" id="premGuestRegisterBtn"
+                            data-i18n="prem.create_account">Créer un compte →</button>
+                        <button class="btn-prem-login" id="premGuestLoginBtn" data-i18n="auth.login">Se
+                            connecter</button>
+                    </div>
+                </div>
+
+                <!-- État 2 : utilisateur connecté -->
+                <div class="prem-logged-box" id="premLoggedNotice" style="display:none">
+                    <span>👤 Compte : <strong id="premLoggedEmail">...</strong></span>
+                    <span style="color:var(--success);font-weight:700">✓ Prêt</span>
+                </div>
+
+                <button class="btn-prem-pay" id="premBtn">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2.5">
                         <rect x="2" y="5" width="20" height="14" rx="2" />
                         <line x1="2" y1="10" x2="22" y2="10" />
                     </svg>
                     <span id="premBtnLabel">Payer maintenant 1 200 FCFA</span>
                 </button>
-                <div style="display:flex;align-items:center;justify-content:center;gap:6px;margin-top:12px">
-                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="var(--success)"
-                        stroke-width="2">
+
+                <div class="prem-security-badge">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2.5">
                         <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
                     </svg>
-                    <span style="font-size:11px;color:var(--text-muted)">Tu seras redirigé vers la page de paiement
-                        sécurisée
-                        CinetPay</span>
+                    <span data-i18n="prem.note">Paiement sécurisé via GeniusPay</span>
                 </div>
+
                 <div class="auth-error" id="premErr" style="display:none;margin-top:12px"></div>
                 <div class="auth-success" id="premOk" style="display:none;margin-top:12px"></div>
             </div>
