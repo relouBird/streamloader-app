@@ -1099,15 +1099,6 @@ nav {
   filter: blur(36px);
   animation: breathe 5s ease-in-out infinite;
 }
-.visual-icon-over {
-  position: absolute;
-  color: var(--accent);
-  opacity: 0.85;
-}
-.visual-icon-over svg {
-  width: 46px;
-  height: 46px;
-}
 
 /* ─── Pricing ────────────────────────────────────────────────────── */
 .pricing-grid {
@@ -2430,4 +2421,53 @@ footer {
   color: #fff;
   font-size: 11px;
   font-weight: 700;
+}
+
+
+/* ─── Disclaimer sous la barre d'URL (réintroduit) ─────────────────── */
+.url-disclaimer {
+  max-width: 480px;
+  margin: 0 auto 20px;
+  text-align: center;
+  font-size: 11px;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+/* ─── CGV checkbox (modale Premium) ─────────────────────────────────── */
+.prem-cgv-check {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin: 14px 0 12px;
+  font-size: 12px;
+  color: var(--text-dim);
+  cursor: pointer;
+  user-select: none;
+  line-height: 1.5;
+}
+.prem-cgv-check input {
+  margin-top: 2px;
+  width: 15px;
+  height: 15px;
+  flex-shrink: 0;
+  accent-color: var(--accent);
+  cursor: pointer;
+}
+.prem-cgv-check a {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+/* ─── Anti-zoom iOS sur les champs de saisie ───────────────────────── */
+/* Safari iOS zoome automatiquement au focus d'un input/select dont la
+   police est < 16px, indépendamment de la balise viewport. On ne force
+   les 16px qu'en dessous de 768px pour ne pas alourdir le desktop. */
+@media (max-width: 768px) {
+  .url-widget input,
+  .subtitle-lang-select,
+  .trim-field input,
+  #premCountryPicker {
+    font-size: 16px;
+  }
 }

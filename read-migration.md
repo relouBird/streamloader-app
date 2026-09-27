@@ -94,7 +94,7 @@ Document de répartition : chaque élément **nouveau ou modifié** dans le brut
   - Bouton Instagram (`.social-icon-btn`) → `https://www.instagram.com/streamloader2026…`
   - Bouton X (`.social-icon-btn`) → `https://x.com/streamloader`
 - **Un `<style>` inline** (à déplacer vers `style.css`, voir plus bas).
-- **Modification du `foot.copy`** : « © 2026 StreamLoader · **Propulsée par GOD D_PACHA** ».
+- **Modification du `foot.copy`** : « © 2026 StreamLoader · **Propulsée par GOD D_PACHA & RelouBird** ».
 
 ### 1.6 Modale — panneau Premium entièrement refondu
 
@@ -399,7 +399,7 @@ Remplace l'ancien `{ url, format, title }` par :
 - `pf.f1` → « 30 téléchargements par jour »
 - `pf.f3` → « Qualité maximale 1080p »
 - `pp.period` → « selon le forfait »
-- `foot.copy` → « Propulsée par GOD D_PACHA »
+- `foot.copy` → « Propulsée par GOD D_PACHA & RelouBird »
 
 ---
 

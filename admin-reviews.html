@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Modération des avis — StreamLoader</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: #13132A;
+      color: #EEEEF8;
+      margin: 0;
+      padding: 32px 16px;
+    }
+
+    .wrap {
+      max-width: 640px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      font-size: 20px;
+      margin-bottom: 4px;
+    }
+
+    .sub {
+      color: #9090B8;
+      font-size: 13px;
+      margin-bottom: 24px;
+    }
+
+    .token-box {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+
+    input[type="password"],
+    input[type="text"] {
+      flex: 1;
+      padding: 10px 12px;
+      background: #1C1C38;
+      border: 1px solid rgba(255, 255, 255, .13);
+      border-radius: 8px;
+      color: #EEEEF8;
+      font-size: 13px;
+      outline: none;
+    }
+
+    input:focus {
+      border-color: #7B5FF5;
+    }
+
+    button {
+      padding: 10px 16px;
+      background: #7B5FF5;
+      border: none;
+      border-radius: 8px;
+      color: #fff;
+      font-weight: 700;
+      font-size: 13px;
+      cursor: pointer;
+      font-family: inherit;
+      transition: opacity .15s;
+    }
+
+    button:hover:not(:disabled) {
+      opacity: .88;
+    }
+
+    button:disabled {
+      opacity: .5;
+      cursor: not-allowed;
+    }
+
+    button.reject {
+      background: #EF4444;
+    }
+
+    button.approve {
+      background: #22C55E;
+    }
+
+    button.ghost {
+      background: transparent;
+      border: 1px solid rgba(255, 255, 255, .13);
+      color: #9090B8;
+    }
+
+    .toolbar {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 16px;
+      flex-wrap: wrap;
+    }
+
+    .toolbar small {
+      color: #5858A0;
+      font-size: 11px;
+    }
+
+    .card {
+      background: #1C1C38;
+      border: 1px solid rgba(255, 255, 255, .13);
+      border-radius: 12px;
+      padding: 16px;
+      margin-bottom: 12px;
+    }
+
+    .stars {
+      color: #F59E0B;
+      font-size: 15px;
+      letter-spacing: 2px;
+      margin-bottom: 6px;
+    }
+
+    .comment {
+      font-size: 13px;
+      color: #EEEEF8;
+      line-height: 1.6;
+      margin-bottom: 10px;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+
+    .comment.empty-comment {
+      color: #5858A0;
+      font-style: italic;
+    }
+
+    .meta {
+      font-size: 11px;
+      color: #5858A0;
+      margin-bottom: 10px;
+    }
+
+    .actions {
+      display: flex;
+      gap: 8px;
+    }
+
+    .empty {
+      color: #9090B8;
+      font-size: 13px;
+      text-align: center;
+      padding: 40px 0;
+    }
+
+    .status {
+      font-size: 12px;
+      margin-bottom: 16px;
+      min-height: 16px;
+    }
+
+    .status.err {
+      color: #EF4444;
+    }
+
+    .status.ok {
+      color: #22C55E;
+    }
+
+    .hidden {
+      display: none !important;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <h1>Modération des avis</h1>
+    <p class="sub">Page privée — ne pas partager ce lien.</p>
+
+    <div class="token-box" id="tokenBox">
+      <input type="password" id="tokenInput" placeholder="Jeton admin (ADMIN_TOKEN)" autocomplete="off">
+      <button id="connectBtn">Connexion</button>
+    </div>
+
+    <div class="toolbar hidden" id="toolbar">
+      <small id="countLabel"></small>
+      <div style="display:flex;gap:8px">
+        <button class="ghost" id="refreshBtn" type="button">↻ Rafraîchir</button>
+        <button class="ghost" id="logoutBtn" type="button">Déconnexion</button>
+      </div>
+    </div>
+
+    <div class="status" id="status"></div>
+    <div id="list"></div>
+  </div>
+
+  <script type="module">
+    import { ENDPOINTS } from './scripts/config.js';
+
+    const TOKEN_KEY = 'sl_admin_token';
+    const $ = (id) => document.getElementById(id);
+
+    const tokenBox = $('tokenBox');
+    const toolbar = $('toolbar');
+    const tokenInput = $('tokenInput');
+    const connectBtn = $('connectBtn');
+    const refreshBtn = $('refreshBtn');
+    const logoutBtn = $('logoutBtn');
+    const countLabel = $('countLabel');
+    const statusEl = $('status');
+    const listEl = $('list');
+
+    const getToken = () => sessionStorage.getItem(TOKEN_KEY) || '';
+
+    function setStatus(msg, kind = '') {
+      statusEl.textContent = msg || '';
+      statusEl.className = 'status' + (kind ? ' ' + kind : '');
+    }
+
+    function starString(n) {
+      const rating = Math.max(0, Math.min(5, Number(n) || 0));
+      return '★'.repeat(rating) + '☆'.repeat(5 - rating);
+    }
+
+    function escapeHtml(str) {
+      const div = document.createElement('div');
+      div.textContent = String(str ?? '');
+      return div.innerHTML;
+    }
+
+    function formatDate(iso) {
+      if (!iso) return '';
+      // SQLite stocke généralement en "YYYY-MM-DD HH:MM:SS" sans timezone ;
+      // on assume UTC pour l'affichage local.
+      const s = String(iso).includes('T') ? iso : String(iso).replace(' ', 'T') + 'Z';
+      const d = new Date(s);
+      return isNaN(d) ? String(iso) : d.toLocaleString('fr-FR');
+    }
+
+    function showConnectedState(connected) {
+      tokenBox.classList.toggle('hidden', connected);
+      toolbar.classList.toggle('hidden', !connected);
+    }
+
+    async function loadPending() {
+      const token = getToken();
+      if (!token) {
+        showConnectedState(false);
+        setStatus('Entre le jeton admin pour voir les avis en attente.');
+        return;
+      }
+
+      showConnectedState(true);
+      setStatus('Chargement…');
+      listEl.innerHTML = '';
+
+      let res;
+      try {
+        res = await fetch(ENDPOINTS.reviewsPending, {
+          headers: { 'X-Admin-Token': token },
+        });
+      } catch {
+        setStatus('Erreur réseau.', 'err');
+        return;
+      }
+
+      if (res.status === 401) {
+        sessionStorage.removeItem(TOKEN_KEY);
+        showConnectedState(false);
+        setStatus('Jeton invalide.', 'err');
+        return;
+      }
+
+      if (!res.ok) {
+        setStatus(`Erreur serveur (${res.status}).`, 'err');
+        return;
+      }
+
+      const data = await res.json().catch(() => ({}));
+      const reviews = Array.isArray(data.reviews) ? data.reviews : [];
+      setStatus('');
+      renderList(reviews);
+    }
+
+    function renderList(reviews) {
+      countLabel.textContent = reviews.length
+        ? `${reviews.length} avis en attente`
+        : '';
+
+      if (reviews.length === 0) {
+        listEl.innerHTML = '<div class="empty">Aucun avis en attente.</div>';
+        return;
+      }
+
+      listEl.innerHTML = reviews.map((r) => {
+        const commentHtml = r.comment
+          ? `<div class="comment">${escapeHtml(r.comment)}</div>`
+          : `<div class="comment empty-comment">(pas de commentaire)</div>`;
+
+        return `
+          <div class="card" data-id="${escapeHtml(r.id)}">
+            <div class="stars">${starString(r.rating)}</div>
+            ${commentHtml}
+            <div class="meta">${escapeHtml(formatDate(r.created_at))}</div>
+            <div class="actions">
+              <button class="approve" data-action="approve" data-id="${escapeHtml(r.id)}">✓ Approuver</button>
+              <button class="reject"  data-action="reject"  data-id="${escapeHtml(r.id)}">✕ Rejeter</button>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    async function moderate(id, action) {
+      const token = getToken();
+      if (!token) return;
+
+      const card = listEl.querySelector(`.card[data-id="${CSS.escape(String(id))}"]`);
+      const buttons = card ? card.querySelectorAll('button') : [];
+      buttons.forEach((b) => (b.disabled = true));
+
+      let res;
+      try {
+        res = await fetch(ENDPOINTS.reviews(id, action), {
+          method: 'POST',
+          headers: { 'X-Admin-Token': token },
+        });
+      } catch {
+        setStatus('Erreur réseau.', 'err');
+        buttons.forEach((b) => (b.disabled = false));
+        return;
+      }
+
+      if (res.status === 401) {
+        sessionStorage.removeItem(TOKEN_KEY);
+        showConnectedState(false);
+        setStatus('Jeton invalide.', 'err');
+        return;
+      }
+      if (!res.ok) {
+        setStatus('Erreur lors de la modération.', 'err');
+        buttons.forEach((b) => (b.disabled = false));
+        return;
+      }
+
+      // Retire la carte et met à jour le compteur
+      card?.remove();
+      const remaining = listEl.querySelectorAll('.card').length;
+      countLabel.textContent = remaining ? `${remaining} avis en attente` : '';
+      if (remaining === 0) {
+        listEl.innerHTML = '<div class="empty">Aucun avis en attente.</div>';
+      }
+      setStatus(action === 'approve' ? 'Avis approuvé.' : 'Avis rejeté.', 'ok');
+      setTimeout(() => setStatus(''), 2500);
+    }
+
+    /* ─── Événements ─────────────────────────────────────────────── */
+
+    connectBtn.addEventListener('click', () => {
+      const val = tokenInput.value.trim();
+      if (!val) return;
+      sessionStorage.setItem(TOKEN_KEY, val);
+      tokenInput.value = '';
+      loadPending();
+    });
+
+    tokenInput.addEventListener('keypress', (e) => {
+      if (e.key === 'Enter') connectBtn.click();
+    });
+
+    refreshBtn.addEventListener('click', loadPending);
+
+    logoutBtn.addEventListener('click', () => {
+      sessionStorage.removeItem(TOKEN_KEY);
+      showConnectedState(false);
+      setStatus('');
+      listEl.innerHTML = '';
+      countLabel.textContent = '';
+      tokenInput.focus();
+    });
+
+    // Event delegation : un seul listener gère tous les boutons approve/reject
+    // générés dynamiquement (les onclick inline ne fonctionnent pas dans un module ES).
+    listEl.addEventListener('click', (e) => {
+      const btn = e.target.closest('button[data-action]');
+      if (!btn) return;
+      moderate(btn.dataset.id, btn.dataset.action);
+    });
+
+    /* ─── Init ───────────────────────────────────────────────────── */
+
+    if (getToken()) {
+      loadPending();
+    } else {
+      showConnectedState(false);
+      tokenInput.focus();
+    }
+  </script>
+</body>
+
+</html>

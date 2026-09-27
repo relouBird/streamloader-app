@@ -15,6 +15,7 @@ import { initDownloadEvents } from './download.js';
 import { initPaymentEvents, handlePaymentReturn, initGeoCurrency } from './payment.js';
 import { initScrollReveal, initParallax } from './app.js';
 import { updateAdVisibility } from './ads.js';
+import { initApiKeyEvents } from './apikey.js';
 
 async function init() {
   // 1. Réglages d'affichage indépendants du réseau
@@ -29,6 +30,7 @@ async function init() {
   initMediaEvents();
   initDownloadEvents();
   initPaymentEvents();
+  initApiKeyEvents();
 
   // 3. Géo-détection (devise Premium), puis session utilisateur et
   //    dépendances qui en découlent

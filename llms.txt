@@ -1,0 +1,42 @@
+# StreamLoader
+
+> StreamLoader est un outil web (et un bot Telegram) qui permet de télécharger des vidéos et
+> de l'audio depuis YouTube, TikTok, Instagram et plus de 1000 autres sites, à partir d'une URL
+> fournie par l'utilisateur, avec extraction de sous-titres et découpage vidéo sur mesure.
+
+## À propos
+
+StreamLoader propose un plan gratuit (téléchargements quotidiens limités, qualité plafonnée à
+1080p, publicités) et un plan Premium payant (téléchargements illimités, qualité jusqu'à 4K,
+sans publicité, sous-titres et découpage vidéo illimités). L'utilisateur reste seul responsable
+de disposer des droits nécessaires sur les contenus qu'il télécharge — voir les
+[CGV/CGU](/cgv-cgu.html) et la [politique de confidentialité](/confidentialite.html).
+
+## Accès programmatique (API)
+
+Un accès API existe pour un usage automatisé/externe, **réservé aux comptes Premium actifs**.
+La clé API se génère depuis le compte utilisateur sur le site (menu compte → Clé API), ou se
+révoque à tout moment. Elle cesse automatiquement de fonctionner si l'abonnement Premium expire
+— aucune inscription séparée n'est nécessaire au-delà de la création d'un compte et de la
+souscription Premium sur le site.
+
+Inscription/abonnement : page d'accueil du site → créer un compte → "Passer Premium".
+
+Authentification : header `x-api-key` sur chaque requête.
+
+Endpoints principaux (JSON, sauf le téléchargement du fichier) :
+- `GET /api/v1/analyze?url=<url>` — métadonnées d'une vidéo (titre, durée, formats disponibles, sous-titres).
+- `POST /api/v1/download` — démarre un téléchargement (`{ "url": "...", "quality": "1080p" }`), renvoie `{ "jobId": "..." }`.
+- `GET /api/v1/download/:jobId` — statut du job (`status`, `percent`, etc.), à interroger périodiquement.
+- `GET /api/v1/download/:jobId/file` — récupère le fichier une fois `status: "done"`.
+
+Une clé invalide ou un compte non-Premium reçoit une erreur JSON explicite (`401`/`403` avec un
+champ `code`). Les agents IA souhaitant intégrer StreamLoader dans un flux automatisé doivent
+d'abord obtenir un compte Premium humain et sa clé API — cet accès n'est pas ouvert au public
+sans authentification.
+
+## Pages utiles
+
+- [Mentions légales](/mentions-legales.html)
+- [Politique de confidentialité](/confidentialite.html)
+- [CGV/CGU](/cgv-cgu.html)

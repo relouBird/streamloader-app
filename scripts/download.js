@@ -217,7 +217,70 @@ function triggerFileDownload(jobId, title, ext) {
   document.body.removeChild(a);
 }
 
+/* ─── Simulation de téléchargement (dev uniquement) ─────────────── */
+
+function simulateDownload() {
+  if (!state.currentInfo) {
+    showStatus("Analysez d'abord une URL pour pouvoir simuler.", "info");
+    return;
+  }
+
+  const pw = el("progressWrap");
+  const fill = el("progressFill");
+  const pct = el("progressPct");
+  const lbl = el("progressLbl");
+  const total = el("progressTotal");
+  const speed = el("progressSpeed");
+  const eta = el("progressEta");
+  const dlBtn = el("dlBtn");
+  const simBtn = el("simBtn");
+
+  pw?.classList.add("show");
+  if (fill) {
+    fill.style.width = "0%";
+    fill.style.background = "var(--accent)";
+  }
+  if (pct) pct.textContent = "0%";
+  if (lbl) lbl.textContent = "Simulation de téléchargement…";
+  if (total) total.textContent = "📦 123.45 MiB";
+  if (speed) speed.textContent = "";
+  if (eta) eta.textContent = "";
+  if (dlBtn) dlBtn.disabled = true;
+  if (simBtn) simBtn.disabled = true;
+
+  let progress = 0;
+  const interval = setInterval(() => {
+    progress += Math.random() * 5 + 2;
+    if (progress >= 100) {
+      progress = 100;
+      clearInterval(interval);
+
+      if (fill) {
+        fill.style.width = "100%";
+        fill.style.background = "var(--success)";
+      }
+      if (pct) pct.textContent = "100%";
+      if (lbl) lbl.textContent = "✅ Simulation terminée.";
+      if (speed) speed.textContent = "";
+      if (eta) eta.textContent = "";
+
+      setTimeout(() => {
+        if (dlBtn) dlBtn.disabled = false;
+        if (simBtn) simBtn.disabled = false;
+      }, 2000);
+    } else {
+      if (fill) fill.style.width = progress + "%";
+      if (pct) pct.textContent = progress.toFixed(1) + "%";
+      if (speed)
+        speed.textContent = `⚡ ${(Math.random() * 3 + 2).toFixed(2)} MiB/s`;
+      if (eta)
+        eta.textContent = `⏱ ETA 00:${String(Math.floor((100 - progress) / 4)).padStart(2, "0")}`;
+    }
+  }, 300);
+}
+
 /** Câble le bouton de téléchargement. */
 export function initDownloadEvents() {
   el("dlBtn")?.addEventListener("click", startDownloadFromButton);
+  el("simBtn")?.addEventListener("click", simulateDownload);
 }

@@ -20,6 +20,14 @@ export const ENDPOINTS = {
 
   paymentInitiate: `${API_BASE}/payment/initiate`,
   paymentStatus: (txId) => `${API_BASE}/payment/status/${txId}`,
+  reviews: (id, action) => `${API_BASE}/admin/reviews/${id}/${action}`,
+  reviewsPending: `${API_BASE}/admin/reviews/pending`,
+
+  // Compte utilisateur
+  accountApiKey: `${API_BASE}/account/api-key`,
+
+  // Bannières publicitaires servies par le backend (fichiers ads/*.html côté serveur)
+  adsBanners: `${API_BASE}/ads/banners`,
 };
 
 // Clés de stockage local (regroupées ici pour éviter les typos éparpillées)
