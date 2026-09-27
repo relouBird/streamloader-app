@@ -18,6 +18,8 @@ const TR = {
       "YouTube, TikTok, Instagram, Twitter, Facebook — colle le lien, choisis le format, c'est prêt.",
     "hero.placeholder": "Colle l'URL ici — YouTube, TikTok, Instagram…",
     "hero.analyze": "Analyser",
+    "hero.disclaimer":
+      "StreamLoader est un outil technique. Vous êtes responsable de disposer des droits nécessaires sur les médias téléchargés.",
     "hero.supports": "Compatible :",
     "hero.more": "+1000 autres",
     "card.format": "Format",
@@ -156,6 +158,8 @@ const TR = {
       "YouTube, TikTok, Instagram, Twitter, Facebook — paste the link, pick the format, done.",
     "hero.placeholder": "Paste URL here — YouTube, TikTok, Instagram…",
     "hero.analyze": "Analyze",
+    "hero.disclaimer":
+      "StreamLoader is a technical tool. You are responsible for possessing the necessary rights to the downloaded media.",
     "hero.supports": "Works with:",
     "hero.more": "+1000 more",
     "card.format": "Format",
@@ -293,6 +297,8 @@ const TR = {
       "YouTube, TikTok, Instagram, Twitter, Facebook — pega el enlace, elige el formato, listo.",
     "hero.placeholder": "Pega la URL aquí — YouTube, TikTok, Instagram…",
     "hero.analyze": "Analizar",
+    "hero.disclaimer":
+      "StreamLoader es una herramienta técnica. Usted es responsable de asegurarse de tener los derechos necesarios sobre el contenido multimedia descargado.",
     "hero.supports": "Compatible con:",
     "hero.more": "+1000 más",
     "card.format": "Formato",
@@ -430,6 +436,8 @@ const TR = {
       "YouTube, TikTok, Instagram, Twitter, Facebook — cole o link, escolha o formato, pronto.",
     "hero.placeholder": "Cole a URL aqui — YouTube, TikTok, Instagram…",
     "hero.analyze": "Analisar",
+    "hero.disclaimer":
+      "O StreamLoader é uma ferramenta técnica. É da sua responsabilidade garantir que possui os direitos necessários para aceder aos meios descarregados.",
     "hero.supports": "Compatível com:",
     "hero.more": "+1000 outros",
     "card.format": "Formato",
@@ -504,7 +512,8 @@ const TR = {
     "foot.terms": "Termos",
     "foot.faq": "FAQ",
     "foot.contact": "Contato",
-    "foot.copy": "© 2026 StreamLoader · Desenvolvido por GOD D_PACHA & RelouBird",
+    "foot.copy":
+      "© 2026 StreamLoader · Desenvolvido por GOD D_PACHA & RelouBird",
     "auth.title": "Bem-vindo",
     "auth.sub": "Faça login ou crie uma conta.",
     "auth.login": "Entrar",
@@ -567,6 +576,8 @@ const TR = {
       "يوتيوب، تيك توك، إنستغرام، تويتر، فيسبوك — الصق الرابط، اختر الصيغة، انتهيت.",
     "hero.placeholder": "الصق الرابط هنا — يوتيوب، تيك توك، إنستغرام…",
     "hero.analyze": "تحليل",
+    "hero.disclaimer":
+      "StreamLoader أداة تقنية. أنت مسؤول عن التأكد من امتلاكك الحقوق اللازمة للوسائط التي تم تنزيلها.",
     "hero.supports": "متوافق مع:",
     "hero.more": "+1000 موقع",
     "card.format": "الصيغة",

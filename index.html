@@ -128,7 +128,7 @@
       }
     ]
   }
-  </script>
+    </script>
 
     <!-- ===== PERFORMANCE ===== -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -137,6 +137,21 @@
         rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./style-float.css">
+
+    <!-- DNS prefetch : domaines sollicités par le JS (drapeaux + géo-détection) -->
+    <link rel="dns-prefetch" href="//flagcdn.com">
+    <link rel="dns-prefetch" href="//ipapi.co">
+
+    <!-- Pour charger le Manifest PWA -->
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#13132A" media="(prefers-color-scheme: dark)">
+    <meta name="theme-color" content="#FAFAFA" media="(prefers-color-scheme: light)">
+
+    <!-- iOS : support PWA partiel, mais ces balises améliorent l'expérience -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="StreamLoader">
+    <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png">
 </head>
 
 <body>
@@ -283,12 +298,12 @@
                     </svg>
                     <span data-i18n="hero.analyze">Analyser</span>
                 </button>
-
-                <p class="url-disclaimer" data-i18n="hero.disclaimer">
-                    StreamLoader est un outil technique. Vous êtes responsable de disposer
-                    des droits nécessaires sur les médias téléchargés.
-                </p>
             </div>
+
+            <p class="url-disclaimer" data-i18n="hero.disclaimer">
+                StreamLoader est un outil technique. Vous êtes responsable de disposer
+                des droits nécessaires sur les médias téléchargés.
+            </p>
 
             <div id="ad-slot-hero" class="ad-slot ad-slot-hero" role="complementary" aria-label="Publicité">
                 <div class="ad-slot-inner"></div>
@@ -973,7 +988,7 @@
                             style="width:100%;padding:7px;font-size:11px">Copier</button>
                     </div>
                 </div>
-                
+
                 <button class="btn-submit" id="profUpgradeBtn" style="margin-bottom:10px;display:none">
                     ⚡ <span data-i18n="prof.upgrade">Passer Premium</span>
                 </button>
@@ -985,6 +1000,37 @@
     </div>
 
     <script type="module" src="./scripts/main.js"></script>
+
+    <!-- PWA : banner d'installation (Android/Chrome) -->
+    <div class="pwa-banner" id="pwaInstallBanner">
+        <img src="/icons/icon-192.png" alt="" class="pwa-banner-icon">
+        <div class="pwa-banner-text">
+            <strong>Installer StreamLoader</strong>
+            <span>Accès direct depuis ton écran d'accueil</span>
+        </div>
+        <button class="pwa-btn-install" id="pwaInstallBtn">Installer</button>
+        <button class="pwa-btn-close" id="pwaLaterBtn" aria-label="Fermer">✕</button>
+    </div>
+
+    <!-- PWA : notice manuelle iOS -->
+    <div class="pwa-modal" id="pwaIosModal">
+        <div class="pwa-modal-card">
+            <img src="/icons/apple-touch-icon.png" alt="" class="pwa-ios-icon">
+            <h3>Installer StreamLoader</h3>
+            <p>Sur iPhone/iPad :</p>
+            <ol>
+                <li>Appuie sur <strong>Partager</strong> <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2">
+                        <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8" />
+                        <polyline points="16 6 12 2 8 6" />
+                        <line x1="12" y1="2" x2="12" y2="15" />
+                    </svg> en bas de Safari</li>
+                <li>Choisis <strong>« Sur l'écran d'accueil »</strong></li>
+                <li>Appuie sur <strong>Ajouter</strong></li>
+            </ol>
+            <button class="pwa-btn-close-ios" id="pwaIosClose">J'ai compris</button>
+        </div>
+    </div>
 </body>
 
 </html>

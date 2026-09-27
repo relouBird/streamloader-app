@@ -6,16 +6,21 @@
 // d'état entre modules passe exclusivement par state.js.
 // ─────────────────────────────────────────────────────────────────
 
-import { initI18n } from './i18n.js';
-import { initTheme } from './theme.js';
-import { initModalEvents } from './modal.js';
-import { initAuthEvents, loadUser } from './auth.js';
-import { initMediaEvents } from './media.js';
-import { initDownloadEvents } from './download.js';
-import { initPaymentEvents, handlePaymentReturn, initGeoCurrency } from './payment.js';
-import { initScrollReveal, initParallax } from './app.js';
-import { updateAdVisibility } from './ads.js';
-import { initApiKeyEvents } from './apikey.js';
+import { initI18n } from "./i18n.js";
+import { initTheme } from "./theme.js";
+import { initModalEvents } from "./modal.js";
+import { initAuthEvents, loadUser } from "./auth.js";
+import { initMediaEvents } from "./media.js";
+import { initDownloadEvents } from "./download.js";
+import {
+  initPaymentEvents,
+  handlePaymentReturn,
+  initGeoCurrency,
+} from "./payment.js";
+import { initScrollReveal, initParallax } from "./app.js";
+import { updateAdVisibility } from "./ads.js";
+import { initApiKeyEvents } from "./apikey.js";
+import { initPWA } from "./pwa.js";
 
 async function init() {
   // 1. Réglages d'affichage indépendants du réseau
@@ -40,6 +45,9 @@ async function init() {
 
   // 4. Retour éventuel d'un paiement Premium (?premium=success)
   await handlePaymentReturn();
+
+  // PWA : enregistrement du SW + UI d'installation
+  initPWA();
 }
 
 init();

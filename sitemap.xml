@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
+  <!-- Page d'accueil -->
   <url>
     <loc>https://streamloader.xyz/</loc>
-    <lastmod>2026-07-28</lastmod>
+    <lastmod>2026-09-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://streamloader.xyz/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://streamloader.xyz/" />
   </url>
 
   <url>
@@ -30,4 +31,27 @@
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
+
+  <!-- Pages légales (contenu utile, signal de transparence E-E-A-T) -->
+  <url>
+    <loc>https://streamloader.xyz/mentions-legales.html</loc>
+    <lastmod>2026-09-20</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://streamloader.xyz/confidentialite.html</loc>
+    <lastmod>2026-09-20</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://streamloader.xyz/cgv-cgu.html</loc>
+    <lastmod>2026-09-20</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
 </urlset>
