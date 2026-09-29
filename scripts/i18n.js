@@ -15,8 +15,8 @@ const TR = {
     "hero.line1": "Télécharge des vidéos",
     "hero.line2": "sans limite.",
     "hero.sub":
-      "YouTube, TikTok, Instagram, Twitter, Facebook — colle le lien, choisis le format, c'est prêt.",
-    "hero.placeholder": "Colle l'URL ici — YouTube, TikTok, Instagram…",
+      "YouTube, TikTok, Instagram, Twitter, Facebook. Colle le lien, choisis le format, c'est prêt.",
+    "hero.placeholder": "Colle l'URL ici: YouTube, TikTok, Instagram…",
     "hero.analyze": "Analyser",
     "hero.disclaimer":
       "StreamLoader est un outil technique. Vous êtes responsable de disposer des droits nécessaires sur les médias téléchargés.",
@@ -155,8 +155,8 @@ const TR = {
     "hero.line1": "Download videos",
     "hero.line2": "without limits.",
     "hero.sub":
-      "YouTube, TikTok, Instagram, Twitter, Facebook — paste the link, pick the format, done.",
-    "hero.placeholder": "Paste URL here — YouTube, TikTok, Instagram…",
+      "YouTube, TikTok, Instagram, Twitter, Facebook. Paste the link, pick the format, done.",
+    "hero.placeholder": "Paste URL here: YouTube, TikTok, Instagram…",
     "hero.analyze": "Analyze",
     "hero.disclaimer":
       "StreamLoader is a technical tool. You are responsible for possessing the necessary rights to the downloaded media.",
@@ -294,8 +294,8 @@ const TR = {
     "hero.line1": "Descarga vídeos",
     "hero.line2": "sin límites.",
     "hero.sub":
-      "YouTube, TikTok, Instagram, Twitter, Facebook — pega el enlace, elige el formato, listo.",
-    "hero.placeholder": "Pega la URL aquí — YouTube, TikTok, Instagram…",
+      "YouTube, TikTok, Instagram, Twitter, Facebook. Pega el enlace, elige el formato, listo.",
+    "hero.placeholder": "Pega la URL aquí: YouTube, TikTok, Instagram…",
     "hero.analyze": "Analizar",
     "hero.disclaimer":
       "StreamLoader es una herramienta técnica. Usted es responsable de asegurarse de tener los derechos necesarios sobre el contenido multimedia descargado.",
@@ -433,8 +433,8 @@ const TR = {
     "hero.line1": "Baixe vídeos",
     "hero.line2": "sem limites.",
     "hero.sub":
-      "YouTube, TikTok, Instagram, Twitter, Facebook — cole o link, escolha o formato, pronto.",
-    "hero.placeholder": "Cole a URL aqui — YouTube, TikTok, Instagram…",
+      "YouTube, TikTok, Instagram, Twitter, Facebook. Cole o link, escolha o formato, pronto.",
+    "hero.placeholder": "Cole a URL aqui: YouTube, TikTok, Instagram…",
     "hero.analyze": "Analisar",
     "hero.disclaimer":
       "O StreamLoader é uma ferramenta técnica. É da sua responsabilidade garantir que possui os direitos necessários para aceder aos meios descarregados.",
