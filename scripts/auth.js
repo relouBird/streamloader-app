@@ -44,7 +44,15 @@ export async function updateNavUser() {
 
 /** Recharge le profil utilisateur depuis le token stocké (à appeler au démarrage). */
 export async function loadUser() {
-  if (!state.token) return;
+  // Cas 1 : pas de token → visiteur anonyme.
+  // On passe quand même par updateNavUser() pour appliquer la politique pub
+  // (anon = gratuit = pubs ON) et mettre à jour la nav (CTA visible).
+  if (!state.token) {
+    await updateNavUser();
+    return;
+  }
+
+  // Cas 2 : token présent → on tente de récupérer le profil.
   try {
     const r = await fetch(ENDPOINTS.authMe, {
       headers: { Authorization: "Bearer " + state.token },

@@ -111,6 +111,7 @@ async function unregisterSW() {
  * @param {boolean} isPremium
  */
 export async function applyAdPolicy(isPremium) {
+  console.log("[pwa] applyAdPolicy appelée, isPremium =", isPremium); // ← AJOUTE ÇA
   if (isPremium) {
     removeMonetagTags();
     await unregisterSW();
