@@ -25,9 +25,6 @@ export const ENDPOINTS = {
 
   // Compte utilisateur
   accountApiKey: `${API_BASE}/account/api-key`,
-
-  // Bannières publicitaires servies par le backend (fichiers ads/*.html côté serveur)
-  adsBanners: `${API_BASE}/ads/banners`,
 };
 
 // Clés de stockage local (regroupées ici pour éviter les typos éparpillées)

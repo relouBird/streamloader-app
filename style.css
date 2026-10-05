@@ -1644,50 +1644,7 @@ footer {
 }
 
 /* ─── Publicités — ad-slot ─────────────────────────────────────── */
-.ad-slot {
-  display: none;
-  width: 100%;
-  min-height: 0;
-  overflow: hidden;
-  border-radius: var(--r-md);
-  background: var(--bg-2);
-  border: 1px dashed var(--border-2);
-  position: relative;
-  transition:
-    opacity 0.3s ease,
-    min-height 0.3s ease;
-}
-.ad-slot.ad-loaded {
-  min-height: 90px;
-  opacity: 1;
-}
-.ad-slot::before {
-  content: "Pub";
-  position: absolute;
-  top: 5px;
-  right: 8px;
-  font-size: 9px;
-  font-weight: 600;
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
-  color: var(--text-muted);
-  z-index: 1;
-  pointer-events: none;
-}
-.ad-slot-hero {
-  max-width: 580px;
-  margin: 14px auto 0;
-}
-.ad-slot-card {
-  margin: 14px 0 0;
-}
-.ad-slot-inner {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 90px;
-  padding: 12px;
-}
+
 
 /* ─── Animation Orbite (Constellation) ───────────────────────── */
 .constellation-wrap {
@@ -2385,43 +2342,6 @@ footer {
 }
 
 /* ─── Bannière publicitaire (contenu injecté par ads.js) ──────────── */
-.ad-banner {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 14px;
-  padding: 13px 16px;
-  border: 1px solid var(--border-2);
-  border-radius: var(--r-md);
-  background: linear-gradient(135deg, var(--bg-3), var(--surface));
-  color: var(--text);
-  text-decoration: none;
-}
-.ad-banner-copy {
-  min-width: 0;
-  text-align: left;
-}
-.ad-banner-title {
-  display: block;
-  font-size: 12px;
-  font-weight: 800;
-}
-.ad-banner-text {
-  display: block;
-  margin-top: 2px;
-  font-size: 11px;
-  color: var(--text-dim);
-}
-.ad-banner-cta {
-  flex-shrink: 0;
-  padding: 7px 11px;
-  border-radius: 100px;
-  background: var(--accent);
-  color: #fff;
-  font-size: 11px;
-  font-weight: 700;
-}
 
 
 /* ─── Disclaimer sous la barre d'URL (réintroduit) ─────────────────── */

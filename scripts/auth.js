@@ -7,15 +7,15 @@ import { ENDPOINTS } from "./config.js";
 import { state, setToken, setCurrentUser } from "./state.js";
 import { t } from "./i18n.js";
 import { SPINNER_HTML } from "./utils.js";
-import { updateAdVisibility } from "./ads.js";
 import { openModal, closeModal, getAuthTab } from "./modal.js";
 import { updateTrimUI } from "./media.js";
+import { applyAdPolicy } from "./pwa.js";
 
 function el(id) {
   return document.getElementById(id);
 }
 
-export function updateNavUser() {
+export async function updateNavUser() {
   const cta = el("navCta");
   const chip = el("navUserChip");
 
@@ -35,7 +35,10 @@ export function updateNavUser() {
         state.currentUser.plan === "premium" ? "inline" : "none";
   }
 
-  updateAdVisibility();
+  // 2. Politique pub — APRÈS avoir connu le plan
+  const isPremium = state.currentUser?.plan === "premium";
+  await applyAdPolicy(isPremium);
+
   updateTrimUI();
 }
 
@@ -53,7 +56,7 @@ export async function loadUser() {
     }
     const d = await r.json();
     setCurrentUser(d.user);
-    updateNavUser();
+    await updateNavUser();
   } catch {
     setToken(null);
     setCurrentUser(null);
@@ -74,7 +77,7 @@ export async function reloadUser() {
     const d = await r.json();
     if (d.user) {
       setCurrentUser(d.user);
-      updateNavUser();
+      await updateNavUser();
     }
   } catch {
     // Échec silencieux : on garde la session en cours.
@@ -132,7 +135,7 @@ async function submitAuth() {
 
     setToken(d.token);
     setCurrentUser(d.user);
-    updateNavUser();
+    await updateNavUser();
 
     if (tab === "login") {
       if (okEl) {

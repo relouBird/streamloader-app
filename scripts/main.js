@@ -18,7 +18,6 @@ import {
   initGeoCurrency,
 } from "./payment.js";
 import { initScrollReveal, initParallax } from "./app.js";
-import { updateAdVisibility } from "./ads.js";
 import { initApiKeyEvents } from "./apikey.js";
 import { initPWA } from "./pwa.js";
 
@@ -41,7 +40,6 @@ async function init() {
   //    dépendances qui en découlent
   initGeoCurrency();
   await loadUser();
-  updateAdVisibility();
 
   // 4. Retour éventuel d'un paiement Premium (?premium=success)
   await handlePaymentReturn();

@@ -1,12 +1,19 @@
-// scripts/pwa.js — enregistrement du service worker + UI d'installation PWA
-// - Android/Chrome : utilise `beforeinstallprompt` (natif)
-// - iOS Safari     : ne supporte PAS cet event → on affiche une notice manuelle
-// - Desktop        : idem Android, avec un petit banner discret
+// scripts/pwa.js — SW (PWA + Monetag) + UI d'installation + politique pub
+// Un utilisateur Premium n'a : ni tags Monetag, ni Service Worker → zéro pub.
 
 const DISMISS_KEY = "sl_pwa_dismissed";
-const INSTALL_BANNER_DELAY = 3000; // ms après chargement avant de proposer l'install
+const INSTALL_BANNER_DELAY = 3000;
+
+// ── Monetag ──────────────────────────────────────────────────────
+const MONETAG_SW_PATH = "/sw.js";
+const MONETAG_TAGS = [
+  { src: "https://quge5.com/88/tag.min.js", zone: "290672" },
+  { src: "https://nap5k.com/tag.min.js", zone: "11956487" },
+];
 
 let deferredPrompt = null;
+let adTagsInjected = false;
+let swRegistered = false;
 
 function el(id) {
   return document.getElementById(id);
@@ -31,54 +38,93 @@ function wasDismissed() {
   return localStorage.getItem(DISMISS_KEY) === "1";
 }
 
-/** Affiche le banner d'installation (Android/Chrome). */
 function showInstallBanner() {
-  const banner = el("pwaInstallBanner");
-  if (!banner) return;
-  banner.classList.add("show");
+  el("pwaInstallBanner")?.classList.add("show");
 }
 
 function hideInstallBanner() {
   el("pwaInstallBanner")?.classList.remove("show");
   el("pwaIosModal")?.classList.remove("show");
 }
-
 function dismissPermanently() {
   localStorage.setItem(DISMISS_KEY, "1");
   hideInstallBanner();
 }
 
-/** Enregistre le service worker et câble l'UI d'installation. */
-export function initPWA() {
-  // 1. Enregistrement du service worker
-  if ("serviceWorker" in navigator) {
-    window.addEventListener("load", () => {
-      navigator.serviceWorker
-        .register("/sw.js", { scope: "/" })
-        .then((reg) => {
-          // Détecte les mises à jour du SW (nouvelle version en prod)
-          reg.addEventListener("updatefound", () => {
-            const nw = reg.installing;
-            nw?.addEventListener("statechange", () => {
-              if (
-                nw.state === "installed" &&
-                navigator.serviceWorker.controller
-              ) {
-                console.info(
-                  "[PWA] Nouvelle version disponible — recharge la page.",
-                );
-              }
-            });
-          });
-        })
-        .catch((err) => console.warn("[PWA] SW refusé :", err));
-    });
+// ── Tags Monetag (injection conditionnelle) ──────────────────────
+function injectMonetagTags() {
+  if (adTagsInjected) return;
+  adTagsInjected = true;
+  for (const { src, zone } of MONETAG_TAGS) {
+    if (document.querySelector(`script[src="${src}"]`)) continue;
+    const s = document.createElement("script");
+    s.src = src;
+    s.dataset.zone = zone;
+    s.async = true;
+    s.setAttribute("data-cfasync", "false");
+    document.head.appendChild(s);
   }
+}
 
-  // 2. Déjà installée ? → on n'affiche rien
+function removeMonetagTags() {
+  for (const { src } of MONETAG_TAGS) {
+    document
+      .querySelectorAll(`script[src="${src}"]`)
+      .forEach((n) => n.remove());
+  }
+  adTagsInjected = false;
+}
+
+// ── Service Worker (PWA + Monetag, même fichier) ─────────────────
+async function registerSW() {
+  if (!("serviceWorker" in navigator) || swRegistered) return;
+  try {
+    await navigator.serviceWorker.register(MONETAG_SW_PATH, { scope: "/" });
+    swRegistered = true;
+    console.log("[pwa] SW enregistré (ads actives)");
+  } catch (e) {
+    console.warn("[pwa] SW refusé :", e);
+  }
+}
+
+async function unregisterSW() {
+  if (!("serviceWorker" in navigator)) return;
+  try {
+    const regs = await navigator.serviceWorker.getRegistrations();
+    for (const reg of regs) {
+      if (reg.active?.scriptURL?.endsWith(MONETAG_SW_PATH)) {
+        await reg.unregister();
+        console.log("[pwa] SW désenregistré (ads coupées)");
+      }
+    }
+    swRegistered = false;
+    // Purge complète des caches (Monetag en pose parfois)
+    const keys = await caches.keys();
+    await Promise.all(keys.map((k) => caches.delete(k)));
+  } catch (e) {
+    console.warn("[pwa] Échec désenregistrement SW :", e);
+  }
+}
+
+/**
+ * Politique pub selon le plan. À appeler APRÈS avoir chargé state.currentUser.
+ * @param {boolean} isPremium
+ */
+export async function applyAdPolicy(isPremium) {
+  if (isPremium) {
+    removeMonetagTags();
+    await unregisterSW();
+  } else {
+    injectMonetagTags();
+    await registerSW();
+  }
+}
+
+// ── PWA UI (installation) ────────────────────────────────────────
+export function initPWA() {
+  // Le SW est géré par applyAdPolicy(), pas ici.
   if (isStandalone()) return;
 
-  // 3. iOS : pas d'event natif → notice manuelle après délai
   if (isIOS()) {
     if (!wasDismissed()) {
       setTimeout(
@@ -86,38 +132,29 @@ export function initPWA() {
         INSTALL_BANNER_DELAY,
       );
     }
-    // Câble le bouton "J'ai compris" du modal iOS
     el("pwaIosClose")?.addEventListener("click", dismissPermanently);
     return;
   }
 
-  // 4. Android/Chrome : capte beforeinstallprompt
   window.addEventListener("beforeinstallprompt", (e) => {
-    e.preventDefault(); // empêche la mini-infobar par défaut
+    e.preventDefault();
     deferredPrompt = e;
     if (!wasDismissed()) showInstallBanner();
   });
 
-  // 5. Bouton "Installer" du banner → déclenche le prompt natif
   el("pwaInstallBtn")?.addEventListener("click", async () => {
     if (!deferredPrompt) return;
     hideInstallBanner();
     deferredPrompt.prompt();
     const { outcome } = await deferredPrompt.userChoice;
-    console.info("[PWA] Choix utilisateur :", outcome);
     deferredPrompt = null;
     if (outcome === "accepted") localStorage.setItem(DISMISS_KEY, "1");
   });
 
-  // 6. Bouton "Plus tard" → ferme sans mémoriser
   el("pwaLaterBtn")?.addEventListener("click", hideInstallBanner);
-
-  // 7. Bouton "Ne plus proposer" → mémorise le refus
   el("pwaNeverBtn")?.addEventListener("click", dismissPermanently);
 
-  // 8. Install terminée → nettoyage
   window.addEventListener("appinstalled", () => {
-    console.info("[PWA] Application installée ✅");
     localStorage.setItem(DISMISS_KEY, "1");
     hideInstallBanner();
   });
