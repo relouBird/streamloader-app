@@ -22,9 +22,9 @@ const TRIM_TIME_RE = /^\d{1,2}(:\d{2}){1,2}$/;
 
 /** Ouvre l'onglet publicitaire (utilisateurs non-Premium) avant de lancer le téléchargement. */
 function startDownloadFromButton() {
-  if (state.currentUser?.plan !== "premium") {
-    window.open(ENDPOINTS.adClick, "_blank", "noopener,noreferrer");
-  }
+  // if (state.currentUser?.plan !== "premium") {
+  //   window.open(ENDPOINTS.adClick, "_blank", "noopener,noreferrer");
+  // }
   return startDownload();
 }
 
