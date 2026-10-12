@@ -1,5 +1,5 @@
 // ─────────────────────────────────────────────────────────────────
-// scripts/main.js — point d'entrée unique de StreamLoader.
+// scripts/main.js — point d'entrée unique de StreamLoaders.
 // Chaque module gère un seul aspect de l'app (langue, thème, auth,
 // modale, analyse, téléchargement, paiement, effets visuels) et
 // expose une fonction init*() appelée ici, dans l'ordre. Le partage

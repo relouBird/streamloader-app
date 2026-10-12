@@ -6,7 +6,7 @@ import { state } from "./state.js";
 
 const TR = {
   fr: {
-    brand: "StreamLoader",
+    brand: "StreamLoaders",
     "nav.features": "Fonctionnalités",
     "nav.how": "Comment ça marche",
     "nav.pricing": "Tarifs",
@@ -21,7 +21,7 @@ const TR = {
     "hero.supports": "Fonctionne avec",
     "hero.more": "et 1 000+ autres sites",
     "hero.disclaimer":
-      "StreamLoader est un outil technique. Vous êtes responsable de disposer des droits nécessaires sur les médias téléchargés.",
+      "StreamLoaders est un outil technique. Vous êtes responsable de disposer des droits nécessaires sur les médias téléchargés.",
     "card.format": "Format",
     "card.download": "Télécharger",
     "card.watch": "Regarder",
@@ -77,7 +77,7 @@ const TR = {
     "price.t1": "Gratuit au départ,",
     "price.t2": "Premium en option.",
     "price.sub":
-      "Utilise StreamLoader gratuitement aussi longtemps que tu veux. Premium retire les limites et les publicités.",
+      "Utilise StreamLoaders gratuitement aussi longtemps que tu veux. Premium retire les limites et les publicités.",
     "price.starting_from": "À partir de",
     "pf.badge": "Gratuit",
     "pf.period": "Pour toujours, sans carte bancaire",
@@ -103,7 +103,7 @@ const TR = {
     "faq.label": "Questions fréquentes",
     "faq.t1": "Une question ?",
     "faq.t2": "La réponse est sans doute ici.",
-    "faq.q1": "StreamLoader est-il gratuit ?",
+    "faq.q1": "StreamLoaders est-il gratuit ?",
     "faq.a1":
       "Oui. Sans rien payer, tu peux faire jusqu’à 30 téléchargements par jour, en qualité jusqu’à 1080p. L’abonnement Premium retire les limites, débloque la 4K et supprime les publicités.",
     "faq.q2": "Quels sites sont pris en charge ?",
@@ -111,7 +111,7 @@ const TR = {
       "YouTube, TikTok, Instagram, X (Twitter), Facebook, Vimeo et plus de 1 000 autres sites. Colle simplement le lien : la plupart des vidéos accessibles publiquement sont prises en charge.",
     "faq.q3": "Ai-je le droit de télécharger n’importe quelle vidéo ?",
     "faq.a3":
-      "StreamLoader est un outil technique, prévu pour un usage personnel. Tu restes responsable de disposer des droits nécessaires sur les contenus que tu télécharges. Le détail figure dans nos conditions d’utilisation.",
+      "StreamLoaders est un outil technique, prévu pour un usage personnel. Tu restes responsable de disposer des droits nécessaires sur les contenus que tu télécharges. Le détail figure dans nos conditions d’utilisation.",
     "faq.q4": "Mes fichiers sont-ils conservés ?",
     "faq.a4":
       "Non. Le fichier est préparé sur nos serveurs le temps du téléchargement, puis supprimé dès qu’il t’a été envoyé. S’il n’est pas récupéré, il est effacé automatiquement au bout de quelques minutes.",
@@ -131,7 +131,7 @@ const TR = {
     "foot.terms": "CGV / CGU",
     "foot.faq": "FAQ",
     "foot.contact": "Contact",
-    "foot.copy": "© 2026 StreamLoader · Propulsée par GOD D_PACHA & RelouBird",
+    "foot.copy": "© 2026 StreamLoaders · Propulsée par GOD D_PACHA & RelouBird",
     "auth.title": "Bienvenue",
     "auth.sub": "Connecte-toi ou crée un compte.",
     "auth.login": "Connexion",
@@ -181,10 +181,10 @@ const TR = {
       "Format de temps invalide. Utilise MM:SS (ex : 00:10).",
     "dl.trim_login_required":
       "Crée un compte gratuit pour utiliser le découpage vidéo sur mesure.",
-    "pwa.install_title": "Installer StreamLoader",
+    "pwa.install_title": "Installer StreamLoaders",
     "pwa.install_desc": "Accès direct depuis ton écran d'accueil",
     "pwa.install_btn": "Installer",
-    "pwa.ios_title": "Installer StreamLoader",
+    "pwa.ios_title": "Installer StreamLoaders",
     "pwa.ios_subtitle": "Sur iPhone / iPad :",
     "pwa.ios_step1":
       'Appuie sur <strong>Partager</strong> <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" style="vertical-align:middle;margin:0 3px"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg> en bas de Safari',
@@ -193,7 +193,7 @@ const TR = {
     "pwa.ios_close": "J'ai compris",
   },
   en: {
-    brand: "StreamLoader",
+    brand: "StreamLoaders",
     "nav.features": "Features",
     "nav.how": "How it works",
     "nav.pricing": "Pricing",
@@ -208,7 +208,7 @@ const TR = {
     "hero.supports": "Works with",
     "hero.more": "and 1,000+ other sites",
     "hero.disclaimer":
-      "StreamLoader is a technical tool. You are responsible for having the necessary rights to the media you download.",
+      "StreamLoaders is a technical tool. You are responsible for having the necessary rights to the media you download.",
     "card.format": "Format",
     "card.download": "Download",
     "card.watch": "Watch",
@@ -263,7 +263,7 @@ const TR = {
     "price.t1": "Free to start,",
     "price.t2": "Premium if you want.",
     "price.sub":
-      "Use StreamLoader for free for as long as you like. Premium removes the limits and the ads.",
+      "Use StreamLoaders for free for as long as you like. Premium removes the limits and the ads.",
     "price.starting_from": "Starting from",
     "pf.badge": "Free",
     "pf.period": "Forever, no card required",
@@ -289,7 +289,7 @@ const TR = {
     "faq.label": "Frequently asked questions",
     "faq.t1": "Got a question?",
     "faq.t2": "The answer is probably here.",
-    "faq.q1": "Is StreamLoader free?",
+    "faq.q1": "Is StreamLoaders free?",
     "faq.a1":
       "Yes. Without paying anything, you get up to 30 downloads per day in up to 1080p. A Premium plan removes the limits, unlocks 4K and removes ads.",
     "faq.q2": "Which sites are supported?",
@@ -297,7 +297,7 @@ const TR = {
       "YouTube, TikTok, Instagram, X (Twitter), Facebook, Vimeo and more than 1,000 other sites. Just paste the link: most publicly accessible videos are supported.",
     "faq.q3": "Am I allowed to download any video?",
     "faq.a3":
-      "StreamLoader is a technical tool intended for personal use. You remain responsible for having the necessary rights to the content you download. Details are in our terms of use.",
+      "StreamLoaders is a technical tool intended for personal use. You remain responsible for having the necessary rights to the content you download. Details are in our terms of use.",
     "faq.q4": "Are my files kept?",
     "faq.a4":
       "No. The file is prepared on our servers for the time of the download, then deleted as soon as it has been sent to you. If it is not collected, it is erased automatically after a few minutes.",
@@ -317,7 +317,7 @@ const TR = {
     "foot.terms": "Terms",
     "foot.faq": "FAQ",
     "foot.contact": "Contact",
-    "foot.copy": "© 2026 StreamLoader · Powered by GOD D_PACHA & RelouBird",
+    "foot.copy": "© 2026 StreamLoaders · Powered by GOD D_PACHA & RelouBird",
     "auth.title": "Welcome",
     "auth.sub": "Log in or create an account.",
     "auth.login": "Log in",
@@ -366,10 +366,10 @@ const TR = {
     "dl.trim_invalid_time": "Invalid time format. Use MM:SS (e.g. 00:10).",
     "dl.trim_login_required":
       "Create a free account to use custom video trimming.",
-    "pwa.install_title": "Install StreamLoader",
+    "pwa.install_title": "Install StreamLoaders",
     "pwa.install_desc": "Direct access from your home screen",
     "pwa.install_btn": "Install",
-    "pwa.ios_title": "Install StreamLoader",
+    "pwa.ios_title": "Install StreamLoaders",
     "pwa.ios_subtitle": "On iPhone / iPad:",
     "pwa.ios_step1":
       'Tap <strong>Share</strong> <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" style="vertical-align:middle;margin:0 3px"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg> at the bottom of Safari',
@@ -378,7 +378,7 @@ const TR = {
     "pwa.ios_close": "Got it",
   },
   es: {
-    brand: "StreamLoader",
+    brand: "StreamLoaders",
     "nav.features": "Funcionalidades",
     "nav.how": "Cómo funciona",
     "nav.pricing": "Precios",
@@ -393,7 +393,7 @@ const TR = {
     "hero.supports": "Compatible con",
     "hero.more": "y más de 1.000 sitios",
     "hero.disclaimer":
-      "StreamLoader es una herramienta técnica. Eres responsable de disponer de los derechos necesarios sobre los medios descargados.",
+      "StreamLoaders es una herramienta técnica. Eres responsable de disponer de los derechos necesarios sobre los medios descargados.",
     "card.format": "Formato",
     "card.download": "Descargar",
     "card.watch": "Ver",
@@ -448,7 +448,7 @@ const TR = {
     "price.t1": "Gratis para empezar,",
     "price.t2": "Premium opcional.",
     "price.sub":
-      "Usa StreamLoader gratis tanto tiempo como quieras. Premium elimina los límites y los anuncios.",
+      "Usa StreamLoaders gratis tanto tiempo como quieras. Premium elimina los límites y los anuncios.",
     "price.starting_from": "Desde",
     "pf.badge": "Gratis",
     "pf.period": "Para siempre, sin tarjeta",
@@ -474,7 +474,7 @@ const TR = {
     "faq.label": "Preguntas frecuentes",
     "faq.t1": "¿Tienes una pregunta?",
     "faq.t2": "La respuesta probablemente esté aquí.",
-    "faq.q1": "¿StreamLoader es gratis?",
+    "faq.q1": "¿StreamLoaders es gratis?",
     "faq.a1":
       "Sí. Sin pagar nada, puedes hacer hasta 30 descargas al día en calidad hasta 1080p. Un plan Premium elimina los límites, desbloquea el 4K y quita los anuncios.",
     "faq.q2": "¿Qué sitios son compatibles?",
@@ -482,7 +482,7 @@ const TR = {
       "YouTube, TikTok, Instagram, X (Twitter), Facebook, Vimeo y más de 1.000 sitios. Solo tienes que pegar el enlace: la mayoría de los vídeos públicos son compatibles.",
     "faq.q3": "¿Puedo descargar cualquier vídeo?",
     "faq.a3":
-      "StreamLoader es una herramienta técnica prevista para uso personal. Sigues siendo responsable de disponer de los derechos necesarios sobre el contenido que descargas. Los detalles están en nuestras condiciones de uso.",
+      "StreamLoaders es una herramienta técnica prevista para uso personal. Sigues siendo responsable de disponer de los derechos necesarios sobre el contenido que descargas. Los detalles están en nuestras condiciones de uso.",
     "faq.q4": "¿Se conservan mis archivos?",
     "faq.a4":
       "No. El archivo se prepara en nuestros servidores durante el tiempo de descarga, y se elimina en cuanto se te envía. Si no se recoge, se borra automáticamente al cabo de unos minutos.",
@@ -502,7 +502,7 @@ const TR = {
     "foot.terms": "Términos",
     "foot.faq": "FAQ",
     "foot.contact": "Contacto",
-    "foot.copy": "© 2026 StreamLoader · Impulsada por GOD D_PACHA & RelouBird",
+    "foot.copy": "© 2026 StreamLoaders · Impulsada por GOD D_PACHA & RelouBird",
     "auth.title": "Bienvenido",
     "auth.sub": "Inicia sesión o crea una cuenta.",
     "auth.login": "Entrar",
@@ -551,10 +551,10 @@ const TR = {
     "dl.trim_invalid_time": "Formato de hora inválido. Usa MM:SS (ej: 00:10).",
     "dl.trim_login_required":
       "Crea una cuenta gratis para usar el recorte de vídeo.",
-    "pwa.install_title": "Instalar StreamLoader",
+    "pwa.install_title": "Instalar StreamLoaders",
     "pwa.install_desc": "Acceso directo desde tu pantalla de inicio",
     "pwa.install_btn": "Instalar",
-    "pwa.ios_title": "Instalar StreamLoader",
+    "pwa.ios_title": "Instalar StreamLoaders",
     "pwa.ios_subtitle": "En iPhone / iPad:",
     "pwa.ios_step1":
       'Toca <strong>Compartir</strong> <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" style="vertical-align:middle;margin:0 3px"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg> en la parte inferior de Safari',
@@ -563,7 +563,7 @@ const TR = {
     "pwa.ios_close": "Entendido",
   },
   pt: {
-    brand: "StreamLoader",
+    brand: "StreamLoaders",
     "nav.features": "Funcionalidades",
     "nav.how": "Como funciona",
     "nav.pricing": "Preços",
@@ -578,7 +578,7 @@ const TR = {
     "hero.supports": "Compatível com",
     "hero.more": "e mais de 1.000 sites",
     "hero.disclaimer":
-      "StreamLoader é uma ferramenta técnica. Você é responsável por ter os direitos necessários sobre a mídia baixada.",
+      "StreamLoaders é uma ferramenta técnica. Você é responsável por ter os direitos necessários sobre a mídia baixada.",
     "card.format": "Formato",
     "card.download": "Baixar",
     "card.watch": "Assistir",
@@ -633,7 +633,7 @@ const TR = {
     "price.t1": "Grátis para começar,",
     "price.t2": "Premium opcional.",
     "price.sub":
-      "Use o StreamLoader de graça pelo tempo que quiser. O Premium remove os limites e os anúncios.",
+      "Use o StreamLoaders de graça pelo tempo que quiser. O Premium remove os limites e os anúncios.",
     "price.starting_from": "A partir de",
     "pf.badge": "Grátis",
     "pf.period": "Para sempre, sem cartão",
@@ -659,7 +659,7 @@ const TR = {
     "faq.label": "Perguntas frequentes",
     "faq.t1": "Tem uma pergunta?",
     "faq.t2": "A resposta provavelmente está aqui.",
-    "faq.q1": "O StreamLoader é gratuito?",
+    "faq.q1": "O StreamLoaders é gratuito?",
     "faq.a1":
       "Sim. Sem pagar nada, você pode fazer até 30 downloads por dia em qualidade até 1080p. Um plano Premium remove os limites, libera o 4K e tira os anúncios.",
     "faq.q2": "Quais sites são suportados?",
@@ -667,7 +667,7 @@ const TR = {
       "YouTube, TikTok, Instagram, X (Twitter), Facebook, Vimeo e mais de 1.000 sites. Basta colar o link: a maioria dos vídeos públicos é suportada.",
     "faq.q3": "Posso baixar qualquer vídeo?",
     "faq.a3":
-      "O StreamLoader é uma ferramenta técnica para uso pessoal. Você continua responsável por ter os direitos necessários sobre o conteúdo que baixa. Os detalhes estão nos termos de uso.",
+      "O StreamLoaders é uma ferramenta técnica para uso pessoal. Você continua responsável por ter os direitos necessários sobre o conteúdo que baixa. Os detalhes estão nos termos de uso.",
     "faq.q4": "Meus arquivos são mantidos?",
     "faq.a4":
       "Não. O arquivo é preparado nos nossos servidores durante o download e apagado assim que é enviado a você. Se não for retirado, é apagado automaticamente após alguns minutos.",
@@ -688,7 +688,7 @@ const TR = {
     "foot.faq": "FAQ",
     "foot.contact": "Contato",
     "foot.copy":
-      "© 2026 StreamLoader · Desenvolvido por GOD D_PACHA & RelouBird",
+      "© 2026 StreamLoaders · Desenvolvido por GOD D_PACHA & RelouBird",
     "auth.title": "Bem-vindo",
     "auth.sub": "Faça login ou crie uma conta.",
     "auth.login": "Entrar",
@@ -737,10 +737,10 @@ const TR = {
     "dl.trim_invalid_time": "Formato de hora inválido. Use MM:SS (ex: 00:10).",
     "dl.trim_login_required":
       "Crie uma conta gratuita para usar o corte de vídeo.",
-    "pwa.install_title": "Instalar o StreamLoader",
+    "pwa.install_title": "Instalar o StreamLoaders",
     "pwa.install_desc": "Acesso direto a partir da sua tela inicial",
     "pwa.install_btn": "Instalar",
-    "pwa.ios_title": "Instalar o StreamLoader",
+    "pwa.ios_title": "Instalar o StreamLoaders",
     "pwa.ios_subtitle": "No iPhone / iPad:",
     "pwa.ios_step1":
       'Toque em <strong>Compartilhar</strong> <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" style="vertical-align:middle;margin:0 3px"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg> na parte inferior do Safari',
@@ -749,7 +749,7 @@ const TR = {
     "pwa.ios_close": "Entendi",
   },
   ar: {
-    brand: "StreamLoader",
+    brand: "StreamLoaders",
     "nav.features": "الميزات",
     "nav.how": "كيف يعمل",
     "nav.pricing": "الأسعار",
@@ -764,7 +764,7 @@ const TR = {
     "hero.supports": "متوافق مع",
     "hero.more": "وأكثر من 1000 موقع",
     "hero.disclaimer":
-      "StreamLoader أداة تقنية. أنت المسؤول عن امتلاك الحقوق اللازمة للوسائط التي تقوم بتنزيلها.",
+      "StreamLoaders أداة تقنية. أنت المسؤول عن امتلاك الحقوق اللازمة للوسائط التي تقوم بتنزيلها.",
     "card.format": "الصيغة",
     "card.download": "تحميل",
     "card.watch": "مشاهدة",
@@ -817,7 +817,7 @@ const TR = {
     "price.t1": "مجاني في البداية،",
     "price.t2": "بريميوم اختياري.",
     "price.sub":
-      "استخدم StreamLoader مجانًا للمدة التي تريد. يزيل بريميوم الحدود والإعلانات.",
+      "استخدم StreamLoaders مجانًا للمدة التي تريد. يزيل بريميوم الحدود والإعلانات.",
     "price.starting_from": "بدءاً من",
     "pf.badge": "مجاني",
     "pf.period": "إلى الأبد، بدون بطاقة",
@@ -843,7 +843,7 @@ const TR = {
     "faq.label": "الأسئلة الشائعة",
     "faq.t1": "هل لديك سؤال؟",
     "faq.t2": "الجواب على الأرجح هنا.",
-    "faq.q1": "هل StreamLoader مجاني؟",
+    "faq.q1": "هل StreamLoaders مجاني؟",
     "faq.a1":
       "نعم. دون دفع أي شيء، يمكنك إجراء ما يصل إلى 30 تحميلًا يوميًا بجودة تصل إلى 1080p. تزيل باقة بريميوم الحدود، وتفتح 4K، وتزيل الإعلانات.",
     "faq.q2": "ما المواقع المدعومة؟",
@@ -851,10 +851,10 @@ const TR = {
       "يوتيوب، تيك توك، إنستغرام، إكس (تويتر)، فيسبوك، فيميو وأكثر من 1000 موقع آخر. الصق الرابط فقط: معظم الفيديوهات المتاحة علنًا مدعومة.",
     "faq.q3": "هل يحق لي تنزيل أي فيديو؟",
     "faq.a3":
-      "StreamLoader أداة تقنية مخصصة للاستخدام الشخصي. تظل مسؤولًا عن امتلاك الحقوق اللازمة للمحتوى الذي تنزّله. التفاصيل في شروط الاستخدام.",
+      "StreamLoaders أداة تقنية مخصصة للاستخدام الشخصي. تظل مسؤولًا عن امتلاك الحقوق اللازمة للمحتوى الذي تنزّله. التفاصيل في شروط الاستخدام.",
     "faq.q4": "هل يتم الاحتفاظ بملفاتي؟",
     "faq.a4":
-      "لا. يتم تجهيز الملف على خوادمنا خلال مدة التنزيل، ثم يُحذف بمجرد إرساله إليك. إذا لم يتم استرجاعه، يُحذف تلقائيًا بعد بضع دقائق.",
+      "لا. يتم تجهيز الملف على خوادمنا خلال مدة التنزيل، ثم يُحذف بمجرد إرساله إليك. إذا لم يتم استرجاعه， يُحذف تلقائيًا بعد بضع دقائق.",
     "faq.q5": "كيف أدفع لبريميوم؟",
     "faq.a5":
       "يمر الدفع عبر GeniusPay: المحفظة الإلكترونية (Orange Money، MTN Money، Wave) أو بطاقة بنكية. يتحول حسابك إلى بريميوم بمجرد تأكيد الدفع.",
@@ -871,7 +871,7 @@ const TR = {
     "foot.terms": "الشروط",
     "foot.faq": "الأسئلة الشائعة",
     "foot.contact": "اتصل بنا",
-    "foot.copy": "© 2026 StreamLoader · بدعم من GOD D_PACHA & RelouBird",
+    "foot.copy": "© 2026 StreamLoaders · بدعم من GOD D_PACHA & RelouBird",
     "auth.title": "مرحباً",
     "auth.sub": "سجّل الدخول أو أنشئ حساباً.",
     "auth.login": "تسجيل الدخول",
@@ -918,10 +918,10 @@ const TR = {
     "dl.premium_quality_required": "⚡ جودة 4K Ultra HD مخصصة لمشتركي بريميوم.",
     "dl.trim_invalid_time": "صيغة وقت غير صالحة. استخدم MM:SS (مثال: 00:10).",
     "dl.trim_login_required": "أنشئ حساباً مجانياً لاستخدام اقتصاص الفيديو.",
-    "pwa.install_title": "تثبيت StreamLoader",
+    "pwa.install_title": "تثبيت StreamLoaders",
     "pwa.install_desc": "وصول مباشر من الشاشة الرئيسية",
     "pwa.install_btn": "تثبيت",
-    "pwa.ios_title": "تثبيت StreamLoader",
+    "pwa.ios_title": "تثبيت StreamLoaders",
     "pwa.ios_subtitle": "على iPhone / iPad:",
     "pwa.ios_step1":
       'اضغط على <strong>مشاركة</strong> <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" style="vertical-align:middle;margin:0 3px"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg> في أسفل Safari',

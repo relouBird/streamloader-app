@@ -4,29 +4,29 @@
 
   <!-- Page d'accueil -->
   <url>
-    <loc>https://streamloader.xyz/</loc>
+    <loc>https://streamloaders.net/</loc>
     <lastmod>2026-09-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://streamloader.xyz/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://streamloaders.net/" />
   </url>
 
   <url>
-    <loc>https://streamloader.xyz/#features</loc>
+    <loc>https://streamloaders.net/#features</loc>
     <lastmod>2026-07-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://streamloader.xyz/#how</loc>
+    <loc>https://streamloaders.net/#how</loc>
     <lastmod>2026-07-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://streamloader.xyz/#pricing</loc>
+    <loc>https://streamloaders.net/#pricing</loc>
     <lastmod>2026-07-28</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
@@ -34,21 +34,21 @@
 
   <!-- Pages légales (contenu utile, signal de transparence E-E-A-T) -->
   <url>
-    <loc>https://streamloader.xyz/mentions-legales.html</loc>
+    <loc>https://streamloaders.net/mentions-legales.html</loc>
     <lastmod>2026-09-20</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
 
   <url>
-    <loc>https://streamloader.xyz/confidentialite.html</loc>
+    <loc>https://streamloaders.net/confidentialite.html</loc>
     <lastmod>2026-09-20</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
 
   <url>
-    <loc>https://streamloader.xyz/cgv-cgu.html</loc>
+    <loc>https://streamloaders.net/cgv-cgu.html</loc>
     <lastmod>2026-09-20</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>

@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap location
-Sitemap: https://streamloader.xyz/sitemap.xml
+Sitemap: https://streamloaders.net/sitemap.xml
 
 # Block admin or private paths (add yours here if needed)
 # Disallow: /admin/

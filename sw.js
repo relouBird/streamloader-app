@@ -1,4 +1,4 @@
-// sw.js — Service Worker StreamLoader
+// sw.js — Service Worker StreamLoaders
 // Stratégie :
 //   - HTML : network-first (pour propager les MAJ immédiatement)
 //   - CSS/JS/images/fonts : stale-while-revalidate (rapide, mais se met à jour)
