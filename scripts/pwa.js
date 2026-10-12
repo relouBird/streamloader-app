@@ -7,7 +7,7 @@ const INSTALL_BANNER_DELAY = 3000;
 // ── Monetag ──────────────────────────────────────────────────────
 const MONETAG_SW_PATH = "/sw.js";
 const MONETAG_TAGS = [
-  { src: "https://quge5.com/88/tag.min.js", zone: "290672" },
+  { src: "https://quge5.com/88/tag.min.js", zone: "294734" },
 ];
 
 let deferredPrompt = null;
