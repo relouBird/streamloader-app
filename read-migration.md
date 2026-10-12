@@ -94,7 +94,7 @@ Document de répartition : chaque élément **nouveau ou modifié** dans le brut
   - Bouton Instagram (`.social-icon-btn`) → `https://www.instagram.com/streamloader2026…`
   - Bouton X (`.social-icon-btn`) → `https://x.com/streamloader`
 - **Un `<style>` inline** (à déplacer vers `style.css`, voir plus bas).
-- **Modification du `foot.copy`** : « © 2026 StreamLoader · **Propulsée par GOD D_PACHA & RelouBird** ».
+- **Modification du `foot.copy`** : « © 2026 StreamLoaders · **Propulsée par GOD D_PACHA & RelouBird** ».
 
 ### 1.6 Modale — panneau Premium entièrement refondu
 
@@ -373,7 +373,7 @@ Remplace l'ancien `{ url, format, title }` par :
     <span class="ad-banner-copy">
       <span class="ad-banner-title">Découvre une offre partenaire</span>
       <span class="ad-banner-text"
-        >Soutiens StreamLoader en visitant notre partenaire.</span
+        >Soutiens StreamLoaders en visitant notre partenaire.</span
       >
     </span>
     <span class="ad-banner-cta">Voir l'offre</span>

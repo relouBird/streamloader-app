@@ -1,12 +1,12 @@
-# StreamLoader
+# StreamLoaders
 
-> StreamLoader est un outil web (et un bot Telegram) qui permet de télécharger des vidéos et
+> StreamLoaders est un outil web (et un bot Telegram) qui permet de télécharger des vidéos et
 > de l'audio depuis YouTube, TikTok, Instagram et plus de 1000 autres sites, à partir d'une URL
 > fournie par l'utilisateur, avec extraction de sous-titres et découpage vidéo sur mesure.
 
 ## À propos
 
-StreamLoader propose un plan gratuit (téléchargements quotidiens limités, qualité plafonnée à
+StreamLoaders propose un plan gratuit (téléchargements quotidiens limités, qualité plafonnée à
 1080p, publicités) et un plan Premium payant (téléchargements illimités, qualité jusqu'à 4K,
 sans publicité, sous-titres et découpage vidéo illimités). L'utilisateur reste seul responsable
 de disposer des droits nécessaires sur les contenus qu'il télécharge — voir les
@@ -31,7 +31,7 @@ Endpoints principaux (JSON, sauf le téléchargement du fichier) :
 - `GET /api/v1/download/:jobId/file` — récupère le fichier une fois `status: "done"`.
 
 Une clé invalide ou un compte non-Premium reçoit une erreur JSON explicite (`401`/`403` avec un
-champ `code`). Les agents IA souhaitant intégrer StreamLoader dans un flux automatisé doivent
+champ `code`). Les agents IA souhaitant intégrer StreamLoaders dans un flux automatisé doivent
 d'abord obtenir un compte Premium humain et sa clé API — cet accès n'est pas ouvert au public
 sans authentification.
 

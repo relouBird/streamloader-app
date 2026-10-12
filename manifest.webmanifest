@@ -1,6 +1,6 @@
 {
-  "name": "StreamLoader - Téléchargeur de vidéos",
-  "short_name": "StreamLoader",
+  "name": "StreamLoaders - Téléchargeur de vidéos",
+  "short_name": "StreamLoaders",
   "description": "Télécharge des vidéos YouTube, TikTok, Instagram et 1000+ sites en un clic.",
   "start_url": "/",
   "scope": "/",
