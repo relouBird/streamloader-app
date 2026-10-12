@@ -24,17 +24,40 @@ function el(id) { return document.getElementById(id); }
 
 const PAY_ICON = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>';
 
-/** Calcule le prix affiché (montant + libellé formaté) d'un forfait dans la devise courante. */
-export function getPlanPrice(plan) {
+// Nombre de mois de chaque forfait (sert à calculer le prix au mois et l'économie).
+const PLAN_MONTHS = { monthly: 1, halfyearly: 6, yearly: 12 };
+
+// Devises à décimales (les autres sont des devises "entières" : FCFA, ₦, ₹…).
+const DECIMAL_CURRENCIES = ['USD', 'EUR', 'GBP', 'CAD', 'CHF'];
+
+/** Format local d'un montant exprimé en USD vers la devise courante. */
+function formatLocalPrice(usdAmount) {
   const currency = state.currentCurrency in LOCAL_RATES ? state.currentCurrency : 'USD';
-  const raw = PLAN_PRICES_USD[plan] * LOCAL_RATES[currency];
-  const decimalCurrency = ['USD', 'EUR', 'GBP', 'CAD', 'CHF'].includes(currency);
-  const amount = decimalCurrency ? Math.round(raw * 100) / 100 : Math.round(raw);
+  const raw = usdAmount * LOCAL_RATES[currency];
+  const isDecimal = DECIMAL_CURRENCIES.includes(currency);
+  const amount = isDecimal ? Math.round(raw * 100) / 100 : Math.round(raw);
   const formatted = new Intl.NumberFormat(state.lang === 'fr' ? 'fr-FR' : 'en-US', {
-    minimumFractionDigits: decimalCurrency ? 2 : 0,
-    maximumFractionDigits: decimalCurrency ? 2 : 0,
+    minimumFractionDigits: isDecimal ? 2 : 0,
+    maximumFractionDigits: isDecimal ? 2 : 0,
   }).format(amount);
   return { amount, formatted: `${formatted} ${CURRENCIES[currency]?.symbol || currency}` };
+}
+
+/** Calcule le prix affiché (montant + libellé formaté) d'un forfait dans la devise courante. */
+export function getPlanPrice(plan) {
+  return formatLocalPrice(PLAN_PRICES_USD[plan]);
+}
+
+/** Prix ramené au mois pour un forfait (ex : "0,83 $ / mois" pour l'annuel). */
+function getPlanPerMonth(plan) {
+  return formatLocalPrice(PLAN_PRICES_USD[plan] / PLAN_MONTHS[plan]).formatted;
+}
+
+/** Économie en % du forfait par rapport au forfait mensuel (arrondi). */
+function getPlanSavingPct(plan) {
+  if (!PLAN_PRICES_USD[plan] || !PLAN_PRICES_USD.monthly) return 0;
+  const perMonth = PLAN_PRICES_USD[plan] / PLAN_MONTHS[plan];
+  return Math.round((1 - perMonth / PLAN_PRICES_USD.monthly) * 100);
 }
 
 /** Sélectionne un forfait (mensuel/6 mois/annuel), met à jour l'UI et les prix affichés. */
@@ -157,13 +180,23 @@ export async function fetchGeoLocation() {
 
 /** Met à jour tous les prix affichés (pricing, modale, bouton, indicateur géo). */
 export function updatePricingDisplay() {
+  // 1. Prix principal de chaque forfait (carte Tarifs → [data-plan-price])
   document.querySelectorAll('[data-plan-price]').forEach((element) => {
     element.textContent = getPlanPrice(element.dataset.planPrice).formatted;
   });
 
+  // 2. Prix de départ sur la carte Premium (accueil) — toujours le mensuel
   const startingPrice = document.querySelector('.premium-starting-price');
   if (startingPrice) startingPrice.textContent = getPlanPrice('monthly').formatted;
 
+  // 3. Prix "0" de la carte Gratuite (devise locale, pas de montant)
+  const freePrice = el('homePriceFree');
+  if (freePrice) {
+    const currency = state.currentCurrency in LOCAL_RATES ? state.currentCurrency : 'USD';
+    freePrice.textContent = `0 ${CURRENCIES[currency]?.symbol || currency}`;
+  }
+
+  // 4. Modale Premium : prix principal du forfait sélectionné
   const selected = getPlanPrice(state.selectedPlan);
   const numberEnd = selected.formatted.lastIndexOf(' ');
 
@@ -177,6 +210,25 @@ export function updatePricingDisplay() {
       state.selectedPlan === 'halfyearly' ? t('prem.sub_halfyearly') :
       t('prem.sub_monthly');
   }
+
+  // 5. Sélecteur de durée : prix au mois + économie réelle de chaque forfait
+  document.querySelectorAll('[data-plan-permonth]').forEach((element) => {
+    element.textContent = getPlanPerMonth(element.dataset.planPermonth);
+  });
+  document.querySelectorAll('[data-plan-save]').forEach((element) => {
+    const pct = getPlanSavingPct(element.dataset.planSave);
+    element.textContent = pct > 0 ? `−${pct} %` : '';
+  });
+
+  // 6. Note sous le prix de la carte Tarifs : "ou X / mois sur un an (−Y %)"
+  const yearlyNote = el('homeYearlyNote');
+  if (yearlyNote) {
+    yearlyNote.textContent = t('pp.yearNote')
+      .replace('{price}', getPlanPerMonth('yearly'))
+      .replace('{pct}', getPlanSavingPct('yearly'));
+  }
+
+  // 7. Indicateur géo (drapeau + pays détecté)
   if (el('premGeoFlag')) el('premGeoFlag').innerHTML = flagImgHtml(state.currentCountryCode);
   if (el('premGeoCountry')) el('premGeoCountry').textContent = `${t('prem.detected')} ${state.currentCountryName}`;
 }
@@ -196,6 +248,17 @@ async function doPremium() {
   const btn = el('premBtn');
   const errEl = el('premErr');
   const okEl = el('premOk');
+
+  // Case CGV obligatoire (non pré-cochée) : on bloque tant qu'elle n'est pas acceptée.
+  const cgvCheck = el('premCgvCheck');
+  if (cgvCheck && !cgvCheck.checked) {
+    if (errEl) {
+      errEl.textContent = 'Tu dois accepter les CGV et CGU pour continuer.';
+      errEl.style.display = 'block';
+    }
+    cgvCheck.focus();
+    return;
+  }
 
   if (btn) { btn.disabled = true; btn.innerHTML = `${SPINNER_HTML} ${t('prem.preparing')}`; }
   if (errEl) errEl.style.display = 'none';
