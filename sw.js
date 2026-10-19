@@ -5,19 +5,10 @@
 //   - /api/* : JAMAIS caché (SSE, POST, données dynamiques)
 //   - POST/DELETE/PUT : jamais cachés
 
-// MONETAG - DATA
-
-self.options = {
-    "domain": "3nbf4.com",
-    "zoneId": 12015495
-}
-self.lary = ""
-importScripts('https://3nbf4.com/act/files/service-worker.min.js?r=sw')
-
 
 // PWA CONFIGURATION
 
-const VERSION = 'v1';
+const VERSION = 'v2';
 const STATIC_CACHE = `sl-static-${VERSION}`;
 const RUNTIME_CACHE = `sl-runtime-${VERSION}`;
 
