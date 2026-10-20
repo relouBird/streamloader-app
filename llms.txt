@@ -6,11 +6,23 @@
 
 ## À propos
 
-StreamLoaders propose un plan gratuit (téléchargements quotidiens limités, qualité plafonnée à
-1080p, publicités) et un plan Premium payant (téléchargements illimités, qualité jusqu'à 4K,
-sans publicité, sous-titres et découpage vidéo illimités). L'utilisateur reste seul responsable
-de disposer des droits nécessaires sur les contenus qu'il télécharge — voir les
-[CGV/CGU](/cgv-cgu.html) et la [politique de confidentialité](/confidentialite.html).
+StreamLoaders propose :
+
+- **Un plan gratuit** : jusqu'à 30 téléchargements par jour, qualité plafonnée à 1080p,
+  5 téléchargements avec sous-titres par jour, 3 essais de découpage vidéo. Financé par la publicité.
+- **Un plan Premium payant**, en trois formules :
+  - **1 mois** : 1,50 USD
+  - **6 mois** : 6,00 USD (économie d'environ 33 % par rapport au mensuel)
+  - **1 an** : 10,00 USD (économie d'environ 44 % par rapport au mensuel)
+
+  Le Premium donne accès aux téléchargements illimités, à la qualité jusqu'à 4K, à l'absence
+  de publicité, aux sous-titres et au découpage vidéo illimités, ainsi qu'à une clé API.
+
+Les prix sont affichés dans la devise locale de l'utilisateur (XAF, XOF, EUR, USD, NGN, GHS, etc.)
+à titre indicatif. Le paiement est traité par GeniusPay (Mobile Money ou carte bancaire).
+
+L'utilisateur reste seul responsable de disposer des droits nécessaires sur les contenus qu'il
+télécharge — voir les [CGV/CGU](/cgv-cgu.html) et la [politique de confidentialité](/confidentialite.html).
 
 ## Accès programmatique (API)
 
@@ -24,11 +36,12 @@ Inscription/abonnement : page d'accueil du site → créer un compte → "Passer
 
 Authentification : header `x-api-key` sur chaque requête.
 
-Endpoints principaux (JSON, sauf le téléchargement du fichier) :
-- `GET /api/v1/analyze?url=<url>` — métadonnées d'une vidéo (titre, durée, formats disponibles, sous-titres).
-- `POST /api/v1/download` — démarre un téléchargement (`{ "url": "...", "quality": "1080p" }`), renvoie `{ "jobId": "..." }`.
-- `GET /api/v1/download/:jobId` — statut du job (`status`, `percent`, etc.), à interroger périodiquement.
-- `GET /api/v1/download/:jobId/file` — récupère le fichier une fois `status: "done"`.
+Endpoints principaux (base : `https://back.streamloaders.net/api`) :
+
+- `GET /media/analyze?url=<url>` — métadonnées d'une vidéo (titre, durée, formats disponibles, sous-titres).
+- `POST /media/download/start` — démarre un téléchargement (`{ "url": "...", "quality": "1080p" }`), renvoie `{ "jobId": "..." }`.
+- `GET /media/progress/<jobId>` — **flux SSE** (Server-Sent Events) de progression. À consommer via `EventSource`, pas en polling. Événements : `progress`, `processing`, `done`, `error`.
+- `GET /media/file/<jobId>` — récupère le fichier une fois le job terminé (`status: "done"`). Usage unique : le fichier est supprimé après livraison.
 
 Une clé invalide ou un compte non-Premium reçoit une erreur JSON explicite (`401`/`403` avec un
 champ `code`). Les agents IA souhaitant intégrer StreamLoaders dans un flux automatisé doivent

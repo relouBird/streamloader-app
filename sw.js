@@ -8,7 +8,7 @@
 
 // PWA CONFIGURATION
 
-const VERSION = 'v2';
+const VERSION = 'v3';
 const STATIC_CACHE = `sl-static-${VERSION}`;
 const RUNTIME_CACHE = `sl-runtime-${VERSION}`;
 
@@ -17,7 +17,6 @@ const PRECACHE = [
   '/',
   '/index.html',
   '/style.css',
-  '/style-float.css',
   '/scripts/main.js',
 ];
 

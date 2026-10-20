@@ -9,6 +9,7 @@ const TR = {
     brand: "StreamLoaders",
     "nav.features": "Fonctionnalités",
     "nav.how": "Comment ça marche",
+    "nav.formats": "Formats",
     "nav.pricing": "Tarifs",
     "nav.faq": "FAQ",
     "nav.cta": "Connexion",
@@ -100,6 +101,20 @@ const TR = {
     "pp.f5": "Sous-titres illimités",
     "pp.f6": "Découpage vidéo illimité",
     "pp.btn": "Choisir un abonnement",
+    "formats.label": "Formats",
+    "formats.t1": "Choisis ta qualité,",
+    "formats.t2": "vidéo ou audio.",
+    "formats.sub":
+      "StreamLoaders s'adapte à ton usage et à ta connexion : une vidéo légère pour économiser tes données, une image nette pour ton écran, ou seulement le son.",
+    "formats.c1.t": "Vidéo MP4 de 480p à 4K",
+    "formats.c1.d":
+      "Choisis 480p pour économiser des données, 720p ou 1080p pour une image nette. La 4K est réservée aux abonnés Premium. Le fichier est en MP4, lisible sur téléphone, ordinateur et télévision.",
+    "formats.c2.t": "Audio MP3 en 320 kbps",
+    "formats.c2.d":
+      "Pour la musique, un podcast ou une conférence, télécharge uniquement le son en MP3 haute qualité, sans la vidéo.",
+    "formats.c3.t": "Plus de 1 000 sites compatibles",
+    "formats.c3.d":
+      "YouTube, TikTok, Instagram, X (Twitter), Facebook, Vimeo et bien d'autres. Si la vidéo est publique, il suffit de coller son lien.",
     "faq.label": "Questions fréquentes",
     "faq.t1": "Une question ?",
     "faq.t2": "La réponse est sans doute ici.",
@@ -121,6 +136,15 @@ const TR = {
     "faq.q6": "Le téléchargement ne démarre pas, que faire ?",
     "faq.a6":
       "Vérifie que le lien est complet et que la vidéo est publique. Aux heures de forte affluence, ton téléchargement peut patienter quelques instants en file d’attente : il démarre tout seul, garde simplement la page ouverte.",
+    "faq.q7": "Comment télécharger une vidéo YouTube en MP3 ?",
+    "faq.a7":
+      "Colle le lien de la vidéo YouTube en haut de la page, clique sur Analyser, choisis « Audio MP3 » dans la liste des formats, puis clique sur Télécharger. Le fichier est enregistré sur ton appareil.",
+    "faq.q8": "Comment télécharger une vidéo TikTok ou Instagram ?",
+    "faq.a8":
+      "Dans l'application, touche « Partager » puis « Copier le lien ». Colle ensuite ce lien sur StreamLoaders, choisis la qualité et télécharge. Seules les vidéos publiques sont prises en charge.",
+    "faq.q9": "Quelle qualité vidéo choisir ?",
+    "faq.a9":
+      "Le 1080p convient à la plupart des écrans. Le 720p et le 480p sont plus légers, pratiques avec une connexion lente. La 4K est réservée aux abonnés Premium.",
     "foot.tagline":
       "Télécharge tes vidéos et ta musique en un lien, depuis plus de 1 000 sites.",
     "foot.product": "Produit",
@@ -196,10 +220,12 @@ const TR = {
     brand: "StreamLoaders",
     "nav.features": "Features",
     "nav.how": "How it works",
+    "nav.formats": "Formats",
     "nav.pricing": "Pricing",
     "nav.faq": "FAQ",
     "nav.cta": "Log in",
-    "hero.line1": "Download your videos",
+    "hero.line1":
+      "Download your videos",
     "hero.line2": "from a single link.",
     "hero.sub":
       "Paste a link from YouTube, TikTok, Instagram, X or Facebook, pick the quality, and get your file.",
@@ -286,6 +312,20 @@ const TR = {
     "pp.f5": "Unlimited subtitles",
     "pp.f6": "Unlimited video trimming",
     "pp.btn": "Choose a plan",
+    "formats.label": "Formats",
+    "formats.t1": "Pick your quality,",
+    "formats.t2": "video or audio.",
+    "formats.sub":
+      "StreamLoaders adapts to your usage and connection: a light video to save data, a sharp image for your screen, or audio only.",
+    "formats.c1.t": "MP4 video from 480p to 4K",
+    "formats.c1.d":
+      "Choose 480p to save data, 720p or 1080p for a sharp image. 4K is reserved for Premium subscribers. Files come as MP4, playable on phone, computer and TV.",
+    "formats.c2.t": "MP3 audio at 320 kbps",
+    "formats.c2.d":
+      "For music, a podcast or a talk, download only the sound as a high-quality MP3, without the video.",
+    "formats.c3.t": "More than 1,000 supported sites",
+    "formats.c3.d":
+      "YouTube, TikTok, Instagram, X (Twitter), Facebook, Vimeo and many more. If the video is public, just paste its link.",
     "faq.label": "Frequently asked questions",
     "faq.t1": "Got a question?",
     "faq.t2": "The answer is probably here.",
@@ -307,6 +347,15 @@ const TR = {
     "faq.q6": "The download won’t start, what should I do?",
     "faq.a6":
       "Check that the link is complete and the video is public. At busy times your download may wait in a queue for a moment: it starts on its own, just keep the page open.",
+    "faq.q7": "How do I download a YouTube video as MP3?",
+    "faq.a7":
+      'Paste the YouTube video link at the top of the page, click Analyze, choose "MP3 audio" from the format list, then click Download. The file is saved to your device.',
+    "faq.q8": "How do I download a TikTok or Instagram video?",
+    "faq.a8":
+      'In the app, tap "Share" then "Copy link". Paste that link on StreamLoaders, choose the quality and download. Only public videos are supported.',
+    "faq.q9": "Which video quality should I choose?",
+    "faq.a9":
+      "1080p suits most screens. 720p and 480p are lighter, handy on a slow connection. 4K is reserved for Premium subscribers.",
     "foot.tagline":
       "Download your videos and music from a single link, from more than 1,000 sites.",
     "foot.product": "Product",
@@ -381,6 +430,7 @@ const TR = {
     brand: "StreamLoaders",
     "nav.features": "Funcionalidades",
     "nav.how": "Cómo funciona",
+    "nav.formats": "Formatos",
     "nav.pricing": "Precios",
     "nav.faq": "FAQ",
     "nav.cta": "Entrar",
@@ -471,6 +521,34 @@ const TR = {
     "pp.f5": "Subtítulos ilimitados",
     "pp.f6": "Recorte de vídeo ilimitado",
     "pp.btn": "Elegir plan",
+    "formats.label": "Formatos",
+    "formats.t1": "Elige tu calidad,",
+    "formats.t2": "vídeo o audio.",
+    "formats.sub":
+      "StreamLoaders se adapta a tu uso y conexión: un vídeo ligero para ahorrar datos, una imagen nítida para tu pantalla, o solo audio.",
+    "formats.c1.t": "Vídeo MP4 de 480p a 4K",
+    "formats.c1.d":
+      "Elige 480p para ahorrar datos, 720p o 1080p para una imagen nítida. La 4K está reservada para los suscriptores Premium. Los archivos están en MP4, reproducible en teléfono, ordenador y televisión.",
+    "formats.c2.t": "Audio MP3 a 320 kbps",
+    "formats.c2.d":
+      "Para música, un pódcast o una conferencia, descarga sólo el sonido en MP3 de alta calidad, sin el vídeo.",
+    "formats.c3.t": "Más de 1 000 sitios compatibles",
+    "formats.c3.d":
+      "YouTube, TikTok, Instagram, X (Twitter), Facebook, Vimeo y muchos otros. Si el vídeo es público, basta con pegar su enlace.",
+    "formats.label": "Formatos",
+    "formats.t1": "Elige tu calidad,",
+    "formats.t2": "vídeo o audio.",
+    "formats.sub":
+      "StreamLoaders se adapta a tu uso y conexión: un vídeo ligero para ahorrar datos, una imagen nítida para tu pantalla, o solo audio.",
+    "formats.c1.t": "Vídeo MP4 de 480p a 4K",
+    "formats.c1.d":
+      "Elige 480p para ahorrar datos, 720p o 1080p para una imagen nítida. La 4K está reservada para los suscriptores Premium. Los archivos están en MP4, reproducible en teléfono, ordenador y televisión.",
+    "formats.c2.t": "Audio MP3 a 320 kbps",
+    "formats.c2.d":
+      "Para música, un pódcast o una conferencia, descarga sólo el sonido en MP3 de alta calidad, sin el vídeo.",
+    "formats.c3.t": "Más de 1 000 sitios compatibles",
+    "formats.c3.d":
+      "YouTube, TikTok, Instagram, X (Twitter), Facebook, Vimeo y muchos otros. Si el vídeo es público, basta con pegar su enlace.",
     "faq.label": "Preguntas frecuentes",
     "faq.t1": "¿Tienes una pregunta?",
     "faq.t2": "La respuesta probablemente esté aquí.",
@@ -492,6 +570,15 @@ const TR = {
     "faq.q6": "La descarga no arranca, ¿qué hago?",
     "faq.a6":
       "Comprueba que el enlace esté completo y que el vídeo sea público. En horas punta, tu descarga puede esperar un momento en cola: arranca sola, solo mantén la página abierta.",
+    "faq.q7": "¿Cómo descargar un vídeo de YouTube en MP3?",
+    "faq.a7":
+      "Pega el enlace del vídeo de YouTube en la parte superior de la página, haz clic en Analizar, elige «Audio MP3» en la lista de formatos y luego haz clic en Descargar. El archivo se guarda en tu dispositivo.",
+    "faq.q8": "¿Cómo descargar un vídeo de TikTok o Instagram?",
+    "faq.a8":
+      "En la aplicación, toca «Compartir» y luego «Copiar enlace». Pega ese enlace en StreamLoaders, elige la calidad y descarga. Solo se admiten vídeos públicos.",
+    "faq.q9": "¿Qué calidad de vídeo debo elegir?",
+    "faq.a9":
+      "El 1080p conviene a la mayoría de las pantallas. El 720p y el 480p son más ligeros, prácticos con una conexión lenta. La 4K está reservada para los suscriptores Premium.",
     "foot.tagline":
       "Descarga tus vídeos y tu música desde un solo enlace, desde más de 1.000 sitios.",
     "foot.product": "Producto",
@@ -566,6 +653,7 @@ const TR = {
     brand: "StreamLoaders",
     "nav.features": "Funcionalidades",
     "nav.how": "Como funciona",
+    "nav.formats": "Formatos",
     "nav.pricing": "Preços",
     "nav.faq": "FAQ",
     "nav.cta": "Entrar",
@@ -656,6 +744,20 @@ const TR = {
     "pp.f5": "Legendas ilimitadas",
     "pp.f6": "Corte de vídeo ilimitado",
     "pp.btn": "Escolher um plano",
+    "formats.label": "Formatos",
+    "formats.t1": "Escolha a qualidade,",
+    "formats.t2": "vídeo ou áudio.",
+    "formats.sub":
+      "O StreamLoaders se adapta ao seu uso e conexão: vídeo leve para economizar dados, imagem nítida para sua tela, ou apenas o áudio.",
+    "formats.c1.t": "Vídeo MP4 de 480p a 4K",
+    "formats.c1.d":
+      "Escolha 480p para economizar dados, 720p ou 1080p para uma imagem nítida. A 4K é reservada para assinantes Premium. Os arquivos vêm em MP4, reproduzíveis em celular, computador e TV.",
+    "formats.c2.t": "Áudio MP3 em 320 kbps",
+    "formats.c2.d":
+      "Para música, um podcast ou uma palestra, baixe apenas o som em MP3 de alta qualidade, sem o vídeo.",
+    "formats.c3.t": "Mais de 1 000 sites compatíveis",
+    "formats.c3.d":
+      "YouTube, TikTok, Instagram, X (Twitter), Facebook, Vimeo e muitos outros. Se o vídeo for público, basta colar o link.",
     "faq.label": "Perguntas frequentes",
     "faq.t1": "Tem uma pergunta?",
     "faq.t2": "A resposta provavelmente está aqui.",
@@ -677,6 +779,15 @@ const TR = {
     "faq.q6": "O download não começa, o que faço?",
     "faq.a6":
       "Verifique se o link está completo e se o vídeo é público. Em horários de pico, seu download pode esperar um momento na fila: começa sozinho, basta manter a página aberta.",
+    "faq.q7": "Como baixar um vídeo do YouTube em MP3?",
+    "faq.a7":
+      "Cole o link do vídeo do YouTube no topo da página, clique em Analisar, escolha «Áudio MP3» na lista de formatos e clique em Baixar. O arquivo é salvo no seu dispositivo.",
+    "faq.q8": "Como baixar um vídeo do TikTok ou do Instagram?",
+    "faq.a8":
+      "No aplicativo, toque em «Compartilhar» e depois em «Copiar link». Cole esse link no StreamLoaders, escolha a qualidade e baixe. Apenas vídeos públicos são aceitos.",
+    "faq.q9": "Qual qualidade de vídeo devo escolher?",
+    "faq.a9":
+      "O 1080p atende à maioria das telas. O 720p e o 480p são mais leves, práticos com uma conexão lenta. O 4K é reservado para assinantes Premium.",
     "foot.tagline":
       "Baixe seus vídeos e músicas por um único link, de mais de 1.000 sites.",
     "foot.product": "Produto",
@@ -752,10 +863,11 @@ const TR = {
     brand: "StreamLoaders",
     "nav.features": "الميزات",
     "nav.how": "كيف يعمل",
+    "nav.formats": "الصيغ",
     "nav.pricing": "الأسعار",
     "nav.faq": "الأسئلة الشائعة",
     "nav.cta": "تسجيل الدخول",
-    "hero.line1": "حمّل مقاطع الفيديو",
+    "hero.line1": "حمّل مقاطع الفيديو الخاصة بك",
     "hero.line2": "من رابط واحد.",
     "hero.sub":
       "الصق رابط فيديو من يوتيوب أو تيك توك أو إنستغرام أو إكس أو فيسبوك، اختر الجودة، واحصل على ملفك.",
@@ -840,6 +952,20 @@ const TR = {
     "pp.f5": "ترجمة غير محدودة",
     "pp.f6": "اقتصاص فيديو غير محدود",
     "pp.btn": "اختر باقة",
+    "formats.label": "الصيغ",
+    "formats.t1": "اختر الجودة،",
+    "formats.t2": "فيديو أو صوت.",
+    "formats.sub":
+      "يتكيف StreamLoaders مع استخدامك واتصالك: فيديو خفيف لتوفير البيانات، صورة واضحة لشاشتك، أو الصوت فقط.",
+    "formats.c1.t": "فيديو MP4 من 480p إلى 4K",
+    "formats.c1.d":
+      "اختر 480p لتوفير البيانات، أو 720p أو 1080p للحصول على صورة واضحة. جودة 4K مخصصة لمشتركي بريميوم. الملف بصيغة MP4، قابل للتشغيل على الهاتف والحاسوب والتلفاز.",
+    "formats.c2.t": "صوت MP3 بجودة 320 kbps",
+    "formats.c2.d":
+      "للموسيقى أو البودكاست أو المحاضرة، حمّل الصوت فقط بصيغة MP3 عالية الجودة، دون الفيديو.",
+    "formats.c3.t": "أكثر من 1000 موقع متوافق",
+    "formats.c3.d":
+      "يوتيوب، تيك توك، إنستغرام، إكس (تويتر)، فيسبوك، فيميو وغيرها الكثير. إذا كان الفيديو عامًا، فما عليك سوى لصق رابطه.",
     "faq.label": "الأسئلة الشائعة",
     "faq.t1": "هل لديك سؤال؟",
     "faq.t2": "الجواب على الأرجح هنا.",
@@ -861,6 +987,15 @@ const TR = {
     "faq.q6": "لا يبدأ التنزيل، ماذا أفعل؟",
     "faq.a6":
       "تحقق من أن الرابط كامل وأن الفيديو عام. في أوقات الذروة، قد ينتظر تنزيلك لحظة في الطابور: يبدأ تلقائيًا، فقط أبقِ الصفحة مفتوحة.",
+    "faq.q7": "كيف أحمّل فيديو من يوتيوب بصيغة MP3؟",
+    "faq.a7":
+      "الصق رابط فيديو يوتيوب في أعلى الصفحة، اضغط على تحليل، اختر «صوت MP3» من قائمة الصيغ، ثم اضغط على تحميل. يُحفظ الملف على جهازك.",
+    "faq.q8": "كيف أحمّل فيديو من تيك توك أو إنستغرام؟",
+    "faq.a8":
+      "في التطبيق، اضغط على «مشاركة» ثم «نسخ الرابط». الصق هذا الرابط على StreamLoaders، اختر الجودة وحمّل. تُدعم الفيديوهات العامة فقط.",
+    "faq.q9": "ما جودة الفيديو التي يجب أن أختارها؟",
+    "faq.a9":
+      "جودة 1080p مناسبة لمعظم الشاشات. جودة 720p و480p أخف، وعملية مع الاتصال البطيء. جودة 4K مخصصة لمشتركي بريميوم.",
     "foot.tagline":
       "حمّل فيديوهاتك وموسيقاك من رابط واحد، من أكثر من 1000 موقع.",
     "foot.product": "المنتج",
@@ -932,10 +1067,13 @@ const TR = {
 };
 
 export const LANGS = ["fr", "en", "es", "pt", "ar"];
+const LANG_KEY = "sl-lang";
 
+/** Langue par défaut : français, sauf si l'utilisateur a explicitement choisi autre chose. */
 function detectLang() {
-  const l = (navigator.language || "fr").split("-")[0].toLowerCase();
-  return LANGS.includes(l) ? l : "fr";
+  const saved = localStorage.getItem(LANG_KEY);
+  if (saved && LANGS.includes(saved)) return saved;
+  return "fr";
 }
 
 /** Traduit une clé pour la langue courante, avec repli sur le français. */
@@ -943,13 +1081,12 @@ export function t(key) {
   return (TR[state.lang] || TR.fr)[key] || TR.fr[key] || key;
 }
 
-/** Applique les traductions à tous les éléments [data-i18n] / [data-i18n-placeholder]. */
+/** Applique les traductions à tous les éléments [data-i18n] / [data-i18n-html] / [data-i18n-placeholder]. */
 export function applyI18n() {
   document.querySelectorAll("[data-i18n]").forEach((el) => {
     const v = t(el.dataset.i18n);
     if (v) el.textContent = v;
   });
-  // Nouveau : permet du HTML inline (ex. <strong>, <svg>) dans les traductions
   document.querySelectorAll("[data-i18n-html]").forEach((el) => {
     const v = t(el.dataset.i18nHtml);
     if (v) el.innerHTML = v;
@@ -970,6 +1107,7 @@ export function initI18n() {
   const langBtn = document.getElementById("langBtn");
   langBtn?.addEventListener("click", () => {
     state.lang = LANGS[(LANGS.indexOf(state.lang) + 1) % LANGS.length];
+    localStorage.setItem(LANG_KEY, state.lang);
     applyI18n();
   });
 }

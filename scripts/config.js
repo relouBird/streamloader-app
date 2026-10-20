@@ -36,25 +36,25 @@ export const STORAGE_KEYS = {
 };
 
 // ─── Multi-devises & Géo-détection automatique (Premium) ──────────
-// Prix, symboles et drapeaux par devise supportée.
+// le prix réel est calculé à partir de PLAN_PRICES_USD × LOCAL_RATES.
 export const CURRENCIES = {
-  XAF: { symbol: "FCFA", amount: 1200, formatted: "1 200 FCFA", approx: "≈ 2€", flag: "🇨🇲", country: "Cameroun / Afrique Centrale" },
-  XOF: { symbol: "FCFA", amount: 1200, formatted: "1 200 FCFA", approx: "≈ 2€", flag: "🇨🇮", country: "Côte d'Ivoire / Afrique de l'Ouest" },
-  EUR: { symbol: "€", amount: 1.99, formatted: "1,99 €", approx: "≈ 1 200 FCFA", flag: "🇪🇺", country: "France / Europe" },
-  USD: { symbol: "$", amount: 1.99, formatted: "$1.99 USD", approx: "≈ 1 200 FCFA", flag: "🇺🇸", country: "États-Unis / International" },
-  CAD: { symbol: "$ CAD", amount: 2.99, formatted: "2,99 $ CAD", approx: "≈ 2€", flag: "🇨🇦", country: "Canada" },
-  GBP: { symbol: "£", amount: 1.99, formatted: "£1.99", approx: "≈ 2€", flag: "🇬🇧", country: "Royaume-Uni" },
-  NGN: { symbol: "₦", amount: 3000, formatted: "₦3 000", approx: "≈ 2€", flag: "🇳🇬", country: "Nigeria" },
-  GHS: { symbol: "GH₵", amount: 25, formatted: "GH₵ 25", approx: "≈ 2€", flag: "🇬🇭", country: "Ghana" },
-  CDF: { symbol: "CDF", amount: 5500, formatted: "5 500 CDF", approx: "≈ 2€", flag: "🇨🇩", country: "RD Congo" },
-  MAD: { symbol: "MAD", amount: 20, formatted: "20 MAD", approx: "≈ 2€", flag: "🇲🇦", country: "Maroc" },
-  DZD: { symbol: "DZD", amount: 290, formatted: "290 DZD", approx: "≈ 2€", flag: "🇩🇿", country: "Algérie" },
-  TND: { symbol: "TND", amount: 6.5, formatted: "6,5 TND", approx: "≈ 2€", flag: "🇹🇳", country: "Tunisie" },
-  GNF: { symbol: "GNF", amount: 17500, formatted: "17 500 GNF", approx: "≈ 2€", flag: "🇬🇳", country: "Guinée" },
-  CHF: { symbol: "CHF", amount: 2.0, formatted: "2.00 CHF", approx: "≈ 2€", flag: "🇨🇭", country: "Suisse" },
-  ZAR: { symbol: "ZAR", amount: 39, formatted: "R 39", approx: "≈ 2€", flag: "🇿🇦", country: "Afrique du Sud" },
-  BRL: { symbol: "R$", amount: 9.99, formatted: "R$ 9,99", approx: "≈ 2€", flag: "🇧🇷", country: "Brésil" },
-  INR: { symbol: "₹", amount: 179, formatted: "₹ 179", approx: "≈ 2€", flag: "🇮🇳", country: "Inde" },
+  XAF: { symbol: "FCFA", amount: 900,    formatted: "900 FCFA",     approx: "≈ 1.50€", flag: "🇨🇲", country: "Cameroun / Afrique Centrale" },
+  XOF: { symbol: "FCFA", amount: 900,    formatted: "900 FCFA",     approx: "≈ 1.50€", flag: "🇨🇮", country: "Côte d'Ivoire / Afrique de l'Ouest" },
+  EUR: { symbol: "€",    amount: 1.38,   formatted: "1,38 €",       approx: "≈ 900 FCFA", flag: "🇪🇺", country: "France / Europe" },
+  USD: { symbol: "$",    amount: 1.50,   formatted: "$1.50 USD",    approx: "≈ 900 FCFA", flag: "🇺🇸", country: "États-Unis / International" },
+  CAD: { symbol: "$ CAD", amount: 2.04,  formatted: "2,04 $ CAD",   approx: "≈ 1.50€", flag: "🇨🇦", country: "Canada" },
+  GBP: { symbol: "£",    amount: 1.19,   formatted: "£1.19",        approx: "≈ 1.50€", flag: "🇬🇧", country: "Royaume-Uni" },
+  NGN: { symbol: "₦",    amount: 2400,   formatted: "₦2 400",       approx: "≈ 1.50€", flag: "🇳🇬", country: "Nigeria" },
+  GHS: { symbol: "GH₵",  amount: 23,     formatted: "GH₵ 23",       approx: "≈ 1.50€", flag: "🇬🇭", country: "Ghana" },
+  CDF: { symbol: "CDF",  amount: 4200,   formatted: "4 200 CDF",    approx: "≈ 1.50€", flag: "🇨🇩", country: "RD Congo" },
+  MAD: { symbol: "MAD",  amount: 15,     formatted: "15 MAD",       approx: "≈ 1.50€", flag: "🇲🇦", country: "Maroc" },
+  DZD: { symbol: "DZD",  amount: 203,    formatted: "203 DZD",      approx: "≈ 1.50€", flag: "🇩🇿", country: "Algérie" },
+  TND: { symbol: "TND",  amount: 4.65,   formatted: "4,65 TND",     approx: "≈ 1.50€", flag: "🇹🇳", country: "Tunisie" },
+  GNF: { symbol: "GNF",  amount: 12900,  formatted: "12 900 GNF",   approx: "≈ 1.50€", flag: "🇬🇳", country: "Guinée" },
+  CHF: { symbol: "CHF",  amount: 1.35,   formatted: "1.35 CHF",     approx: "≈ 1.50€", flag: "🇨🇭", country: "Suisse" },
+  ZAR: { symbol: "ZAR",  amount: 27,     formatted: "R 27",         approx: "≈ 1.50€", flag: "🇿🇦", country: "Afrique du Sud" },
+  BRL: { symbol: "R$",   amount: 7.50,   formatted: "R$ 7,50",      approx: "≈ 1.50€", flag: "🇧🇷", country: "Brésil" },
+  INR: { symbol: "₹",    amount: 125,    formatted: "₹ 125",        approx: "≈ 1.50€", flag: "🇮🇳", country: "Inde" },
 };
 
 // Fuseau horaire → devise (repli quand le pays exact ne figure pas dans COUNTRY_MAP).

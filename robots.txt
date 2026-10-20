@@ -1,12 +1,4 @@
 User-agent: *
 Allow: /
 
-# Sitemap location
 Sitemap: https://streamloaders.net/sitemap.xml
-
-# Block admin or private paths (add yours here if needed)
-# Disallow: /admin/
-# Disallow: /private/
-
-# Crawl delay (optional, helps avoid server overload)
-Crawl-delay: 5
