@@ -11,6 +11,7 @@ import { t } from "./i18n.js";
 import { showStatus, formatFileSize } from "./utils.js";
 import { openModal } from "./modal.js";
 import { reloadUser } from "./auth.js";
+import { ADSTERRA_SMARTLINK_URL } from "./pwa.js";
 
 let activeEventSource = null;
 
@@ -20,11 +21,30 @@ function el(id) {
 
 const TRIM_TIME_RE = /^\d{1,2}(:\d{2}){1,2}$/;
 
+// ── Smartlink Adsterra (Direct Link) ────────────────────────────
+
+/**
+ * Ouvre le Smartlink Adsterra dans un nouvel onglet, UNIQUEMENT si l'utilisateur n'est pas Premium.
+ * @returns {boolean} true si le lien a été ouvert, false sinon.
+ */
+export function openAdSmartlink() {
+  // On vérifie le statut Premium ici pour une double sécurité
+  const isPremium = state.currentUser?.plan === "premium";
+
+  if (isPremium) {
+    return false; // Pas de pub pour les premiums
+  }
+
+  window.open(ADSTERRA_SMARTLINK_URL, "_blank", "noopener,noreferrer");
+  return true;
+}
+
 /** Ouvre l'onglet publicitaire (utilisateurs non-Premium) avant de lancer le téléchargement. */
 function startDownloadFromButton() {
-  // if (state.currentUser?.plan !== "premium") {
-  //   window.open(ENDPOINTS.adClick, "_blank", "noopener,noreferrer");
-  // }
+  // 1. Appeler la fonction. Elle gère elle-même le statut Premium.
+  openAdSmartlink();
+
+  // 2. Lancer le téléchargement
   return startDownload();
 }
 

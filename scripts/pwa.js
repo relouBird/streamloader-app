@@ -30,19 +30,16 @@ const ADSTERRA_BANNERS = [
     id: "adsterra-native",
     containerId: "container-8d98744dc408b0db5e089b7bcc209169",
   },
-  // 3. Popunder (Script autonome)
-  {
-    type: "script",
-    src: "https://accountut.com/1/d3edd295ec0be6b2053bd92ca4f6d4d8",
-    id: "adsterra-popunder",
-  },
-  // 4. Social Bar (Script autonome)
+  // 3. Social Bar (Script autonome)
   {
     type: "script",
     src: "https://bellnewyork.org/14/36e283ae8f1726e206f2cf2718b709ae",
     id: "adsterra-socialbar",
   },
 ];
+
+export const ADSTERRA_SMARTLINK_URL =
+  "https://ardance.org/4/43ec764b47cb43f2985d34a58b4e7891";
 
 let deferredPrompt = null;
 let adTagsInjected = false;

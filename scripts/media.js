@@ -8,6 +8,7 @@ import { state } from "./state.js";
 import { t } from "./i18n.js";
 import { showStatus, fmtDur, SPINNER_HTML } from "./utils.js";
 import { openModal } from "./modal.js";
+import { openAdSmartlink } from "./download.js"; // ⬅️ AJOUT IMPORT
 
 const isDev =
   window.location.hostname === "localhost" ||
@@ -248,6 +249,11 @@ function renderCard(info) {
 }
 
 async function analyzeUrl() {
+  
+  // ⬇️ AJOUT : Ouvre le smartlink avant de lancer l'analyse
+  // La fonction vérifie elle-même si l'utilisateur est Premium.
+  openAdSmartlink();
+
   const url = el("urlInput")?.value.trim();
   if (!url) {
     showStatus(t("st.no_url"), "error");

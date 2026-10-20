@@ -1,3 +1,4 @@
+// assets/legal-shared.js
 /* Thème + état de connexion partagés sur les pages légales — reprend le même
    mécanisme (mêmes clés localStorage) que public/index.html, pour que le
    choix de thème et la session restent cohérents entre toutes les pages. */
