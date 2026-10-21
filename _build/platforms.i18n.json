@@ -1,0 +1,1284 @@
+{
+  "_readme": "Fichier de traductions des pages plateformes. Le build met à jour 'fr' tout seul. Remplis uniquement les valeurs vides (en/es/pt/ar). Garde les balises HTML des clés '.html' intactes, ne traduis pas les noms de marques, URLs ni exemples comme 00:10. Quand une traduction est à jour, supprime 'outdated'.",
+  "foot.download": {
+    "fr": "Télécharger",
+    "en": "Download",
+    "es": "Descargar",
+    "pt": "Baixar",
+    "ar": "تحميل"
+  },
+  "pg.home": {
+    "fr": "Accueil",
+    "en": "Home",
+    "es": "Inicio",
+    "pt": "Início",
+    "ar": "الرئيسية"
+  },
+  "pg.how": {
+    "fr": "Mode d'emploi",
+    "en": "How to use",
+    "es": "Modo de empleo",
+    "pt": "Modo de uso",
+    "ar": "طريقة الاستخدام"
+  },
+  "pg.faqAbout": {
+    "fr": "Questions sur",
+    "en": "FAQ about",
+    "es": "Preguntas sobre",
+    "pt": "Perguntas sobre",
+    "ar": "أسئلة حول"
+  },
+  "pg.otherLabel": {
+    "fr": "Autres sites",
+    "en": "Other sites",
+    "es": "Otros sitios",
+    "pt": "Outros sites",
+    "ar": "مواقع أخرى"
+  },
+  "pg.otherT1": {
+    "fr": "Télécharger depuis",
+    "en": "Download from",
+    "es": "Descargar desde",
+    "pt": "Baixar de",
+    "ar": "تحميل من"
+  },
+  "pg.otherT2": {
+    "fr": "d'autres sites.",
+    "en": "other sites.",
+    "es": "otros sitios.",
+    "pt": "outros sites.",
+    "ar": "مواقع أخرى."
+  },
+  "p.youtube.title": {
+    "fr": "Télécharger vidéo YouTube en MP4 jusqu'en 4K – StreamLoaders",
+    "en": "Download YouTube video in MP4 up to 4K – StreamLoaders",
+    "es": "Descargar video de YouTube en MP4 hasta 4K – StreamLoaders",
+    "pt": "Baixar vídeo do YouTube em MP4 até 4K – StreamLoaders",
+    "ar": "تحميل فيديو يوتيوب بصيغة MP4 حتى 4K – StreamLoaders"
+  },
+  "p.youtube.label": {
+    "fr": "Vidéo YouTube",
+    "en": "YouTube video",
+    "es": "Video de YouTube",
+    "pt": "Vídeo do YouTube",
+    "ar": "فيديو يوتيوب"
+  },
+  "p.youtube.card": {
+    "fr": "Télécharge une vidéo ou un Short YouTube en MP4, de 480p à la 4K avec Premium.",
+    "en": "Download a YouTube video or Short in MP4, from 480p to 4K with Premium.",
+    "es": "Descarga un video o Short de YouTube en MP4, desde 480p hasta 4K con Premium.",
+    "pt": "Baixe um vídeo ou Short do YouTube em MP4, de 480p a 4K com Premium.",
+    "ar": "حمّل فيديو أو Short من يوتيوب بصيغة MP4، من 480p إلى 4K مع Premium."
+  },
+  "p.youtube.h1": {
+    "fr": "Télécharge tes vidéos YouTube",
+    "en": "Download your YouTube videos",
+    "es": "Descarga tus videos de YouTube",
+    "pt": "Baixe seus vídeos do YouTube",
+    "ar": "حمّل فيديوهاتك من يوتيوب"
+  },
+  "p.youtube.h1Accent": {
+    "fr": "en MP4, jusqu'en 4K.",
+    "en": "in MP4, up to 4K.",
+    "es": "en MP4, hasta 4K.",
+    "pt": "em MP4, até 4K.",
+    "ar": "بصيغة MP4، حتى 4K."
+  },
+  "p.youtube.intro": {
+    "fr": "Colle le lien d'une vidéo YouTube ou d'un Short, choisis ta qualité (du 480p à la 4K avec Premium) et récupère le fichier en MP4. Tout se passe dans ton navigateur, sans logiciel ni extension à installer.",
+    "en": "Paste the link of a YouTube video or Short, choose your quality (from 480p to 4K with Premium) and get the file in MP4. Everything happens in your browser, without software or extension to install.",
+    "es": "Pega el enlace de un video o Short de YouTube, elige tu calidad (desde 480p hasta 4K con Premium) y obtén el archivo en MP4. Todo ocurre en tu navegador, sin software ni extensión que instalar.",
+    "pt": "Cole o link de um vídeo ou Short do YouTube, escolha sua qualidade (de 480p a 4K com Premium) e obtenha o arquivo em MP4. Tudo acontece no seu navegador, sem software ou extensão para instalar.",
+    "ar": "الصق رابط فيديو أو Short من يوتيوب، اختر الجودة (من 480p إلى 4K مع Premium) واحصل على الملف بصيغة MP4. كل شيء يحدث في متصفحك، دون برامج أو إضافات للتثبيت."
+  },
+  "p.youtube.placeholder": {
+    "fr": "Colle le lien de la vidéo YouTube…",
+    "en": "Paste the YouTube video link…",
+    "es": "Pega el enlace del video de YouTube…",
+    "pt": "Cole o link do vídeo do YouTube…",
+    "ar": "الصق رابط فيديو يوتيوب…"
+  },
+  "p.youtube.stepsTitle": {
+    "fr": "Comment télécharger une vidéo YouTube",
+    "en": "How to download a YouTube video",
+    "es": "Cómo descargar un video de YouTube",
+    "pt": "Como baixar um vídeo do YouTube",
+    "ar": "كيفية تحميل فيديو من يوتيوب"
+  },
+  "p.youtube.stepsAccent": {
+    "fr": "en 3 étapes.",
+    "en": "in 3 steps.",
+    "es": "en 3 pasos.",
+    "pt": "em 3 passos.",
+    "ar": "في 3 خطوات."
+  },
+  "p.youtube.stepsSub": {
+    "fr": "Aucun compte ni application à installer : tout se passe dans ton navigateur.",
+    "en": "No account or application to install: everything happens in your browser.",
+    "es": "Sin cuenta ni aplicación que instalar: todo ocurre en tu navegador.",
+    "pt": "Sem conta nem aplicativo para instalar: tudo acontece no seu navegador.",
+    "ar": "لا حاجة لحساب أو تطبيق للتثبيت: كل شيء يحدث في متصفحك."
+  },
+  "p.youtube.steps.0.title": {
+    "fr": "Copie le lien YouTube",
+    "en": "Copy the YouTube link",
+    "es": "Copia el enlace de YouTube",
+    "pt": "Copie o link do YouTube",
+    "ar": "انسخ رابط يوتيوب"
+  },
+  "p.youtube.steps.0.text": {
+    "fr": "Dans l'application, touche Partager sous la vidéo puis « Copier le lien ». Sur ordinateur, copie l'adresse de la page dans la barre du navigateur. Les liens courts youtu.be et les Shorts sont en général reconnus.",
+    "en": "In the app, tap Share under the video then \"Copy link\". On a computer, copy the page address from the browser bar. Short youtu.be links and Shorts are generally recognized.",
+    "es": "En la aplicación, toca Compartir debajo del video y luego «Copiar enlace». En ordenador, copia la dirección de la página en la barra del navegador. Los enlaces cortos youtu.be y los Shorts generalmente se reconocen.",
+    "pt": "No aplicativo, toque Compartilhar abaixo do vídeo e depois \"Copiar link\". No computador, copie o endereço da página na barra do navegador. Links curtos youtu.be e Shorts geralmente são reconhecidos.",
+    "ar": "في التطبيق، اضغط على مشاركة أسفل الفيديو ثم \"نسخ الرابط\". على الكمبيوتر، انسخ عنوان الصفحة من شريط المتصفح. روابط youtu.be القصيرة وShorts عادةً ما يتم التعرف عليها."
+  },
+  "p.youtube.steps.1.title": {
+    "fr": "Colle-le et analyse",
+    "en": "Paste it and analyze",
+    "es": "Pégalo y analiza",
+    "pt": "Cole e analise",
+    "ar": "الصقه وحلله"
+  },
+  "p.youtube.steps.1.text": {
+    "fr": "Colle le lien dans le champ en haut de cette page et clique sur Analyser. StreamLoaders affiche la miniature, la durée et les formats disponibles.",
+    "en": "Paste the link in the field at the top of this page and click Analyze. StreamLoaders displays the thumbnail, duration and available formats.",
+    "es": "Pega el enlace en el campo en la parte superior de esta página y haz clic en Analizar. StreamLoaders muestra la miniatura, la duración y los formatos disponibles.",
+    "pt": "Cole o link no campo no topo desta página e clique em Analisar. O StreamLoaders exibe a miniatura, a duração e os formatos disponíveis.",
+    "ar": "الصق الرابط في الحقل أعلى هذه الصفحة وانقر على تحليل. يعرض StreamLoaders الصورة المصغرة والمدة والتنسيقات المتاحة."
+  },
+  "p.youtube.steps.2.title": {
+    "fr": "Choisis ta qualité",
+    "en": "Choose your quality",
+    "es": "Elige tu calidad",
+    "pt": "Escolha sua qualidade",
+    "ar": "اختر الجودة"
+  },
+  "p.youtube.steps.2.text": {
+    "fr": "Sélectionne 480p, 720p ou 1080p, ou la 4K avec Premium, puis clique sur Télécharger. Le fichier MP4 est enregistré sur ton appareil.",
+    "en": "Select 480p, 720p or 1080p, or 4K with Premium, then click Download. The MP4 file is saved to your device.",
+    "es": "Selecciona 480p, 720p o 1080p, o 4K con Premium, luego haz clic en Descargar. El archivo MP4 se guarda en tu dispositivo.",
+    "pt": "Selecione 480p, 720p ou 1080p, ou 4K com Premium, depois clique em Baixar. O arquivo MP4 é salvo no seu dispositivo.",
+    "ar": "اختر 480p أو 720p أو 1080p، أو 4K مع Premium، ثم انقر على تحميل. يتم حفظ ملف MP4 على جهازك."
+  },
+  "p.youtube.sections.0.title": {
+    "fr": "Choisir la bonne qualité pour une vidéo YouTube",
+    "en": "Choosing the right quality for a YouTube video",
+    "es": "Elegir la calidad adecuada para un video de YouTube",
+    "pt": "Escolher a qualidade certa para um vídeo do YouTube",
+    "ar": "اختيار الجودة المناسبة لفيديو يوتيوب"
+  },
+  "p.youtube.sections.0.html": {
+    "fr": "<p>Plus la résolution est élevée, plus le fichier est lourd. Le <strong>480p</strong> convient pour économiser tes données mobiles ou regarder sur un petit écran. Le <strong>720p</strong> offre une image nette sur un téléphone ou une tablette. Le <strong>1080p</strong> (Full HD) est le bon choix pour un ordinateur ou une télévision, et il est disponible gratuitement.</p><p>La <strong>4K</strong> (2160p ou 1440p selon la vidéo) est réservée aux abonnés Premium. Elle n'apparaît que si la vidéo a été publiée dans cette qualité : une vidéo mise en ligne en 1080p ne peut pas être téléchargée en 4K.</p><p>Dans tous les cas, le fichier est livré en MP4, un format lisible sur tous les appareils.</p>",
+    "en": "<p>The higher the resolution, the larger the file. <strong>480p</strong> is suitable for saving mobile data or watching on a small screen. <strong>720p</strong> offers a sharp image on a phone or tablet. <strong>1080p</strong> (Full HD) is the right choice for a computer or television, and it's available for free.</p><p><strong>4K</strong> (2160p or 1440p depending on the video) is reserved for Premium subscribers. It only appears if the video was published in that quality: a video uploaded in 1080p cannot be downloaded in 4K.</p><p>In all cases, the file is delivered in MP4, a format readable on all devices.</p>",
+    "es": "<p>Cuanto mayor es la resolución, más pesado es el archivo. El <strong>480p</strong> es adecuado para ahorrar datos móviles o ver en una pantalla pequeña. El <strong>720p</strong> ofrece una imagen nítida en un teléfono o tableta. El <strong>1080p</strong> (Full HD) es la opción correcta para un ordenador o televisión, y está disponible gratis.</p><p>La <strong>4K</strong> (2160p o 1440p según el video) está reservada a los suscriptores Premium. Solo aparece si el video se publicó en esa calidad: un video subido en 1080p no se puede descargar en 4K.</p><p>En todos los casos, el archivo se entrega en MP4, un formato legible en todos los dispositivos.</p>",
+    "pt": "<p>Quanto maior a resolução, mais pesado é o arquivo. O <strong>480p</strong> é adequado para economizar dados móveis ou assistir em uma tela pequena. O <strong>720p</strong> oferece uma imagem nítida em um celular ou tablet. O <strong>1080p</strong> (Full HD) é a escolha certa para um computador ou televisão, e está disponível gratuitamente.</p><p>O <strong>4K</strong> (2160p ou 1440p dependendo do vídeo) é reservado para assinantes Premium. Ele só aparece se o vídeo foi publicado nessa qualidade: um vídeo enviado em 1080p não pode ser baixado em 4K.</p><p>Em todos os casos, o arquivo é entregue em MP4, um formato legível em todos os dispositivos.</p>",
+    "ar": "<p>كلما زادت الدقة، زاد حجم الملف. <strong>480p</strong> مناسب لتوفير بيانات الهاتف المحمول أو المشاهدة على شاشة صغيرة. <strong>720p</strong> يوفر صورة واضحة على الهاتف أو الجهاز اللوحي. <strong>1080p</strong> (Full HD) هو الخيار المناسب للكمبيوتر أو التلفاز، وهو متاح مجانًا.</p><p><strong>4K</strong> (2160p أو 1440p حسب الفيديو) مخصص لمشتركي Premium. لا يظهر إلا إذا تم نشر الفيديو بهذه الجودة: الفيديو الذي تم رفعه بدقة 1080p لا يمكن تحميله بدقة 4K.</p><p>في جميع الحالات، يتم تسليم الملف بصيغة MP4، وهي صيغة قابلة للقراءة على جميع الأجهزة.</p>"
+  },
+  "p.youtube.sections.1.title": {
+    "fr": "Sous-titres et extraits : deux options utiles",
+    "en": "Subtitles and excerpts: two useful options",
+    "es": "Subtítulos y extractos: dos opciones útiles",
+    "pt": "Legendas e trechos: duas opções úteis",
+    "ar": "الترجمات والمقتطفات: خياران مفيدان"
+  },
+  "p.youtube.sections.1.html": {
+    "fr": "<p>Pour une vidéo dans une langue étrangère, active l'option « Télécharger avec sous-titres » et choisis la langue : français, anglais, espagnol, portugais ou arabe. Les sous-titres sont intégrés directement dans la vidéo. Le plan gratuit permet 5 téléchargements avec sous-titres par jour.</p><p>Tu n'as besoin que d'un passage d'un long cours ou d'une conférence ? Avec « Extraire une scène précise », indique un début et une fin (par exemple 00:10 et 00:25) pour ne récupérer que cet extrait. Cette option demande un compte gratuit et offre 3 essais, puis elle est illimitée avec Premium.</p>",
+    "en": "<p>For a video in a foreign language, enable the \"Download with subtitles\" option and choose the language: French, English, Spanish, Portuguese or Arabic. Subtitles are integrated directly into the video. The free plan allows 5 downloads with subtitles per day.</p><p>Do you only need a passage from a long course or conference? With \"Extract a specific scene\", indicate a start and end (for example 00:10 and 00:25) to retrieve only that excerpt. This option requires a free account and offers 3 trials, then it's unlimited with Premium.</p>",
+    "es": "<p>Para un video en un idioma extranjero, activa la opción «Descargar con subtítulos» y elige el idioma: francés, inglés, español, portugués o árabe. Los subtítulos se integran directamente en el video. El plan gratuito permite 5 descargas con subtítulos por día.</p><p>¿Solo necesitas un fragmento de un curso largo o una conferencia? Con «Extraer una escena precisa», indica un inicio y un fin (por ejemplo 00:10 y 00:25) para obtener solo ese extracto. Esta opción requiere una cuenta gratuita y ofrece 3 pruebas, luego es ilimitada con Premium.</p>",
+    "pt": "<p>Para um vídeo em um idioma estrangeiro, ative a opção \"Baixar com legendas\" e escolha o idioma: francês, inglês, espanhol, português ou árabe. As legendas são integradas diretamente no vídeo. O plano gratuito permite 5 downloads com legendas por dia.</p><p>Você só precisa de um trecho de um curso longo ou conferência? Com \"Extrair uma cena específica\", indique um início e fim (por exemplo 00:10 e 00:25) para obter apenas esse trecho. Esta opção requer uma conta gratuita e oferece 3 testes, depois é ilimitada com Premium.</p>",
+    "ar": "<p>لفيديو بلغة أجنبية، فعّل خيار \"تحميل مع ترجمة\" واختر اللغة: الفرنسية أو الإنجليزية أو الإسبانية أو البرتغالية أو العربية. يتم دمج الترجمات مباشرة في الفيديو. تسمح الخطة المجانية بـ 5 عمليات تحميل مع ترجمة يوميًا.</p><p>هل تحتاج فقط إلى مقطع من درس طويل أو محاضرة؟ مع \"استخراج مشهد محدد\"، حدد بداية ونهاية (على سبيل المثال 00:10 و00:25) لاسترداد ذلك المقطع فقط. يتطلب هذا الخيار حسابًا مجانيًا ويوفر 3 محاولات، ثم يصبح غير محدود مع Premium.</p>"
+  },
+  "p.youtube.sections.2.title": {
+    "fr": "Bon à savoir avant de télécharger",
+    "en": "Good to know before downloading",
+    "es": "Bueno saber antes de descargar",
+    "pt": "Bom saber antes de baixar",
+    "ar": "من الجيد معرفته قبل التحميل"
+  },
+  "p.youtube.sections.2.html": {
+    "fr": "<ul><li>Seules les vidéos publiques sont prises en charge. Une vidéo privée, réservée aux membres ou soumise à une restriction d'âge ne peut en général pas être analysée.</li><li>Beaucoup de vidéos YouTube sont protégées par le droit d'auteur. Utilise cette page pour tes propres vidéos, des contenus libres de droits ou sous licence Creative Commons, ou avec l'accord du créateur.</li><li>Le téléchargement est prévu pour un usage personnel. Tu restes responsable de disposer des droits nécessaires avant de réutiliser ou de republier une vidéo.</li></ul>",
+    "en": "<ul><li>Only public videos are supported. A private video, members-only video or age-restricted video generally cannot be analyzed.</li><li>Many YouTube videos are protected by copyright. Use this page for your own videos, royalty-free or Creative Commons licensed content, or with the creator's permission.</li><li>Downloading is intended for personal use. You remain responsible for having the necessary rights before reusing or republishing a video.</li></ul>",
+    "es": "<ul><li>Solo se admiten videos públicos. Un video privado, reservado a miembros o con restricción de edad generalmente no se puede analizar.</li><li>Muchos videos de YouTube están protegidos por derechos de autor. Usa esta página para tus propios videos, contenidos libres de derechos o bajo licencia Creative Commons, o con el permiso del creador.</li><li>La descarga está prevista para uso personal. Sigues siendo responsable de tener los derechos necesarios antes de reutilizar o republicar un video.</li></ul>",
+    "pt": "<ul><li>Apenas vídeos públicos são suportados. Um vídeo privado, reservado a membros ou com restrição de idade geralmente não pode ser analisado.</li><li>Muitos vídeos do YouTube são protegidos por direitos autorais. Use esta página para seus próprios vídeos, conteúdos livres de direitos ou licenciados sob Creative Commons, ou com a permissão do criador.</li><li>O download destina-se a uso pessoal. Você continua responsável por ter os direitos necessários antes de reutilizar ou republicar um vídeo.</li></ul>",
+    "ar": "<ul><li>يتم دعم الفيديوهات العامة فقط. الفيديو الخاص أو المخصص للأعضاء أو المقيد بالعمر عادةً لا يمكن تحليله.</li><li>العديد من فيديوهات يوتيوب محمية بحقوق النشر. استخدم هذه الصفحة لفيديوهاتك الخاصة، أو المحتوى الخالي من الحقوق أو المرخص بموجب Creative Commons، أو بموافقة المنشئ.</li><li>التحميل مخصص للاستخدام الشخصي. تظل مسؤولاً عن امتلاك الحقوق اللازمة قبل إعادة استخدام أو إعادة نشر فيديو.</li></ul>"
+  },
+  "p.youtube.faq.0.q": {
+    "fr": "Comment télécharger une vidéo YouTube en 1080p ?",
+    "en": "How to download a YouTube video in 1080p?",
+    "es": "¿Cómo descargar un video de YouTube en 1080p?",
+    "pt": "Como baixar um vídeo do YouTube em 1080p?",
+    "ar": "كيف تحميل فيديو يوتيوب بدقة 1080p؟"
+  },
+  "p.youtube.faq.0.a": {
+    "fr": "Colle le lien, clique sur Analyser, puis choisis « 1080p Full HD » dans la liste des formats avant de cliquer sur Télécharger. Le 1080p est disponible gratuitement.",
+    "en": "Paste the link, click Analyze, then choose \"1080p Full HD\" from the format list before clicking Download. 1080p is available for free.",
+    "es": "Pega el enlace, haz clic en Analizar, luego elige «1080p Full HD» en la lista de formatos antes de hacer clic en Descargar. El 1080p está disponible gratis.",
+    "pt": "Cole o link, clique em Analisar, depois escolha \"1080p Full HD\" na lista de formatos antes de clicar em Baixar. O 1080p está disponível gratuitamente.",
+    "ar": "الصق الرابط، انقر على تحليل، ثم اختر \"1080p Full HD\" من قائمة التنسيقات قبل النقر على تحميل. 1080p متاح مجانًا."
+  },
+  "p.youtube.faq.1.q": {
+    "fr": "Peut-on télécharger un Short YouTube ?",
+    "en": "Can you download a YouTube Short?",
+    "es": "¿Se puede descargar un Short de YouTube?",
+    "pt": "Pode-se baixar um Short do YouTube?",
+    "ar": "هل يمكن تحميل Short من يوتيوب؟"
+  },
+  "p.youtube.faq.1.a": {
+    "fr": "Oui, en général. Copie le lien du Short depuis le bouton Partager, colle-le sur StreamLoaders et suis les mêmes étapes que pour une vidéo classique.",
+    "en": "Yes, generally. Copy the Short's link from the Share button, paste it on StreamLoaders and follow the same steps as for a regular video.",
+    "es": "Sí, en general. Copia el enlace del Short desde el botón Compartir, pégalo en StreamLoaders y sigue los mismos pasos que para un video normal.",
+    "pt": "Sim, geralmente. Copie o link do Short a partir do botão Compartilhar, cole no StreamLoaders e siga os mesmos passos de um vídeo normal.",
+    "ar": "نعم، عادةً. انسخ رابط Short من زر المشاركة، والصقه في StreamLoaders واتبع نفس الخطوات كفيديو عادي."
+  },
+  "p.youtube.faq.2.q": {
+    "fr": "Comment ne télécharger qu'un extrait d'une vidéo YouTube ?",
+    "en": "How to download only an excerpt of a YouTube video?",
+    "es": "¿Cómo descargar solo un fragmento de un video de YouTube?",
+    "pt": "Como baixar apenas um trecho de um vídeo do YouTube?",
+    "ar": "كيف تحميل مقتطف فقط من فيديو يوتيوب؟"
+  },
+  "p.youtube.faq.2.a": {
+    "fr": "Après l'analyse du lien, active l'option « Extraire une scène précise », saisis le début et la fin au format minutes:secondes, puis télécharge. Il faut un compte gratuit : tu disposes de 3 essais, puis l'option est illimitée avec Premium.",
+    "en": "After analyzing the link, enable the \"Extract a specific scene\" option, enter the start and end in minutes:seconds format, then download. A free account is required: you get 3 trials, then the option is unlimited with Premium.",
+    "es": "Después de analizar el enlace, activa la opción «Extraer una escena precisa», introduce el inicio y el fin en formato minutos:segundos, luego descarga. Se necesita una cuenta gratuita: tienes 3 pruebas, luego la opción es ilimitada con Premium.",
+    "pt": "Após analisar o link, ative a opção \"Extrair uma cena específica\", insira o início e o fim no formato minutos:segundos, depois baixe. É necessária uma conta gratuita: você tem 3 testes, depois a opção é ilimitada com Premium.",
+    "ar": "بعد تحليل الرابط، فعّل خيار \"استخراج مشهد محدد\"، وأدخل البداية والنهاية بتنسيق دقائق:ثوانٍ، ثم حمّل. يلزم حساب مجاني: لديك 3 محاولات، ثم يصبح الخيار غير محدود مع Premium."
+  },
+  "p.youtube.faq.3.q": {
+    "fr": "Pourquoi la qualité 4K est-elle verrouillée ?",
+    "en": "Why is 4K quality locked?",
+    "es": "¿Por qué está bloqueada la calidad 4K?",
+    "pt": "Por que a qualidade 4K está bloqueada?",
+    "ar": "لماذا جودة 4K مقفلة؟"
+  },
+  "p.youtube.faq.3.a": {
+    "fr": "La qualité 4K est réservée aux abonnés Premium. Elle n'est de toute façon proposée que si la vidéo d'origine a été publiée en 4K ou en 1440p.",
+    "en": "4K quality is reserved for Premium subscribers. It's only offered if the original video was published in 4K or 1440p anyway.",
+    "es": "La calidad 4K está reservada a los suscriptores Premium. De todos modos, solo se ofrece si el video original se publicó en 4K o 1440p.",
+    "pt": "A qualidade 4K é reservada para assinantes Premium. De qualquer forma, só é oferecida se o vídeo original foi publicado em 4K ou 1440p.",
+    "ar": "جودة 4K مخصصة لمشتركي Premium. على أي حال، لا تُعرض إلا إذا تم نشر الفيديو الأصلي بدقة 4K أو 1440p."
+  },
+  "p.youtube.faq.4.q": {
+    "fr": "Ai-je le droit de télécharger n'importe quelle vidéo YouTube ?",
+    "en": "Do I have the right to download any YouTube video?",
+    "es": "¿Tengo derecho a descargar cualquier video de YouTube?",
+    "pt": "Tenho o direito de baixar qualquer vídeo do YouTube?",
+    "ar": "هل يحق لي تحميل أي فيديو من يوتيوب؟"
+  },
+  "p.youtube.faq.4.a": {
+    "fr": "Cela dépend de la vidéo et de ton usage. Télécharger tes propres vidéos ou un contenu sous licence libre ne pose en principe pas de problème ; copier ou republier le travail d'autrui sans son accord, si. StreamLoaders est un outil technique : tu restes responsable de disposer des droits nécessaires.",
+    "en": "It depends on the video and your use. Downloading your own videos or freely licensed content is generally not a problem; copying or republishing someone else's work without their permission is. StreamLoaders is a technical tool: you remain responsible for having the necessary rights.",
+    "es": "Depende del video y de tu uso. Descargar tus propios videos o contenido con licencia libre en principio no supone un problema; copiar o republicar el trabajo de otros sin su permiso, sí. StreamLoaders es una herramienta técnica: sigues siendo responsable de tener los derechos necesarios.",
+    "pt": "Depende do vídeo e do seu uso. Baixar seus próprios vídeos ou conteúdo com licença livre em princípio não é problema; copiar ou republicar o trabalho de outros sem permissão, sim. O StreamLoaders é uma ferramenta técnica: você continua responsável por ter os direitos necessários.",
+    "ar": "يعتمد على الفيديو واستخدامك. تحميل فيديوهاتك الخاصة أو محتوى بترخيص حر لا يمثل مشكلة من حيث المبدأ؛ أما نسخ أو إعادة نشر عمل الآخرين دون إذنهم فهو مشكلة. StreamLoaders أداة تقنية: تظل مسؤولاً عن امتلاك الحقوق اللازمة."
+  },
+  "p.youtube-mp3.title": {
+    "fr": "Convertir YouTube en MP3 gratuit – StreamLoaders",
+    "en": "Convert YouTube to MP3 free – StreamLoaders",
+    "es": "Convertir YouTube a MP3 gratis – StreamLoaders",
+    "pt": "Converter YouTube para MP3 grátis – StreamLoaders",
+    "ar": "تحويل يوتيوب إلى MP3 مجانًا – StreamLoaders"
+  },
+  "p.youtube-mp3.label": {
+    "fr": "YouTube en MP3",
+    "en": "YouTube to MP3",
+    "es": "YouTube a MP3",
+    "pt": "YouTube para MP3",
+    "ar": "يوتيوب إلى MP3"
+  },
+  "p.youtube-mp3.card": {
+    "fr": "Convertis une vidéo YouTube en MP3 320 kbps pour l'écouter hors ligne.",
+    "en": "Convert a YouTube video to MP3 320 kbps to listen offline.",
+    "es": "Convierte un video de YouTube a MP3 320 kbps para escucharlo sin conexión.",
+    "pt": "Converta um vídeo do YouTube em MP3 320 kbps para ouvir offline.",
+    "ar": "حوّل فيديو يوتيوب إلى MP3 320 kbps للاستماع بدون اتصال."
+  },
+  "p.youtube-mp3.h1": {
+    "fr": "Convertis YouTube en MP3",
+    "en": "Convert YouTube to MP3",
+    "es": "Convierte YouTube a MP3",
+    "pt": "Converta YouTube para MP3",
+    "ar": "حوّل يوتيوب إلى MP3"
+  },
+  "p.youtube-mp3.h1Accent": {
+    "fr": "gratuitement, sans logiciel.",
+    "en": "for free, without software.",
+    "es": "gratis, sin software.",
+    "pt": "gratuitamente, sem software.",
+    "ar": "مجانًا، دون برامج."
+  },
+  "p.youtube-mp3.intro": {
+    "fr": "Colle le lien d'une vidéo YouTube, choisis « Audio MP3 » et récupère uniquement le son, en MP3 haute qualité (320 kbps). Pratique pour un podcast, une conférence ou un cours : rien à installer, tout se passe dans ton navigateur.",
+    "en": "Paste the link of a YouTube video, choose \"Audio MP3\" and get only the sound, in high-quality MP3 (320 kbps). Handy for a podcast, a conference or a course: nothing to install, everything happens in your browser.",
+    "es": "Pega el enlace de un video de YouTube, elige «Audio MP3» y obtén solo el sonido, en MP3 de alta calidad (320 kbps). Práctico para un podcast, una conferencia o un curso: nada que instalar, todo ocurre en tu navegador.",
+    "pt": "Cole o link de um vídeo do YouTube, escolha \"Áudio MP3\" e obtenha apenas o som, em MP3 de alta qualidade (320 kbps). Prático para um podcast, uma conferência ou um curso: nada para instalar, tudo acontece no seu navegador.",
+    "ar": "الصق رابط فيديو يوتيوب، اختر \"صوت MP3\" واحصل على الصوت فقط، بصيغة MP3 عالية الجودة (320 kbps). مفيد لبودكاست أو محاضرة أو درس: لا شيء للتثبيت، كل شيء يحدث في متصفحك."
+  },
+  "p.youtube-mp3.placeholder": {
+    "fr": "Colle le lien de la vidéo YouTube…",
+    "en": "Paste the YouTube video link…",
+    "es": "Pega el enlace del video de YouTube…",
+    "pt": "Cole o link do vídeo do YouTube…",
+    "ar": "الصق رابط فيديو يوتيوب…"
+  },
+  "p.youtube-mp3.stepsTitle": {
+    "fr": "Comment convertir une vidéo YouTube en MP3",
+    "en": "How to convert a YouTube video to MP3",
+    "es": "Cómo convertir un video de YouTube a MP3",
+    "pt": "Como converter um vídeo do YouTube em MP3",
+    "ar": "كيفية تحويل فيديو يوتيوب إلى MP3"
+  },
+  "p.youtube-mp3.stepsAccent": {
+    "fr": "en 3 étapes.",
+    "en": "in 3 steps.",
+    "es": "en 3 pasos.",
+    "pt": "em 3 passos.",
+    "ar": "في 3 خطوات."
+  },
+  "p.youtube-mp3.stepsSub": {
+    "fr": "Aucun compte ni application à installer : tout se passe dans ton navigateur.",
+    "en": "No account or application to install: everything happens in your browser.",
+    "es": "Sin cuenta ni aplicación que instalar: todo ocurre en tu navegador.",
+    "pt": "Sem conta nem aplicativo para instalar: tudo acontece no seu navegador.",
+    "ar": "لا حاجة لحساب أو تطبيق للتثبيت: كل شيء يحدث في متصفحك."
+  },
+  "p.youtube-mp3.steps.0.title": {
+    "fr": "Copie le lien de la vidéo",
+    "en": "Copy the video link",
+    "es": "Copia el enlace del video",
+    "pt": "Copie o link do vídeo",
+    "ar": "انسخ رابط الفيديو"
+  },
+  "p.youtube-mp3.steps.0.text": {
+    "fr": "Ouvre la vidéo YouTube, touche Partager puis « Copier le lien » dans l'application, ou copie l'adresse de la page depuis la barre de ton navigateur.",
+    "en": "Open the YouTube video, tap Share then \"Copy link\" in the app, or copy the page address from your browser bar.",
+    "es": "Abre el video de YouTube, toca Compartir y luego «Copiar enlace» en la aplicación, o copia la dirección de la página desde la barra de tu navegador.",
+    "pt": "Abra o vídeo do YouTube, toque em Compartilhar e depois \"Copiar link\" no aplicativo, ou copie o endereço da página na barra do seu navegador.",
+    "ar": "افتح فيديو يوتيوب، اضغط على مشاركة ثم \"نسخ الرابط\" في التطبيق، أو انسخ عنوان الصفحة من شريط المتصفح."
+  },
+  "p.youtube-mp3.steps.1.title": {
+    "fr": "Colle-le et analyse",
+    "en": "Paste it and analyze",
+    "es": "Pégalo y analiza",
+    "pt": "Cole e analise",
+    "ar": "الصقه وحلله"
+  },
+  "p.youtube-mp3.steps.1.text": {
+    "fr": "Colle le lien en haut de cette page et clique sur Analyser. La miniature et la durée de la vidéo s'affichent pour que tu vérifies que c'est la bonne.",
+    "en": "Paste the link at the top of this page and click Analyze. The video's thumbnail and duration are displayed so you can check it's the right one.",
+    "es": "Pega el enlace en la parte superior de esta página y haz clic en Analizar. La miniatura y la duración del video se muestran para que verifiques que es el correcto.",
+    "pt": "Cole o link no topo desta página e clique em Analisar. A miniatura e a duração do vídeo são exibidas para você verificar se é o certo.",
+    "ar": "الصق الرابط أعلى هذه الصفحة وانقر على تحليل. يتم عرض الصورة المصغرة ومدة الفيديو لتتحقق من أنه الصحيح."
+  },
+  "p.youtube-mp3.steps.2.title": {
+    "fr": "Choisis Audio MP3",
+    "en": "Choose Audio MP3",
+    "es": "Elige Audio MP3",
+    "pt": "Escolha Áudio MP3",
+    "ar": "اختر صوت MP3"
+  },
+  "p.youtube-mp3.steps.2.text": {
+    "fr": "Dans la liste des formats, sélectionne « Audio MP3 », puis clique sur Télécharger. Le fichier audio est enregistré sur ton appareil.",
+    "en": "In the format list, select \"Audio MP3\", then click Download. The audio file is saved to your device.",
+    "es": "En la lista de formatos, selecciona «Audio MP3», luego haz clic en Descargar. El archivo de audio se guarda en tu dispositivo.",
+    "pt": "Na lista de formatos, selecione \"Áudio MP3\", depois clique em Baixar. O arquivo de áudio é salvo no seu dispositivo.",
+    "ar": "في قائمة التنسيقات، اختر \"صوت MP3\"، ثم انقر على تحميل. يتم حفظ الملف الصوتي على جهازك."
+  },
+  "p.youtube-mp3.sections.0.title": {
+    "fr": "Un MP3 de qualité, sans logiciel de conversion",
+    "en": "Quality MP3, without conversion software",
+    "es": "Un MP3 de calidad, sin software de conversión",
+    "pt": "Um MP3 de qualidade, sem software de conversão",
+    "ar": "MP3 عالي الجودة، دون برامج تحويل"
+  },
+  "p.youtube-mp3.sections.0.html": {
+    "fr": "<p>StreamLoaders extrait la piste audio de la vidéo YouTube et te la livre en MP3 à 320 kbps, le débit le plus élevé de ce format. La conversion se fait sur nos serveurs : tu n'as aucun logiciel ni extension à installer, et ça marche aussi bien sur téléphone que sur ordinateur.</p><p>Garde en tête que la qualité finale dépend de l'enregistrement d'origine : un MP3 à 320 kbps ne peut pas rendre meilleur le son d'une vidéo mal enregistrée.</p><p>Le fichier ne contient que le son, sans image : il est donc bien plus léger que la vidéo complète. C'est idéal pour écouter hors ligne sans occuper beaucoup de stockage.</p>",
+    "en": "<p>StreamLoaders extracts the audio track from the YouTube video and delivers it as MP3 at 320 kbps, the highest bitrate for this format. The conversion is done on our servers: you don't need any software or extension to install, and it works on both phone and computer.</p><p>Keep in mind that the final quality depends on the original recording: a 320 kbps MP3 cannot make the sound of a badly recorded video any better.</p><p>The file contains only sound, no image: it's therefore much lighter than the full video. It's ideal for listening offline without taking up much storage.</p>",
+    "es": "<p>StreamLoaders extrae la pista de audio del video de YouTube y te la entrega en MP3 a 320 kbps, la tasa más alta de este formato. La conversión se realiza en nuestros servidores: no necesitas instalar ningún software ni extensión, y funciona tanto en teléfono como en ordenador.</p><p>Ten en cuenta que la calidad final depende de la grabación original: un MP3 a 320 kbps no puede mejorar el sonido de un video mal grabado.</p><p>El archivo solo contiene sonido, sin imagen: por lo tanto, es mucho más ligero que el video completo. Es ideal para escuchar sin conexión sin ocupar mucho almacenamiento.</p>",
+    "pt": "<p>O StreamLoaders extrai a faixa de áudio do vídeo do YouTube e a entrega em MP3 a 320 kbps, a taxa mais alta desse formato. A conversão é feita em nossos servidores: você não precisa instalar nenhum software ou extensão, e funciona tanto no celular quanto no computador.</p><p>Lembre-se de que a qualidade final depende da gravação original: um MP3 a 320 kbps não pode melhorar o som de um vídeo mal gravado.</p><p>O arquivo contém apenas som, sem imagem: portanto, é muito mais leve que o vídeo completo. É ideal para ouvir offline sem ocupar muito armazenamento.</p>",
+    "ar": "<p>يستخرج StreamLoaders المسار الصوتي من فيديو يوتيوب ويسلمه بصيغة MP3 بمعدل 320 kbps، أعلى معدل لهذه الصيغة. يتم التحويل على خوادمنا: لا تحتاج إلى تثبيت أي برنامج أو إضافة، ويعمل على الهاتف والكمبيوتر.</p><p>ضع في اعتبارك أن الجودة النهائية تعتمد على التسجيل الأصلي: MP3 بمعدل 320 kbps لا يمكنه تحسين صوت فيديو مسجل بشكل سيئ.</p><p>يحتوي الملف على الصوت فقط، بدون صورة: لذلك فهو أخف بكثير من الفيديو الكامل. إنه مثالي للاستماع بدون اتصال دون شغل مساحة تخزين كبيرة.</p>"
+  },
+  "p.youtube-mp3.sections.1.title": {
+    "fr": "Pour quels contenus utiliser la conversion MP3 ?",
+    "en": "For what content should you use MP3 conversion?",
+    "es": "¿Para qué contenidos usar la conversión MP3?",
+    "pt": "Para quais conteúdos usar a conversão MP3?",
+    "ar": "لأي محتوى تستخدم تحويل MP3؟"
+  },
+  "p.youtube-mp3.sections.1.html": {
+    "fr": "<p>L'extraction audio est surtout utile pour :</p><ul><li>un <strong>podcast</strong> ou une émission diffusée sur YouTube, à écouter en déplacement ;</li><li>une <strong>conférence</strong>, un cours ou un webinaire que tu veux suivre sans regarder l'écran ;</li><li>un <strong>discours</strong> ou un enregistrement que tu as toi-même publié ;</li><li>une musique <strong>libre de droits</strong> ou publiée sous une licence qui autorise la copie.</li></ul><p>La plupart des chansons du commerce sont protégées par le droit d'auteur. Pour ces contenus, il faut l'accord des ayants droit : tu restes responsable de l'usage que tu fais des fichiers téléchargés.</p>",
+    "en": "<p>Audio extraction is especially useful for:</p><ul><li>a <strong>podcast</strong> or show broadcast on YouTube, to listen on the go;</li><li>a <strong>conference</strong>, course or webinar you want to follow without looking at the screen;</li><li>a <strong>speech</strong> or recording you published yourself;</li><li><strong>royalty-free</strong> music or music published under a license that allows copying.</li></ul><p>Most commercial songs are protected by copyright. For these contents, you need the permission of the rights holders: you remain responsible for the use you make of the downloaded files.</p>",
+    "es": "<p>La extracción de audio es especialmente útil para:</p><ul><li>un <strong>podcast</strong> o programa emitido en YouTube, para escuchar en movimiento;</li><li>una <strong>conferencia</strong>, curso o seminario web que quieras seguir sin mirar la pantalla;</li><li>un <strong>discurso</strong> o grabación que hayas publicado tú mismo;</li><li>música <strong>libre de derechos</strong> o publicada bajo una licencia que permita la copia.</li></ul><p>La mayoría de las canciones comerciales están protegidas por derechos de autor. Para estos contenidos, se necesita el acuerdo de los titulares de derechos: sigues siendo responsable del uso que hagas de los archivos descargados.</p>",
+    "pt": "<p>A extração de áudio é especialmente útil para:</p><ul><li>um <strong>podcast</strong> ou programa transmitido no YouTube, para ouvir em movimento;</li><li>uma <strong>conferência</strong>, curso ou webinar que você queira acompanhar sem olhar para a tela;</li><li>um <strong>discurso</strong> ou gravação que você mesmo publicou;</li><li>música <strong>livre de direitos</strong> ou publicada sob uma licença que permita a cópia.</li></ul><p>A maioria das músicas comerciais é protegida por direitos autorais. Para esses conteúdos, é necessário o acordo dos detentores dos direitos: você continua responsável pelo uso que faz dos arquivos baixados.</p>",
+    "ar": "<p>استخراج الصوت مفيد بشكل خاص لـ:</p><ul><li><strong>بودكاست</strong> أو برنامج يُبث على يوتيوب، للاستماع أثناء التنقل؛</li><li><strong>محاضرة</strong> أو درس أو ندوة عبر الإنترنت تريد متابعتها دون النظر إلى الشاشة؛</li><li><strong>خطاب</strong> أو تسجيل قمت بنشره بنفسك؛</li><li>موسيقى <strong>خالية من الحقوق</strong> أو منشورة بموجب ترخيص يسمح بالنسخ.</li></ul><p>معظم الأغاني التجارية محمية بحقوق النشر. لهذه المحتويات، يلزم الحصول على موافقة أصحاب الحقوق: تظل مسؤولاً عن استخدامك للملفات التي تم تحميلها.</p>"
+  },
+  "p.youtube-mp3.sections.2.title": {
+    "fr": "Où retrouver ton fichier MP3 ?",
+    "en": "Where to find your MP3 file?",
+    "es": "¿Dónde encontrar tu archivo MP3?",
+    "pt": "Onde encontrar seu arquivo MP3?",
+    "ar": "أين تجد ملف MP3 الخاص بك؟"
+  },
+  "p.youtube-mp3.sections.2.html": {
+    "fr": "<p>Une fois le téléchargement terminé, le MP3 se trouve en général dans les téléchargements de ton navigateur : dossier Téléchargements sur Android et sur ordinateur, application Fichiers sur iPhone et iPad. Tu peux ensuite l'ouvrir avec ton lecteur de musique habituel ou le copier sur une clé USB ou un autre appareil.</p>",
+    "en": "<p>Once the download is complete, the MP3 is usually found in your browser's downloads: Downloads folder on Android and computer, Files app on iPhone and iPad. You can then open it with your usual music player or copy it to a USB drive or another device.</p>",
+    "es": "<p>Una vez completada la descarga, el MP3 generalmente se encuentra en las descargas de tu navegador: carpeta Descargas en Android y ordenador, aplicación Archivos en iPhone y iPad. Luego puedes abrirlo con tu reproductor de música habitual o copiarlo a una memoria USB u otro dispositivo.</p>",
+    "pt": "<p>Depois que o download for concluído, o MP3 geralmente é encontrado nos downloads do seu navegador: pasta Downloads no Android e computador, aplicativo Arquivos no iPhone e iPad. Você pode então abri-lo com seu player de música habitual ou copiá-lo para um pen drive ou outro dispositivo.</p>",
+    "ar": "<p>بعد اكتمال التحميل، عادةً ما يوجد ملف MP3 في تنزيلات متصفحك: مجلد التنزيلات على Android والكمبيوتر، وتطبيق الملفات على iPhone وiPad. يمكنك بعد ذلك فتحه بمشغل الموسيقى المعتاد أو نسخه إلى محرك USB أو جهاز آخر.</p>"
+  },
+  "p.youtube-mp3.faq.0.q": {
+    "fr": "Comment convertir une vidéo YouTube en MP3 sur téléphone ?",
+    "en": "How to convert a YouTube video to MP3 on phone?",
+    "es": "¿Cómo convertir un video de YouTube a MP3 en el teléfono?",
+    "pt": "Como converter um vídeo do YouTube em MP3 no celular?",
+    "ar": "كيف تحويل فيديو يوتيوب إلى MP3 على الهاتف؟"
+  },
+  "p.youtube-mp3.faq.0.a": {
+    "fr": "Copie le lien depuis l'application YouTube (Partager, puis Copier le lien), ouvre StreamLoaders dans ton navigateur, colle le lien, clique sur Analyser, choisis « Audio MP3 » et télécharge. Aucune application à installer.",
+    "en": "Copy the link from the YouTube app (Share, then Copy link), open StreamLoaders in your browser, paste the link, click Analyze, choose \"Audio MP3\" and download. No app to install.",
+    "es": "Copia el enlace desde la aplicación de YouTube (Compartir, luego Copiar enlace), abre StreamLoaders en tu navegador, pega el enlace, haz clic en Analizar, elige «Audio MP3» y descarga. Ninguna aplicación que instalar.",
+    "pt": "Copie o link do aplicativo YouTube (Compartilhar, depois Copiar link), abra o StreamLoaders no seu navegador, cole o link, clique em Analisar, escolha \"Áudio MP3\" e baixe. Nenhum aplicativo para instalar.",
+    "ar": "انسخ الرابط من تطبيق يوتيوب (مشاركة، ثم نسخ الرابط)، افتح StreamLoaders في متصفحك، الصق الرابط، انقر على تحليل، اختر \"صوت MP3\" وحمّل. لا حاجة لتثبيت أي تطبيق."
+  },
+  "p.youtube-mp3.faq.1.q": {
+    "fr": "Quelle est la qualité du MP3 obtenu ?",
+    "en": "What is the quality of the resulting MP3?",
+    "es": "¿Cuál es la calidad del MP3 obtenido?",
+    "pt": "Qual é a qualidade do MP3 obtido?",
+    "ar": "ما جودة ملف MP3 الناتج؟"
+  },
+  "p.youtube-mp3.faq.1.a": {
+    "fr": "Le fichier est encodé en 320 kbps, le débit maximal du format MP3. Sa qualité réelle dépend toutefois du son de la vidéo d'origine.",
+    "en": "The file is encoded at 320 kbps, the maximum bitrate for the MP3 format. Its actual quality depends, however, on the sound of the original video.",
+    "es": "El archivo se codifica a 320 kbps, la tasa máxima del formato MP3. Su calidad real depende, sin embargo, del sonido del video original.",
+    "pt": "O arquivo é codificado a 320 kbps, a taxa máxima do formato MP3. Sua qualidade real depende, no entanto, do som do vídeo original.",
+    "ar": "يتم ترميز الملف بمعدل 320 kbps، وهو أقصى معدل لصيغة MP3. ومع ذلك، تعتمد جودته الفعلية على صوت الفيديو الأصلي."
+  },
+  "p.youtube-mp3.faq.2.q": {
+    "fr": "La conversion de YouTube en MP3 est-elle gratuite ?",
+    "en": "Is YouTube to MP3 conversion free?",
+    "es": "¿Es gratuita la conversión de YouTube a MP3?",
+    "pt": "A conversão do YouTube para MP3 é gratuita?",
+    "ar": "هل تحويل يوتيوب إلى MP3 مجاني؟"
+  },
+  "p.youtube-mp3.faq.2.a": {
+    "fr": "Oui. Le plan gratuit permet jusqu'à 30 téléchargements par jour, avec des publicités. L'abonnement Premium retire les limites et les publicités.",
+    "en": "Yes. The free plan allows up to 30 downloads per day, with ads. The Premium subscription removes limits and ads.",
+    "es": "Sí. El plan gratuito permite hasta 30 descargas por día, con anuncios. La suscripción Premium elimina los límites y los anuncios.",
+    "pt": "Sim. O plano gratuito permite até 30 downloads por dia, com anúncios. A assinatura Premium remove os limites e os anúncios.",
+    "ar": "نعم. تسمح الخطة المجانية بما يصل إلى 30 عملية تحميل يوميًا، مع إعلانات. يزيل اشتراك Premium الحدود والإعلانات."
+  },
+  "p.youtube-mp3.faq.3.q": {
+    "fr": "Puis-je convertir n'importe quelle musique en MP3 ?",
+    "en": "Can I convert any music to MP3?",
+    "es": "¿Puedo convertir cualquier música a MP3?",
+    "pt": "Posso converter qualquer música em MP3?",
+    "ar": "هل يمكنني تحويل أي موسيقى إلى MP3؟"
+  },
+  "p.youtube-mp3.faq.3.a": {
+    "fr": "Pas sans précaution. La plupart des chansons sont protégées par le droit d'auteur, et leur copie nécessite l'accord des ayants droit. Privilégie les podcasts, les conférences, les contenus libres de droits et tes propres créations.",
+    "en": "Not without caution. Most songs are protected by copyright, and copying them requires the permission of the rights holders. Favor podcasts, conferences, royalty-free content and your own creations.",
+    "es": "No sin precaución. La mayoría de las canciones están protegidas por derechos de autor, y su copia requiere el acuerdo de los titulares de derechos. Prioriza los podcasts, las conferencias, los contenidos libres de derechos y tus propias creaciones.",
+    "pt": "Não sem precaução. A maioria das músicas é protegida por direitos autorais, e sua cópia requer o acordo dos detentores dos direitos. Priorize podcasts, conferências, conteúdos livres de direitos e suas próprias criações.",
+    "ar": "ليس دون حذر. معظم الأغاني محمية بحقوق النشر، ونسخها يتطلب موافقة أصحاب الحقوق. فضّل البودكاست والمحاضرات والمحتوى الخالي من الحقوق وإبداعاتك الخاصة."
+  },
+  "p.youtube-mp3.faq.4.q": {
+    "fr": "Pourquoi ma conversion ne démarre-t-elle pas ?",
+    "en": "Why doesn't my conversion start?",
+    "es": "¿Por qué no se inicia mi conversión?",
+    "pt": "Por que minha conversão não começa?",
+    "ar": "لماذا لا يبدأ تحويلي؟"
+  },
+  "p.youtube-mp3.faq.4.a": {
+    "fr": "Vérifie que le lien est complet et que la vidéo est publique. Aux heures de forte affluence, la conversion peut patienter quelques instants en file d'attente : elle démarre toute seule, garde simplement la page ouverte.",
+    "en": "Check that the link is complete and the video is public. During peak hours, the conversion may wait a few moments in a queue: it starts on its own, just keep the page open.",
+    "es": "Verifica que el enlace esté completo y que el video sea público. En horas de mucha afluencia, la conversión puede esperar unos instantes en cola: se inicia sola, simplemente mantén la página abierta.",
+    "pt": "Verifique se o link está completo e se o vídeo é público. Nos horários de pico, a conversão pode aguardar alguns instantes em fila: ela começa sozinha, basta manter a página aberta.",
+    "ar": "تحقق من أن الرابط كامل وأن الفيديو عام. في ساعات الذروة، قد ينتظر التحويل بضع لحظات في قائمة الانتظار: يبدأ من تلقاء نفسه، فقط أبقِ الصفحة مفتوحة."
+  },
+  "p.tiktok.title": {
+    "fr": "Télécharger vidéo TikTok en MP4 ou MP3 – StreamLoaders",
+    "en": "Download TikTok video in MP4 or MP3 – StreamLoaders",
+    "es": "Descargar video de TikTok en MP4 o MP3 – StreamLoaders",
+    "pt": "Baixar vídeo do TikTok em MP4 ou MP3 – StreamLoaders",
+    "ar": "تحميل فيديو تيك توك بصيغة MP4 أو MP3 – StreamLoaders"
+  },
+  "p.tiktok.label": {
+    "fr": "Vidéo TikTok",
+    "en": "TikTok video",
+    "es": "Video de TikTok",
+    "pt": "Vídeo do TikTok",
+    "ar": "فيديو تيك توك"
+  },
+  "p.tiktok.card": {
+    "fr": "Télécharge une vidéo TikTok en MP4 ou récupère uniquement son audio en MP3.",
+    "en": "Download a TikTok video in MP4 or get only its audio in MP3.",
+    "es": "Descarga un video de TikTok en MP4 o recupera solo su audio en MP3.",
+    "pt": "Baixe um vídeo do TikTok em MP4 ou obtenha apenas seu áudio em MP3.",
+    "ar": "حمّل فيديو تيك توك بصيغة MP4 أو احصل على صوته فقط بصيغة MP3."
+  },
+  "p.tiktok.h1": {
+    "fr": "Télécharge tes vidéos TikTok",
+    "en": "Download your TikTok videos",
+    "es": "Descarga tus videos de TikTok",
+    "pt": "Baixe seus vídeos do TikTok",
+    "ar": "حمّل فيديوهاتك من تيك توك"
+  },
+  "p.tiktok.h1Accent": {
+    "fr": "en MP4 ou en MP3.",
+    "en": "in MP4 or MP3.",
+    "es": "en MP4 o MP3.",
+    "pt": "em MP4 ou MP3.",
+    "ar": "بصيغة MP4 أو MP3."
+  },
+  "p.tiktok.intro": {
+    "fr": "Colle le lien d'une vidéo TikTok, choisis ta qualité et récupère le fichier sur ton téléphone ou ton ordinateur. Pas de compte, pas d'application à installer : tout se passe dans ton navigateur.",
+    "en": "Paste the link of a TikTok video, choose your quality and get the file on your phone or computer. No account, no app to install: everything happens in your browser.",
+    "es": "Pega el enlace de un video de TikTok, elige tu calidad y obtén el archivo en tu teléfono u ordenador. Sin cuenta, sin aplicación que instalar: todo ocurre en tu navegador.",
+    "pt": "Cole o link de um vídeo do TikTok, escolha sua qualidade e obtenha o arquivo no seu celular ou computador. Sem conta, sem aplicativo para instalar: tudo acontece no seu navegador.",
+    "ar": "الصق رابط فيديو تيك توك، اختر الجودة واحصل على الملف على هاتفك أو كمبيوترك. لا حساب، لا تطبيق للتثبيت: كل شيء يحدث في متصفحك."
+  },
+  "p.tiktok.placeholder": {
+    "fr": "Colle le lien de la vidéo TikTok…",
+    "en": "Paste the TikTok video link…",
+    "es": "Pega el enlace del video de TikTok…",
+    "pt": "Cole o link do vídeo do TikTok…",
+    "ar": "الصق رابط فيديو تيك توك…"
+  },
+  "p.tiktok.stepsTitle": {
+    "fr": "Comment télécharger une vidéo TikTok",
+    "en": "How to download a TikTok video",
+    "es": "Cómo descargar un video de TikTok",
+    "pt": "Como baixar um vídeo do TikTok",
+    "ar": "كيفية تحميل فيديو من تيك توك"
+  },
+  "p.tiktok.stepsAccent": {
+    "fr": "en 3 étapes.",
+    "en": "in 3 steps.",
+    "es": "en 3 pasos.",
+    "pt": "em 3 passos.",
+    "ar": "في 3 خطوات."
+  },
+  "p.tiktok.stepsSub": {
+    "fr": "Aucun compte ni application à installer : tout se passe dans ton navigateur.",
+    "en": "No account or application to install: everything happens in your browser.",
+    "es": "Sin cuenta ni aplicación que instalar: todo ocurre en tu navegador.",
+    "pt": "Sem conta nem aplicativo para instalar: tudo acontece no seu navegador.",
+    "ar": "لا حاجة لحساب أو تطبيق للتثبيت: كل شيء يحدث في متصفحك."
+  },
+  "p.tiktok.steps.0.title": {
+    "fr": "Copie le lien TikTok",
+    "en": "Copy the TikTok link",
+    "es": "Copia el enlace de TikTok",
+    "pt": "Copie o link do TikTok",
+    "ar": "انسخ رابط تيك توك"
+  },
+  "p.tiktok.steps.0.text": {
+    "fr": "Dans l'application, ouvre la vidéo, touche Partager (la flèche), puis « Copier le lien ». Sur ordinateur, copie simplement l'adresse de la page dans la barre du navigateur.",
+    "en": "In the app, open the video, tap Share (the arrow), then \"Copy link\". On a computer, simply copy the page address from the browser bar.",
+    "es": "En la aplicación, abre el video, toca Compartir (la flecha), luego «Copiar enlace». En ordenador, simplemente copia la dirección de la página en la barra del navegador.",
+    "pt": "No aplicativo, abra o vídeo, toque em Compartilhar (a seta), depois \"Copiar link\". No computador, basta copiar o endereço da página na barra do navegador.",
+    "ar": "في التطبيق، افتح الفيديو، اضغط على مشاركة (السهم)، ثم \"نسخ الرابط\". على الكمبيوتر، ما عليك سوى نسخ عنوان الصفحة من شريط المتصفح."
+  },
+  "p.tiktok.steps.1.title": {
+    "fr": "Colle-le et analyse",
+    "en": "Paste it and analyze",
+    "es": "Pégalo y analiza",
+    "pt": "Cole e analise",
+    "ar": "الصقه وحلله"
+  },
+  "p.tiktok.steps.1.text": {
+    "fr": "Colle le lien dans le champ en haut de cette page et clique sur Analyser. StreamLoaders lit la vidéo et te propose les formats disponibles.",
+    "en": "Paste the link in the field at the top of this page and click Analyze. StreamLoaders reads the video and offers you the available formats.",
+    "es": "Pega el enlace en el campo en la parte superior de esta página y haz clic en Analizar. StreamLoaders lee el video y te ofrece los formatos disponibles.",
+    "pt": "Cole o link no campo no topo desta página e clique em Analisar. O StreamLoaders lê o vídeo e oferece os formatos disponíveis.",
+    "ar": "الصق الرابط في الحقل أعلى هذه الصفحة وانقر على تحليل. يقرأ StreamLoaders الفيديو ويعرض لك التنسيقات المتاحة."
+  },
+  "p.tiktok.steps.2.title": {
+    "fr": "Choisis et télécharge",
+    "en": "Choose and download",
+    "es": "Elige y descarga",
+    "pt": "Escolha e baixe",
+    "ar": "اختر وحمّل"
+  },
+  "p.tiktok.steps.2.text": {
+    "fr": "Sélectionne la qualité MP4 qui te convient, ou « Audio MP3 » pour ne garder que le son, puis clique sur Télécharger. Le fichier est enregistré sur ton appareil.",
+    "en": "Select the MP4 quality that suits you, or \"Audio MP3\" to keep only the sound, then click Download. The file is saved to your device.",
+    "es": "Selecciona la calidad MP4 que te convenga, o «Audio MP3» para quedarte solo con el sonido, luego haz clic en Descargar. El archivo se guarda en tu dispositivo.",
+    "pt": "Selecione a qualidade MP4 que lhe convier, ou \"Áudio MP3\" para manter apenas o som, depois clique em Baixar. O arquivo é salvo no seu dispositivo.",
+    "ar": "اختر جودة MP4 التي تناسبك، أو \"صوت MP3\" للاحتفاظ بالصوت فقط، ثم انقر على تحميل. يتم حفظ الملف على جهازك."
+  },
+  "p.tiktok.sections.0.title": {
+    "fr": "Télécharger une vidéo TikTok en MP4 ou en MP3",
+    "en": "Download a TikTok video in MP4 or MP3",
+    "es": "Descargar un video de TikTok en MP4 o MP3",
+    "pt": "Baixar um vídeo do TikTok em MP4 ou MP3",
+    "ar": "تحميل فيديو تيك توك بصيغة MP4 أو MP3"
+  },
+  "p.tiktok.sections.0.html": {
+    "fr": "<p>StreamLoaders récupère la vidéo TikTok telle qu'elle est publiée et te la livre en MP4, un format lisible sur tous les téléphones, ordinateurs et télévisions. Tu choisis la qualité : une version légère pour économiser tes données mobiles, ou la meilleure qualité disponible pour la regarder sur un grand écran.</p><p>Si seul le son t'intéresse (une musique, un extrait audio, une prise de parole), choisis l'option Audio MP3 : tu obtiens un fichier audio sans la vidéo.</p><p>Tu as besoin d'un passage précis ? L'option « Extraire une scène précise » te permet d'indiquer un début et une fin pour ne garder que le moment qui t'intéresse. Elle demande un compte gratuit, avec quelques essais offerts.</p>",
+    "en": "<p>StreamLoaders retrieves the TikTok video as it is published and delivers it in MP4, a format readable on all phones, computers and televisions. You choose the quality: a lightweight version to save mobile data, or the best available quality to watch on a big screen.</p><p>If only the sound interests you (a song, an audio excerpt, a speech), choose the Audio MP3 option: you get an audio file without the video.</p><p>Need a specific passage? The \"Extract a specific scene\" option lets you indicate a start and end to keep only the moment that interests you. It requires a free account, with a few free trials.</p>",
+    "es": "<p>StreamLoaders obtiene el video de TikTok tal como se publica y lo entrega en MP4, un formato legible en todos los teléfonos, ordenadores y televisores. Eliges la calidad: una versión ligera para ahorrar datos móviles, o la mejor calidad disponible para verlo en una pantalla grande.</p><p>Si solo te interesa el sonido (una música, un fragmento de audio, un discurso), elige la opción Audio MP3: obtienes un archivo de audio sin el video.</p><p>¿Necesitas un fragmento concreto? La opción «Extraer una escena precisa» te permite indicar un inicio y un fin para quedarte solo con el momento que te interesa. Requiere una cuenta gratuita, con algunas pruebas gratuitas.</p>",
+    "pt": "<p>O StreamLoaders obtém o vídeo do TikTok como é publicado e o entrega em MP4, um formato legível em todos os celulares, computadores e televisões. Você escolhe a qualidade: uma versão leve para economizar dados móveis, ou a melhor qualidade disponível para assistir em uma tela grande.</p><p>Se apenas o som lhe interessa (uma música, um trecho de áudio, um discurso), escolha a opção Áudio MP3: você obtém um arquivo de áudio sem o vídeo.</p><p>Precisa de um trecho específico? A opção \"Extrair uma cena específica\" permite indicar um início e fim para manter apenas o momento que lhe interessa. Requer uma conta gratuita, com alguns testes gratuitos.</p>",
+    "ar": "<p>يسترجع StreamLoaders فيديو تيك توك كما هو منشور ويسلمه بصيغة MP4، وهي صيغة قابلة للقراءة على جميع الهواتف والكمبيوترات والتلفزيونات. تختار الجودة: نسخة خفيفة لتوفير بيانات الهاتف المحمول، أو أفضل جودة متاحة للمشاهدة على شاشة كبيرة.</p><p>إذا كان الصوت فقط هو ما يهمك (أغنية، مقطع صوتي، خطاب)، اختر خيار صوت MP3: تحصل على ملف صوتي بدون الفيديو.</p><p>هل تحتاج إلى مقطع محدد؟ يتيح لك خيار \"استخراج مشهد محدد\" تحديد بداية ونهاية للاحتفاظ فقط باللحظة التي تهمك. يتطلب حسابًا مجانيًا، مع بعض المحاولات المجانية.</p>"
+  },
+  "p.tiktok.sections.1.title": {
+    "fr": "Bon à savoir avant de télécharger",
+    "en": "Good to know before downloading",
+    "es": "Bueno saber antes de descargar",
+    "pt": "Bom saber antes de baixar",
+    "ar": "من الجيد معرفته قبل التحميل"
+  },
+  "p.tiktok.sections.1.html": {
+    "fr": "<ul><li>Seules les vidéos publiques sont prises en charge. Une vidéo privée, supprimée ou réservée à certains abonnés ne pourra pas être analysée.</li><li>Utilise le lien complet de la vidéo, ou le lien de partage copié depuis l'application. Un lien tronqué est la cause d'erreur la plus fréquente.</li><li>Télécharge pour un usage personnel. Les vidéos appartiennent à leurs créateurs : tu restes responsable de disposer des droits nécessaires avant de les réutiliser ou de les republier.</li></ul>",
+    "en": "<ul><li>Only public videos are supported. A private, deleted or subscribers-only video cannot be analyzed.</li><li>Use the full video link, or the share link copied from the app. A truncated link is the most common cause of error.</li><li>Download for personal use. Videos belong to their creators: you remain responsible for having the necessary rights before reusing or republishing them.</li></ul>",
+    "es": "<ul><li>Solo se admiten videos públicos. Un video privado, eliminado o reservado a ciertos suscriptores no podrá analizarse.</li><li>Usa el enlace completo del video, o el enlace de compartir copiado desde la aplicación. Un enlace truncado es la causa de error más frecuente.</li><li>Descarga para uso personal. Los videos pertenecen a sus creadores: sigues siendo responsable de tener los derechos necesarios antes de reutilizarlos o republicarlos.</li></ul>",
+    "pt": "<ul><li>Apenas vídeos públicos são suportados. Um vídeo privado, excluído ou reservado a certos assinantes não poderá ser analisado.</li><li>Use o link completo do vídeo, ou o link de compartilhamento copiado do aplicativo. Um link truncado é a causa de erro mais frequente.</li><li>Baixe para uso pessoal. Os vídeos pertencem aos seus criadores: você continua responsável por ter os direitos necessários antes de reutilizá-los ou republicá-los.</li></ul>",
+    "ar": "<ul><li>يتم دعم الفيديوهات العامة فقط. الفيديو الخاص أو المحذوف أو المخصص لبعض المشتركين لا يمكن تحليله.</li><li>استخدم الرابط الكامل للفيديو، أو رابط المشاركة المنسوخ من التطبيق. الرابط المقطوع هو السبب الأكثر شيوعًا للخطأ.</li><li>حمّل للاستخدام الشخصي. الفيديوهات ملك لمنشئيها: تظل مسؤولاً عن امتلاك الحقوق اللازمة قبل إعادة استخدامها أو إعادة نشرها.</li></ul>"
+  },
+  "p.tiktok.faq.0.q": {
+    "fr": "Comment télécharger une vidéo TikTok sur iPhone ou Android ?",
+    "en": "How to download a TikTok video on iPhone or Android?",
+    "es": "¿Cómo descargar un video de TikTok en iPhone o Android?",
+    "pt": "Como baixar um vídeo do TikTok no iPhone ou Android?",
+    "ar": "كيف تحميل فيديو تيك توك على iPhone أو Android؟"
+  },
+  "p.tiktok.faq.0.a": {
+    "fr": "Copie le lien depuis l'application TikTok (Partager, puis Copier le lien), ouvre StreamLoaders dans ton navigateur, colle le lien et clique sur Analyser, puis sur Télécharger. Le fichier arrive dans les téléchargements de ton navigateur.",
+    "en": "Copy the link from the TikTok app (Share, then Copy link), open StreamLoaders in your browser, paste the link and click Analyze, then Download. The file arrives in your browser's downloads.",
+    "es": "Copia el enlace desde la aplicación de TikTok (Compartir, luego Copiar enlace), abre StreamLoaders en tu navegador, pega el enlace y haz clic en Analizar, luego en Descargar. El archivo llega a las descargas de tu navegador.",
+    "pt": "Copie o link do aplicativo TikTok (Compartilhar, depois Copiar link), abra o StreamLoaders no seu navegador, cole o link e clique em Analisar, depois em Baixar. O arquivo chega aos downloads do seu navegador.",
+    "ar": "انسخ الرابط من تطبيق تيك توك (مشاركة، ثم نسخ الرابط)، افتح StreamLoaders في متصفحك، الصق الرابط وانقر على تحليل، ثم على تحميل. يصل الملف إلى تنزيلات متصفحك."
+  },
+  "p.tiktok.faq.1.q": {
+    "fr": "Peut-on récupérer uniquement le son d'une vidéo TikTok ?",
+    "en": "Can you get only the sound of a TikTok video?",
+    "es": "¿Se puede obtener solo el sonido de un video de TikTok?",
+    "pt": "Pode-se obter apenas o som de um vídeo do TikTok?",
+    "ar": "هل يمكن الحصول على صوت فيديو تيك توك فقط؟"
+  },
+  "p.tiktok.faq.1.a": {
+    "fr": "Oui. Après l'analyse du lien, choisis « Audio MP3 » à la place d'un format vidéo. Tu obtiens un fichier audio que tu peux écouter ou garder sur ton téléphone.",
+    "en": "Yes. After analyzing the link, choose \"Audio MP3\" instead of a video format. You get an audio file you can listen to or keep on your phone.",
+    "es": "Sí. Después de analizar el enlace, elige «Audio MP3» en lugar de un formato de video. Obtienes un archivo de audio que puedes escuchar o guardar en tu teléfono.",
+    "pt": "Sim. Após analisar o link, escolha \"Áudio MP3\" em vez de um formato de vídeo. Você obtém um arquivo de áudio que pode ouvir ou guardar no seu celular.",
+    "ar": "نعم. بعد تحليل الرابط، اختر \"صوت MP3\" بدلاً من تنسيق الفيديو. تحصل على ملف صوتي يمكنك الاستماع إليه أو الاحتفاظ به على هاتفك."
+  },
+  "p.tiktok.faq.2.q": {
+    "fr": "Pourquoi mon lien TikTok n'est-il pas reconnu ?",
+    "en": "Why isn't my TikTok link recognized?",
+    "es": "¿Por qué no se reconoce mi enlace de TikTok?",
+    "pt": "Por que meu link do TikTok não é reconhecido?",
+    "ar": "لماذا لا يتم التعرف على رابط تيك توك الخاص بي؟"
+  },
+  "p.tiktok.faq.2.a": {
+    "fr": "Vérifie que le lien est complet, que la vidéo est publique et qu'elle n'a pas été supprimée. En cas de doute, ouvre le lien dans ton navigateur : si la vidéo s'y affiche, elle peut en général être analysée. Réessaie aussi quelques instants plus tard si le site est très sollicité.",
+    "en": "Check that the link is complete, the video is public and hasn't been deleted. If in doubt, open the link in your browser: if the video displays, it can generally be analyzed. Also try again a few moments later if the site is very busy.",
+    "es": "Verifica que el enlace esté completo, que el video sea público y que no haya sido eliminado. En caso de duda, abre el enlace en tu navegador: si el video se muestra, generalmente puede analizarse. También vuelve a intentarlo unos instantes después si el sitio está muy solicitado.",
+    "pt": "Verifique se o link está completo, se o vídeo é público e se não foi excluído. Em caso de dúvida, abra o link no seu navegador: se o vídeo aparecer, geralmente pode ser analisado. Tente novamente também alguns instantes depois se o site estiver muito movimentado.",
+    "ar": "تحقق من أن الرابط كامل وأن الفيديو عام ولم يتم حذفه. في حالة الشك، افتح الرابط في متصفحك: إذا ظهر الفيديو، فيمكن عادةً تحليله. أعد المحاولة أيضًا بعد بضع لحظات إذا كان الموقع مزدحمًا جدًا."
+  },
+  "p.tiktok.faq.3.q": {
+    "fr": "Le téléchargement de vidéos TikTok est-il gratuit ?",
+    "en": "Is downloading TikTok videos free?",
+    "es": "¿Es gratuita la descarga de videos de TikTok?",
+    "pt": "O download de vídeos do TikTok é gratuito?",
+    "ar": "هل تحميل فيديوهات تيك توك مجاني؟"
+  },
+  "p.tiktok.faq.3.a": {
+    "fr": "Oui. Le plan gratuit permet jusqu'à 30 téléchargements par jour, avec des publicités. L'abonnement Premium retire les limites et les publicités.",
+    "en": "Yes. The free plan allows up to 30 downloads per day, with ads. The Premium subscription removes limits and ads.",
+    "es": "Sí. El plan gratuito permite hasta 30 descargas por día, con anuncios. La suscripción Premium elimina los límites y los anuncios.",
+    "pt": "Sim. O plano gratuito permite até 30 downloads por dia, com anúncios. A assinatura Premium remove os limites e os anúncios.",
+    "ar": "نعم. تسمح الخطة المجانية بما يصل إلى 30 عملية تحميل يوميًا، مع إعلانات. يزيل اشتراك Premium الحدود والإعلانات."
+  },
+  "p.instagram.title": {
+    "fr": "Télécharger vidéo et Reel Instagram – StreamLoaders",
+    "en": "Download Instagram video and Reel – StreamLoaders",
+    "es": "Descargar video y Reel de Instagram – StreamLoaders",
+    "pt": "Baixar vídeo e Reel do Instagram – StreamLoaders",
+    "ar": "تحميل فيديو وReel من إنستغرام – StreamLoaders"
+  },
+  "p.instagram.label": {
+    "fr": "Vidéo Instagram",
+    "en": "Instagram video",
+    "es": "Video de Instagram",
+    "pt": "Vídeo do Instagram",
+    "ar": "فيديو إنستغرام"
+  },
+  "p.instagram.card": {
+    "fr": "Enregistre un Reel ou une vidéo Instagram publique en MP4 ou en MP3.",
+    "en": "Save a public Instagram Reel or video in MP4 or MP3.",
+    "es": "Guarda un Reel o video público de Instagram en MP4 o MP3.",
+    "pt": "Salve um Reel ou vídeo público do Instagram em MP4 ou MP3.",
+    "ar": "احفظ Reel أو فيديو إنستغرام عام بصيغة MP4 أو MP3."
+  },
+  "p.instagram.h1": {
+    "fr": "Télécharge les Reels et vidéos Instagram",
+    "en": "Download Instagram Reels and videos",
+    "es": "Descarga los Reels y videos de Instagram",
+    "pt": "Baixe os Reels e vídeos do Instagram",
+    "ar": "حمّل Reels وفيديوهات إنستغرام"
+  },
+  "p.instagram.h1Accent": {
+    "fr": "en MP4 ou en MP3.",
+    "en": "in MP4 or MP3.",
+    "es": "en MP4 o MP3.",
+    "pt": "em MP4 ou MP3.",
+    "ar": "بصيغة MP4 أو MP3."
+  },
+  "p.instagram.intro": {
+    "fr": "Colle le lien d'un Reel ou d'une vidéo Instagram publique, choisis la qualité et télécharge-la en MP4, ou garde seulement le son en MP3. Aucune application à installer, et pas besoin de te connecter à Instagram.",
+    "en": "Paste the link of a public Instagram Reel or video, choose the quality and download it in MP4, or keep only the sound in MP3. No app to install, and no need to log in to Instagram.",
+    "es": "Pega el enlace de un Reel o video público de Instagram, elige la calidad y descárgalo en MP4, o guarda solo el sonido en MP3. Ninguna aplicación que instalar, y no necesitas iniciar sesión en Instagram.",
+    "pt": "Cole o link de um Reel ou vídeo público do Instagram, escolha a qualidade e baixe-o em MP4, ou guarde apenas o som em MP3. Nenhum aplicativo para instalar, e não precisa fazer login no Instagram.",
+    "ar": "الصق رابط Reel أو فيديو إنستغرام عام، اختر الجودة وحمّله بصيغة MP4، أو احتفظ بالصوت فقط بصيغة MP3. لا حاجة لتثبيت أي تطبيق، ولا حاجة لتسجيل الدخول إلى إنستغرام."
+  },
+  "p.instagram.placeholder": {
+    "fr": "Colle le lien du Reel ou de la vidéo Instagram…",
+    "en": "Paste the Instagram Reel or video link…",
+    "es": "Pega el enlace del Reel o video de Instagram…",
+    "pt": "Cole o link do Reel ou vídeo do Instagram…",
+    "ar": "الصق رابط Reel أو فيديو إنستغرام…"
+  },
+  "p.instagram.stepsTitle": {
+    "fr": "Comment télécharger une vidéo Instagram",
+    "en": "How to download an Instagram video",
+    "es": "Cómo descargar un video de Instagram",
+    "pt": "Como baixar um vídeo do Instagram",
+    "ar": "كيفية تحميل فيديو من إنستغرام"
+  },
+  "p.instagram.stepsAccent": {
+    "fr": "en 3 étapes.",
+    "en": "in 3 steps.",
+    "es": "en 3 pasos.",
+    "pt": "em 3 passos.",
+    "ar": "في 3 خطوات."
+  },
+  "p.instagram.stepsSub": {
+    "fr": "Aucun compte ni application à installer : tout se passe dans ton navigateur.",
+    "en": "No account or application to install: everything happens in your browser.",
+    "es": "Sin cuenta ni aplicación que instalar: todo ocurre en tu navegador.",
+    "pt": "Sem conta nem aplicativo para instalar: tudo acontece no seu navegador.",
+    "ar": "لا حاجة لحساب أو تطبيق للتثبيت: كل شيء يحدث في متصفحك."
+  },
+  "p.instagram.steps.0.title": {
+    "fr": "Copie le lien Instagram",
+    "en": "Copy the Instagram link",
+    "es": "Copia el enlace de Instagram",
+    "pt": "Copie o link do Instagram",
+    "ar": "انسخ رابط إنستغرام"
+  },
+  "p.instagram.steps.0.text": {
+    "fr": "Ouvre le Reel ou la vidéo dans l'application, touche l'icône de partage (l'avion en papier), puis « Copier le lien ». Tu peux aussi passer par le menu (…) de la publication.",
+    "en": "Open the Reel or video in the app, tap the share icon (the paper plane), then \"Copy link\". You can also use the post's menu (…).",
+    "es": "Abre el Reel o el video en la aplicación, toca el icono de compartir (el avión de papel), luego «Copiar enlace». También puedes usar el menú (…) de la publicación.",
+    "pt": "Abra o Reel ou vídeo no aplicativo, toque no ícone de compartilhamento (o avião de papel), depois \"Copiar link\". Você também pode usar o menu (…) da publicação.",
+    "ar": "افتح Reel أو الفيديو في التطبيق، اضغط على أيقونة المشاركة (الطائرة الورقية)، ثم \"نسخ الرابط\". يمكنك أيضًا استخدام قائمة (...) المنشور."
+  },
+  "p.instagram.steps.1.title": {
+    "fr": "Colle-le et analyse",
+    "en": "Paste it and analyze",
+    "es": "Pégalo y analiza",
+    "pt": "Cole e analise",
+    "ar": "الصقه وحلله"
+  },
+  "p.instagram.steps.1.text": {
+    "fr": "Colle le lien dans le champ en haut de cette page et clique sur Analyser. StreamLoaders vérifie la vidéo et affiche les formats proposés.",
+    "en": "Paste the link in the field at the top of this page and click Analyze. StreamLoaders checks the video and displays the offered formats.",
+    "es": "Pega el enlace en el campo en la parte superior de esta página y haz clic en Analizar. StreamLoaders verifica el video y muestra los formatos ofrecidos.",
+    "pt": "Cole o link no campo no topo desta página e clique em Analisar. O StreamLoaders verifica o vídeo e exibe os formatos oferecidos.",
+    "ar": "الصق الرابط في الحقل أعلى هذه الصفحة وانقر على تحليل. يتحقق StreamLoaders من الفيديو ويعرض التنسيقات المقترحة."
+  },
+  "p.instagram.steps.2.title": {
+    "fr": "Choisis et télécharge",
+    "en": "Choose and download",
+    "es": "Elige y descarga",
+    "pt": "Escolha e baixe",
+    "ar": "اختر وحمّل"
+  },
+  "p.instagram.steps.2.text": {
+    "fr": "Sélectionne la qualité MP4 souhaitée, ou « Audio MP3 » pour ne garder que le son, puis clique sur Télécharger.",
+    "en": "Select the desired MP4 quality, or \"Audio MP3\" to keep only the sound, then click Download.",
+    "es": "Selecciona la calidad MP4 deseada, o «Audio MP3» para quedarte solo con el sonido, luego haz clic en Descargar.",
+    "pt": "Selecione a qualidade MP4 desejada, ou \"Áudio MP3\" para manter apenas o som, depois clique em Baixar.",
+    "ar": "اختر جودة MP4 المطلوبة، أو \"صوت MP3\" للاحتفاظ بالصوت فقط، ثم انقر على تحميل."
+  },
+  "p.instagram.sections.0.title": {
+    "fr": "Télécharger un Reel ou une vidéo Instagram",
+    "en": "Download an Instagram Reel or video",
+    "es": "Descargar un Reel o video de Instagram",
+    "pt": "Baixar um Reel ou vídeo do Instagram",
+    "ar": "تحميل Reel أو فيديو من إنستغرام"
+  },
+  "p.instagram.sections.0.html": {
+    "fr": "<p>Cette page sert à enregistrer sur ton téléphone ou ton ordinateur les <strong>Reels</strong> et les <strong>vidéos publiées</strong> par des comptes publics : une recette, un tutoriel, un souvenir partagé par un proche, ta propre création. Le fichier est livré en MP4, lisible partout, dans la meilleure qualité proposée par la publication.</p><p>Si c'est le son qui t'intéresse (une voix, une musique, un extrait), l'option « Audio MP3 » le sépare de l'image.</p><p>Instagram compresse fortement les vidéos : la qualité obtenue ne peut pas dépasser celle de la vidéo telle qu'elle a été publiée.</p>",
+    "en": "<p>This page is used to save on your phone or computer the <strong>Reels</strong> and <strong>published videos</strong> from public accounts: a recipe, a tutorial, a memory shared by a friend, your own creation. The file is delivered in MP4, readable everywhere, in the best quality offered by the post.</p><p>If it's the sound that interests you (a voice, music, an excerpt), the \"Audio MP3\" option separates it from the image.</p><p>Instagram heavily compresses videos: the resulting quality cannot exceed that of the video as it was published.</p>",
+    "es": "<p>Esta página sirve para guardar en tu teléfono u ordenador los <strong>Reels</strong> y los <strong>videos publicados</strong> por cuentas públicas: una receta, un tutorial, un recuerdo compartido por un allegado, tu propia creación. El archivo se entrega en MP4, legible en todas partes, en la mejor calidad ofrecida por la publicación.</p><p>Si es el sonido lo que te interesa (una voz, una música, un fragmento), la opción «Audio MP3» lo separa de la imagen.</p><p>Instagram comprime fuertemente los videos: la calidad obtenida no puede superar la del video tal como se publicó.</p>",
+    "pt": "<p>Esta página serve para salvar no seu celular ou computador os <strong>Reels</strong> e os <strong>vídeos publicados</strong> por contas públicas: uma receita, um tutorial, uma lembrança compartilhada por um conhecido, sua própria criação. O arquivo é entregue em MP4, legível em todos os lugares, na melhor qualidade oferecida pela publicação.</p><p>Se é o som que lhe interessa (uma voz, uma música, um trecho), a opção \"Áudio MP3\" o separa da imagem.</p><p>O Instagram comprime fortemente os vídeos: a qualidade obtida não pode exceder a do vídeo como foi publicado.</p>",
+    "ar": "<p>تُستخدم هذه الصفحة لحفظ <strong>Reels</strong> و<strong>الفيديوهات المنشورة</strong> من الحسابات العامة على هاتفك أو كمبيوترك: وصفة، برنامج تعليمي، ذكرى شاركها صديق، إبداعك الخاص. يتم تسليم الملف بصيغة MP4، قابلة للقراءة في كل مكان، بأفضل جودة تقدمها المنشور.</p><p>إذا كان الصوت هو ما يهمك (صوت، موسيقى، مقتطف)، فإن خيار \"صوت MP3\" يفصله عن الصورة.</p><p>يضغط إنستغرام الفيديوهات بشدة: لا يمكن أن تتجاوز الجودة الناتجة جودة الفيديو كما تم نشره.</p>"
+  },
+  "p.instagram.sections.1.title": {
+    "fr": "Bon à savoir avant de télécharger",
+    "en": "Good to know before downloading",
+    "es": "Bueno saber antes de descargar",
+    "pt": "Bom saber antes de baixar",
+    "ar": "من الجيد معرفته قبل التحميل"
+  },
+  "p.instagram.sections.1.html": {
+    "fr": "<ul><li>Seuls les comptes publics sont pris en charge. Une vidéo d'un compte privé, ou visible seulement par certains abonnés, ne peut pas être analysée.</li><li>Utilise le lien de la publication elle-même, pas celui du profil.</li><li>Les vidéos appartiennent à leurs créateurs. Télécharger pour regarder hors connexion est un usage personnel ; republier un Reel demande l'accord de son auteur, et il est d'usage de le citer.</li></ul>",
+    "en": "<ul><li>Only public accounts are supported. A video from a private account, or visible only to certain subscribers, cannot be analyzed.</li><li>Use the link of the post itself, not the profile link.</li><li>Videos belong to their creators. Downloading to watch offline is personal use; republishing a Reel requires the author's permission, and it is customary to credit them.</li></ul>",
+    "es": "<ul><li>Solo se admiten cuentas públicas. Un video de una cuenta privada, o visible solo para ciertos seguidores, no puede analizarse.</li><li>Usa el enlace de la publicación en sí, no el del perfil.</li><li>Los videos pertenecen a sus creadores. Descargar para ver sin conexión es un uso personal; republicar un Reel requiere el permiso de su autor, y es costumbre citarlo.</li></ul>",
+    "pt": "<ul><li>Apenas contas públicas são suportadas. Um vídeo de uma conta privada, ou visível apenas para certos seguidores, não pode ser analisado.</li><li>Use o link da publicação em si, não o do perfil.</li><li>Os vídeos pertencem aos seus criadores. Baixar para assistir offline é uso pessoal; republicar um Reel requer a permissão do autor, e é costume citá-lo.</li></ul>",
+    "ar": "<ul><li>يتم دعم الحسابات العامة فقط. فيديو من حساب خاص، أو مرئي فقط لبعض المتابعين، لا يمكن تحليله.</li><li>استخدم رابط المنشور نفسه، وليس رابط الملف الشخصي.</li><li>الفيديوهات ملك لمنشئيها. التحميل للمشاهدة بدون اتصال هو استخدام شخصي؛ إعادة نشر Reel تتطلب إذن المؤلف، ومن المعتاد ذكره.</li></ul>"
+  },
+  "p.instagram.faq.0.q": {
+    "fr": "Comment télécharger un Reel Instagram sur iPhone ou Android ?",
+    "en": "How to download an Instagram Reel on iPhone or Android?",
+    "es": "¿Cómo descargar un Reel de Instagram en iPhone o Android?",
+    "pt": "Como baixar um Reel do Instagram no iPhone ou Android?",
+    "ar": "كيف تحميل Reel من إنستغرام على iPhone أو Android؟"
+  },
+  "p.instagram.faq.0.a": {
+    "fr": "Dans l'application, touche l'icône de partage du Reel puis « Copier le lien ». Ouvre StreamLoaders dans ton navigateur, colle le lien, clique sur Analyser puis sur Télécharger. Le fichier arrive dans les téléchargements de ton navigateur.",
+    "en": "In the app, tap the Reel's share icon then \"Copy link\". Open StreamLoaders in your browser, paste the link, click Analyze then Download. The file arrives in your browser's downloads.",
+    "es": "En la aplicación, toca el icono de compartir del Reel y luego «Copiar enlace». Abre StreamLoaders en tu navegador, pega el enlace, haz clic en Analizar y luego en Descargar. El archivo llega a las descargas de tu navegador.",
+    "pt": "No aplicativo, toque no ícone de compartilhamento do Reel e depois \"Copiar link\". Abra o StreamLoaders no seu navegador, cole o link, clique em Analisar e depois em Baixar. O arquivo chega aos downloads do seu navegador.",
+    "ar": "في التطبيق، اضغط على أيقونة مشاركة Reel ثم \"نسخ الرابط\". افتح StreamLoaders في متصفحك، الصق الرابط، انقر على تحليل ثم على تحميل. يصل الملف إلى تنزيلات متصفحك."
+  },
+  "p.instagram.faq.1.q": {
+    "fr": "Pourquoi mon lien Instagram n'est-il pas reconnu ?",
+    "en": "Why isn't my Instagram link recognized?",
+    "es": "¿Por qué no se reconoce mi enlace de Instagram?",
+    "pt": "Por que meu link do Instagram não é reconhecido?",
+    "ar": "لماذا لا يتم التعرف على رابط إنستغرام الخاص بي؟"
+  },
+  "p.instagram.faq.1.a": {
+    "fr": "Le compte est probablement privé, ou la publication a été supprimée. Vérifie aussi que tu as copié le lien de la publication et non celui du profil. Si la vidéo s'ouvre dans ton navigateur sans connexion, elle peut en général être analysée.",
+    "en": "The account is probably private, or the post has been deleted. Also check that you copied the post link and not the profile link. If the video opens in your browser without logging in, it can generally be analyzed.",
+    "es": "La cuenta probablemente sea privada, o la publicación haya sido eliminada. Verifica también que copiaste el enlace de la publicación y no el del perfil. Si el video se abre en tu navegador sin conexión, generalmente puede analizarse.",
+    "pt": "A conta provavelmente é privada, ou a publicação foi excluída. Verifique também se você copiou o link da publicação e não o do perfil. Se o vídeo abrir no seu navegador sem login, geralmente pode ser analisado.",
+    "ar": "من المحتمل أن الحساب خاص، أو تم حذف المنشور. تحقق أيضًا من أنك نسخت رابط المنشور وليس رابط الملف الشخصي. إذا فتح الفيديو في متصفحك دون تسجيل دخول، فيمكن عادةً تحليله."
+  },
+  "p.instagram.faq.2.q": {
+    "fr": "Peut-on récupérer uniquement le son d'un Reel ?",
+    "en": "Can you get only the sound of a Reel?",
+    "es": "¿Se puede obtener solo el sonido de un Reel?",
+    "pt": "Pode-se obter apenas o som de um Reel?",
+    "ar": "هل يمكن الحصول على صوت Reel فقط؟"
+  },
+  "p.instagram.faq.2.a": {
+    "fr": "Oui. Après l'analyse, choisis « Audio MP3 » à la place d'un format vidéo pour obtenir un fichier audio.",
+    "en": "Yes. After analysis, choose \"Audio MP3\" instead of a video format to get an audio file.",
+    "es": "Sí. Después del análisis, elige «Audio MP3» en lugar de un formato de video para obtener un archivo de audio.",
+    "pt": "Sim. Após a análise, escolha \"Áudio MP3\" em vez de um formato de vídeo para obter um arquivo de áudio.",
+    "ar": "نعم. بعد التحليل، اختر \"صوت MP3\" بدلاً من تنسيق الفيديو للحصول على ملف صوتي."
+  },
+  "p.instagram.faq.3.q": {
+    "fr": "Puis-je republier la vidéo d'un autre compte ?",
+    "en": "Can I republish a video from another account?",
+    "es": "¿Puedo republicar el video de otra cuenta?",
+    "pt": "Posso republicar o vídeo de outra conta?",
+    "ar": "هل يمكنني إعادة نشر فيديو من حساب آخر؟"
+  },
+  "p.instagram.faq.3.a": {
+    "fr": "Pas sans l'accord de son créateur. Télécharger une vidéo pour la regarder hors connexion relève d'un usage personnel ; la republier ou la réutiliser demande une autorisation. StreamLoaders est un outil technique : tu restes responsable des droits sur les contenus.",
+    "en": "Not without the creator's permission. Downloading a video to watch it offline is personal use; republishing or reusing it requires authorization. StreamLoaders is a technical tool: you remain responsible for the rights to the content.",
+    "es": "No sin el permiso de su creador. Descargar un video para verlo sin conexión es un uso personal; republicarlo o reutilizarlo requiere autorización. StreamLoaders es una herramienta técnica: sigues siendo responsable de los derechos sobre los contenidos.",
+    "pt": "Não sem a permissão do criador. Baixar um vídeo para assistir offline é uso pessoal; republicá-lo ou reutilizá-lo requer autorização. O StreamLoaders é uma ferramenta técnica: você continua responsável pelos direitos sobre os conteúdos.",
+    "ar": "ليس دون إذن منشئه. تحميل فيديو لمشاهدته بدون اتصال هو استخدام شخصي؛ إعادة نشره أو إعادة استخدامه تتطلب إذنًا. StreamLoaders أداة تقنية: تظل مسؤولاً عن حقوق المحتويات."
+  },
+  "p.facebook.title": {
+    "fr": "Télécharger vidéo Facebook en MP4 ou MP3 – StreamLoaders",
+    "en": "Download Facebook video in MP4 or MP3 – StreamLoaders",
+    "es": "Descargar video de Facebook en MP4 o MP3 – StreamLoaders",
+    "pt": "Baixar vídeo do Facebook em MP4 ou MP3 – StreamLoaders",
+    "ar": "تحميل فيديو فيسبوك بصيغة MP4 أو MP3 – StreamLoaders"
+  },
+  "p.facebook.label": {
+    "fr": "Vidéo Facebook",
+    "en": "Facebook video",
+    "es": "Video de Facebook",
+    "pt": "Vídeo do Facebook",
+    "ar": "فيديو فيسبوك"
+  },
+  "p.facebook.card": {
+    "fr": "Télécharge une vidéo Facebook publique, un Reel ou la rediffusion d'un direct.",
+    "en": "Download a public Facebook video, a Reel or a live replay.",
+    "es": "Descarga un video público de Facebook, un Reel o la repetición de un directo.",
+    "pt": "Baixe um vídeo público do Facebook, um Reel ou a reprise de uma live.",
+    "ar": "حمّل فيديو فيسبوك عام، أو Reel، أو إعادة بث مباشر."
+  },
+  "p.facebook.h1": {
+    "fr": "Télécharge tes vidéos Facebook",
+    "en": "Download your Facebook videos",
+    "es": "Descarga tus videos de Facebook",
+    "pt": "Baixe seus vídeos do Facebook",
+    "ar": "حمّل فيديوهاتك من فيسبوك"
+  },
+  "p.facebook.h1Accent": {
+    "fr": "en MP4 ou en MP3.",
+    "en": "in MP4 or MP3.",
+    "es": "en MP4 o MP3.",
+    "pt": "em MP4 ou MP3.",
+    "ar": "بصيغة MP4 أو MP3."
+  },
+  "p.facebook.intro": {
+    "fr": "Colle le lien d'une vidéo Facebook publique (publication, Reel ou rediffusion d'un direct), choisis la qualité et télécharge-la en MP4, ou garde uniquement le son en MP3. Pas de compte requis, pas d'application à installer.",
+    "en": "Paste the link of a public Facebook video (post, Reel or live replay), choose the quality and download it in MP4, or keep only the sound in MP3. No account required, no app to install.",
+    "es": "Pega el enlace de un video público de Facebook (publicación, Reel o repetición de un directo), elige la calidad y descárgalo en MP4, o guarda solo el sonido en MP3. No se requiere cuenta, ninguna aplicación que instalar.",
+    "pt": "Cole o link de um vídeo público do Facebook (publicação, Reel ou reprise de uma live), escolha a qualidade e baixe-o em MP4, ou guarde apenas o som em MP3. Nenhuma conta necessária, nenhum aplicativo para instalar.",
+    "ar": "الصق رابط فيديو فيسبوك عام (منشور، Reel أو إعادة بث مباشر)، اختر الجودة وحمّله بصيغة MP4، أو احتفظ بالصوت فقط بصيغة MP3. لا حاجة لحساب، ولا حاجة لتثبيت أي تطبيق."
+  },
+  "p.facebook.placeholder": {
+    "fr": "Colle le lien de la vidéo Facebook…",
+    "en": "Paste the Facebook video link…",
+    "es": "Pega el enlace del video de Facebook…",
+    "pt": "Cole o link do vídeo do Facebook…",
+    "ar": "الصق رابط فيديو فيسبوك…"
+  },
+  "p.facebook.stepsTitle": {
+    "fr": "Comment télécharger une vidéo Facebook",
+    "en": "How to download a Facebook video",
+    "es": "Cómo descargar un video de Facebook",
+    "pt": "Como baixar um vídeo do Facebook",
+    "ar": "كيفية تحميل فيديو من فيسبوك"
+  },
+  "p.facebook.stepsAccent": {
+    "fr": "en 3 étapes.",
+    "en": "in 3 steps.",
+    "es": "en 3 pasos.",
+    "pt": "em 3 passos.",
+    "ar": "في 3 خطوات."
+  },
+  "p.facebook.stepsSub": {
+    "fr": "Aucun compte ni application à installer : tout se passe dans ton navigateur.",
+    "en": "No account or application to install: everything happens in your browser.",
+    "es": "Sin cuenta ni aplicación que instalar: todo ocurre en tu navegador.",
+    "pt": "Sem conta nem aplicativo para instalar: tudo acontece no seu navegador.",
+    "ar": "لا حاجة لحساب أو تطبيق للتثبيت: كل شيء يحدث في متصفحك."
+  },
+  "p.facebook.steps.0.title": {
+    "fr": "Copie le lien de la vidéo",
+    "en": "Copy the video link",
+    "es": "Copia el enlace del video",
+    "pt": "Copie o link do vídeo",
+    "ar": "انسخ رابط الفيديو"
+  },
+  "p.facebook.steps.0.text": {
+    "fr": "Dans l'application, touche Partager sous la vidéo puis « Copier le lien ». Sur ordinateur, fais un clic droit sur la date de publication de la vidéo et choisis « Copier l'adresse du lien ».",
+    "en": "In the app, tap Share under the video then \"Copy link\". On a computer, right-click the video's publication date and choose \"Copy link address\".",
+    "es": "En la aplicación, toca Compartir debajo del video y luego «Copiar enlace». En ordenador, haz clic derecho en la fecha de publicación del video y elige «Copiar dirección del enlace».",
+    "pt": "No aplicativo, toque em Compartilhar abaixo do vídeo e depois \"Copiar link\". No computador, clique com o botão direito na data de publicação do vídeo e escolha \"Copiar endereço do link\".",
+    "ar": "في التطبيق، اضغط على مشاركة أسفل الفيديو ثم \"نسخ الرابط\". على الكمبيوتر، انقر بزر الماوس الأيمن على تاريخ نشر الفيديو واختر \"نسخ عنوان الرابط\"."
+  },
+  "p.facebook.steps.1.title": {
+    "fr": "Colle-le et analyse",
+    "en": "Paste it and analyze",
+    "es": "Pégalo y analiza",
+    "pt": "Cole e analise",
+    "ar": "الصقه وحلله"
+  },
+  "p.facebook.steps.1.text": {
+    "fr": "Colle le lien dans le champ en haut de cette page et clique sur Analyser. Les formats disponibles s'affichent.",
+    "en": "Paste the link in the field at the top of this page and click Analyze. The available formats are displayed.",
+    "es": "Pega el enlace en el campo en la parte superior de esta página y haz clic en Analizar. Se muestran los formatos disponibles.",
+    "pt": "Cole o link no campo no topo desta página e clique em Analisar. Os formatos disponíveis são exibidos.",
+    "ar": "الصق الرابط في الحقل أعلى هذه الصفحة وانقر على تحليل. يتم عرض التنسيقات المتاحة."
+  },
+  "p.facebook.steps.2.title": {
+    "fr": "Choisis et télécharge",
+    "en": "Choose and download",
+    "es": "Elige y descarga",
+    "pt": "Escolha e baixe",
+    "ar": "اختر وحمّل"
+  },
+  "p.facebook.steps.2.text": {
+    "fr": "Choisis la qualité MP4 qui te convient ou « Audio MP3 », puis clique sur Télécharger.",
+    "en": "Choose the MP4 quality that suits you or \"Audio MP3\", then click Download.",
+    "es": "Elige la calidad MP4 que te convenga o «Audio MP3», luego haz clic en Descargar.",
+    "pt": "Escolha a qualidade MP4 que lhe convier ou \"Áudio MP3\", depois clique em Baixar.",
+    "ar": "اختر جودة MP4 التي تناسبك أو \"صوت MP3\"، ثم انقر على تحميل."
+  },
+  "p.facebook.sections.0.title": {
+    "fr": "Télécharger une vidéo Facebook en MP4 ou en MP3",
+    "en": "Download a Facebook video in MP4 or MP3",
+    "es": "Descargar un video de Facebook en MP4 o MP3",
+    "pt": "Baixar um vídeo do Facebook em MP4 ou MP3",
+    "ar": "تحميل فيديو فيسبوك بصيغة MP4 أو MP3"
+  },
+  "p.facebook.sections.0.html": {
+    "fr": "<p>StreamLoaders enregistre les vidéos <strong>publiques</strong> de Facebook : publications de pages ou de personnes qui partagent en mode public, Reels et rediffusions de directs terminés. Le fichier est en MP4, lisible sur tous les appareils, dans la qualité proposée par la vidéo (en HD quand elle existe).</p><p>Pour une interview, une chanson ou un discours dont tu ne veux que le son, l'option « Audio MP3 » extrait la piste audio.</p><p>C'est pratique pour garder la vidéo d'un événement que tu as toi-même publiée, regarder un tutoriel sans connexion, ou archiver la rediffusion de ton propre direct.</p>",
+    "en": "<p>StreamLoaders saves <strong>public</strong> Facebook videos: posts from pages or people sharing publicly, Reels and replays of finished live streams. The file is in MP4, readable on all devices, in the quality offered by the video (in HD when available).</p><p>For an interview, a song or a speech where you only want the sound, the \"Audio MP3\" option extracts the audio track.</p><p>It's handy for keeping the video of an event you published yourself, watching a tutorial without a connection, or archiving the replay of your own live stream.</p>",
+    "es": "<p>StreamLoaders guarda los videos <strong>públicos</strong> de Facebook: publicaciones de páginas o personas que comparten en modo público, Reels y repeticiones de directos terminados. El archivo está en MP4, legible en todos los dispositivos, en la calidad ofrecida por el video (en HD cuando existe).</p><p>Para una entrevista, una canción o un discurso del que solo quieras el sonido, la opción «Audio MP3» extrae la pista de audio.</p><p>Es práctico para guardar el video de un evento que tú mismo publicaste, ver un tutorial sin conexión, o archivar la repetición de tu propio directo.</p>",
+    "pt": "<p>O StreamLoaders salva os vídeos <strong>públicos</strong> do Facebook: publicações de páginas ou pessoas que compartilham publicamente, Reels e reprises de lives encerradas. O arquivo está em MP4, legível em todos os dispositivos, na qualidade oferecida pelo vídeo (em HD quando disponível).</p><p>Para uma entrevista, uma música ou um discurso do qual você só quer o som, a opção \"Áudio MP3\" extrai a faixa de áudio.</p><p>É prático para guardar o vídeo de um evento que você mesmo publicou, assistir a um tutorial sem conexão, ou arquivar a reprise da sua própria live.</p>",
+    "ar": "<p>يحفظ StreamLoaders فيديوهات فيسبوك <strong>العامة</strong>: منشورات الصفحات أو الأشخاص الذين يشاركون بشكل عام، وReels وإعادات البث المباشر المنتهية. الملف بصيغة MP4، قابل للقراءة على جميع الأجهزة، بالجودة التي يقدمها الفيديو (بجودة HD عندما تكون متاحة).</p><p>لمقابلة أو أغنية أو خطاب تريد منه الصوت فقط، يستخرج خيار \"صوت MP3\" المسار الصوتي.</p><p>إنه مفيد للاحتفاظ بفيديو حدث قمت بنشره بنفسك، أو مشاهدة برنامج تعليمي بدون اتصال، أو أرشفة إعادة بثك المباشر.</p>"
+  },
+  "p.facebook.sections.1.title": {
+    "fr": "Bon à savoir avant de télécharger",
+    "en": "Good to know before downloading",
+    "es": "Bueno saber antes de descargar",
+    "pt": "Bom saber antes de baixar",
+    "ar": "من الجيد معرفته قبل التحميل"
+  },
+  "p.facebook.sections.1.html": {
+    "fr": "<ul><li>Les vidéos de groupes privés, de profils non publics ou visibles uniquement par des amis ne sont pas accessibles à StreamLoaders.</li><li>Prends le lien de la vidéo elle-même. Les liens courts du type fb.watch sont en général reconnus.</li><li>Tu restes responsable des droits sur ce que tu télécharges : ne republie pas la vidéo d'un autre sans son accord.</li></ul>",
+    "en": "<ul><li>Videos from private groups, non-public profiles or visible only to friends are not accessible to StreamLoaders.</li><li>Take the link of the video itself. Short links like fb.watch are generally recognized.</li><li>You remain responsible for the rights to what you download: do not republish someone else's video without their permission.</li></ul>",
+    "es": "<ul><li>Los videos de grupos privados, perfiles no públicos o visibles solo para amigos no son accesibles para StreamLoaders.</li><li>Toma el enlace del video en sí. Los enlaces cortos del tipo fb.watch generalmente se reconocen.</li><li>Sigues siendo responsable de los derechos sobre lo que descargas: no republiques el video de otro sin su permiso.</li></ul>",
+    "pt": "<ul><li>Vídeos de grupos privados, perfis não públicos ou visíveis apenas para amigos não são acessíveis ao StreamLoaders.</li><li>Pegue o link do vídeo em si. Links curtos do tipo fb.watch geralmente são reconhecidos.</li><li>Você continua responsável pelos direitos sobre o que baixa: não republique o vídeo de outra pessoa sem a permissão dela.</li></ul>",
+    "ar": "<ul><li>فيديوهات المجموعات الخاصة، أو الملفات الشخصية غير العامة، أو المرئية فقط للأصدقاء غير متاحة لـ StreamLoaders.</li><li>خذ رابط الفيديو نفسه. الروابط القصيرة من نوع fb.watch عادةً ما يتم التعرف عليها.</li><li>تظل مسؤولاً عن حقوق ما تقوم بتحميله: لا تعد نشر فيديو شخص آخر دون إذنه.</li></ul>"
+  },
+  "p.facebook.faq.0.q": {
+    "fr": "Comment télécharger une vidéo Facebook sur Android ou iPhone ?",
+    "en": "How to download a Facebook video on Android or iPhone?",
+    "es": "¿Cómo descargar un video de Facebook en Android o iPhone?",
+    "pt": "Como baixar um vídeo do Facebook no Android ou iPhone?",
+    "ar": "كيف تحميل فيديو فيسبوك على Android أو iPhone؟"
+  },
+  "p.facebook.faq.0.a": {
+    "fr": "Touche Partager sous la vidéo puis « Copier le lien ». Ouvre StreamLoaders dans ton navigateur, colle le lien, clique sur Analyser puis sur Télécharger.",
+    "en": "Tap Share under the video then \"Copy link\". Open StreamLoaders in your browser, paste the link, click Analyze then Download.",
+    "es": "Toca Compartir debajo del video y luego «Copiar enlace». Abre StreamLoaders en tu navegador, pega el enlace, haz clic en Analizar y luego en Descargar.",
+    "pt": "Toque em Compartilhar abaixo do vídeo e depois \"Copiar link\". Abra o StreamLoaders no seu navegador, cole o link, clique em Analisar e depois em Baixar.",
+    "ar": "اضغط على مشاركة أسفل الفيديو ثم \"نسخ الرابط\". افتح StreamLoaders في متصفحك، الصق الرابط، انقر على تحليل ثم على تحميل."
+  },
+  "p.facebook.faq.1.q": {
+    "fr": "Peut-on télécharger une vidéo d'un groupe Facebook privé ?",
+    "en": "Can you download a video from a private Facebook group?",
+    "es": "¿Se puede descargar un video de un grupo privado de Facebook?",
+    "pt": "Pode-se baixar um vídeo de um grupo privado do Facebook?",
+    "ar": "هل يمكن تحميل فيديو من مجموعة فيسبوك خاصة؟"
+  },
+  "p.facebook.faq.1.a": {
+    "fr": "Non. Seules les vidéos publiques sont prises en charge. Une vidéo de groupe privé, de profil restreint ou réservée à tes amis ne peut pas être analysée.",
+    "en": "No. Only public videos are supported. A video from a private group, restricted profile or limited to your friends cannot be analyzed.",
+    "es": "No. Solo se admiten videos públicos. Un video de grupo privado, de perfil restringido o reservado a tus amigos no puede analizarse.",
+    "pt": "Não. Apenas vídeos públicos são suportados. Um vídeo de grupo privado, perfil restrito ou reservado aos seus amigos não pode ser analisado.",
+    "ar": "لا. يتم دعم الفيديوهات العامة فقط. فيديو من مجموعة خاصة، أو ملف شخصي مقيد، أو مخصص لأصدقائك لا يمكن تحليله."
+  },
+  "p.facebook.faq.2.q": {
+    "fr": "Comment obtenir une vidéo Facebook en HD ?",
+    "en": "How to get a Facebook video in HD?",
+    "es": "¿Cómo obtener un video de Facebook en HD?",
+    "pt": "Como obter um vídeo do Facebook em HD?",
+    "ar": "كيف الحصول على فيديو فيسبوك بجودة HD؟"
+  },
+  "p.facebook.faq.2.a": {
+    "fr": "Après l'analyse, choisis la meilleure qualité proposée dans la liste (1080p ou 720p). Elle dépend de la qualité à laquelle la vidéo a été publiée : une vidéo mise en ligne en basse définition ne peut pas être améliorée.",
+    "en": "After analysis, choose the best quality offered in the list (1080p or 720p). It depends on the quality at which the video was published: a video uploaded in low definition cannot be improved.",
+    "es": "Después del análisis, elige la mejor calidad ofrecida en la lista (1080p o 720p). Depende de la calidad a la que se publicó el video: un video subido en baja definición no puede mejorarse.",
+    "pt": "Após a análise, escolha a melhor qualidade oferecida na lista (1080p ou 720p). Depende da qualidade com que o vídeo foi publicado: um vídeo enviado em baixa definição não pode ser melhorado.",
+    "ar": "بعد التحليل، اختر أفضل جودة معروضة في القائمة (1080p أو 720p). تعتمد على الجودة التي نُشر بها الفيديو: الفيديو المرفوع بدقة منخفضة لا يمكن تحسينه."
+  },
+  "p.facebook.faq.3.q": {
+    "fr": "Mon lien Facebook ne fonctionne pas, que faire ?",
+    "en": "My Facebook link doesn't work, what should I do?",
+    "es": "Mi enlace de Facebook no funciona, ¿qué hacer?",
+    "pt": "Meu link do Facebook não funciona, o que fazer?",
+    "ar": "رابط فيسبوك الخاص بي لا يعمل، ماذا أفعل؟"
+  },
+  "p.facebook.faq.3.a": {
+    "fr": "Vérifie que la vidéo est publique et que le lien est complet. Essaie de l'ouvrir dans ton navigateur sans être connecté : si elle s'affiche, elle peut en général être analysée. Réessaie quelques instants plus tard aux heures de forte affluence.",
+    "en": "Check that the video is public and the link is complete. Try opening it in your browser without being logged in: if it displays, it can generally be analyzed. Try again a few moments later during peak hours.",
+    "es": "Verifica que el video sea público y que el enlace esté completo. Intenta abrirlo en tu navegador sin estar conectado: si se muestra, generalmente puede analizarse. Vuelve a intentarlo unos instantes después en horas de mucha afluencia.",
+    "pt": "Verifique se o vídeo é público e se o link está completo. Tente abri-lo no seu navegador sem estar logado: se aparecer, geralmente pode ser analisado. Tente novamente alguns instantes depois nos horários de pico.",
+    "ar": "تحقق من أن الفيديو عام وأن الرابط كامل. حاول فتحه في متصفحك دون تسجيل دخول: إذا ظهر، فيمكن عادةً تحليله. أعد المحاولة بعد بضع لحظات في ساعات الذروة."
+  },
+  "p.twitter-x.title": {
+    "fr": "Télécharger vidéo Twitter (X) en MP4 – StreamLoaders",
+    "en": "Download Twitter (X) video in MP4 – StreamLoaders",
+    "es": "Descargar video de Twitter (X) en MP4 – StreamLoaders",
+    "pt": "Baixar vídeo do Twitter (X) em MP4 – StreamLoaders",
+    "ar": "تحميل فيديو تويتر (X) بصيغة MP4 – StreamLoaders"
+  },
+  "p.twitter-x.label": {
+    "fr": "Vidéo X (Twitter)",
+    "en": "X (Twitter) video",
+    "es": "Video de X (Twitter)",
+    "pt": "Vídeo do X (Twitter)",
+    "ar": "فيديو X (تويتر)"
+  },
+  "p.twitter-x.card": {
+    "fr": "Récupère la vidéo ou le GIF d'un post X (Twitter) en MP4.",
+    "en": "Get the video or GIF from an X (Twitter) post in MP4.",
+    "es": "Obtén el video o GIF de una publicación de X (Twitter) en MP4.",
+    "pt": "Obtenha o vídeo ou GIF de um post do X (Twitter) em MP4.",
+    "ar": "احصل على فيديو أو GIF من منشور X (تويتر) بصيغة MP4."
+  },
+  "p.twitter-x.h1": {
+    "fr": "Télécharge les vidéos de X (Twitter)",
+    "en": "Download videos from X (Twitter)",
+    "es": "Descarga los videos de X (Twitter)",
+    "pt": "Baixe os vídeos do X (Twitter)",
+    "ar": "حمّل فيديوهات X (تويتر)"
+  },
+  "p.twitter-x.h1Accent": {
+    "fr": "en MP4, à partir d'un lien.",
+    "en": "in MP4, from a link.",
+    "es": "en MP4, desde un enlace.",
+    "pt": "em MP4, a partir de um link.",
+    "ar": "بصيغة MP4، من رابط."
+  },
+  "p.twitter-x.intro": {
+    "fr": "Colle le lien d'un post X (ex-Twitter) contenant une vidéo ou un GIF, et télécharge-le en MP4. Pas de compte, pas d'application : tout se passe dans ton navigateur, depuis ton téléphone ou ton ordinateur.",
+    "en": "Paste the link of an X (formerly Twitter) post containing a video or GIF, and download it in MP4. No account, no app: everything happens in your browser, from your phone or computer.",
+    "es": "Pega el enlace de una publicación de X (antes Twitter) que contenga un video o GIF, y descárgalo en MP4. Sin cuenta, sin aplicación: todo ocurre en tu navegador, desde tu teléfono u ordenador.",
+    "pt": "Cole o link de um post do X (antigo Twitter) contendo um vídeo ou GIF, e baixe-o em MP4. Sem conta, sem aplicativo: tudo acontece no seu navegador, do seu celular ou computador.",
+    "ar": "الصق رابط منشور X (تويتر سابقًا) يحتوي على فيديو أو GIF، وحمّله بصيغة MP4. لا حساب، لا تطبيق: كل شيء يحدث في متصفحك، من هاتفك أو كمبيوترك."
+  },
+  "p.twitter-x.placeholder": {
+    "fr": "Colle le lien du post X (Twitter)…",
+    "en": "Paste the X (Twitter) post link…",
+    "es": "Pega el enlace de la publicación de X (Twitter)…",
+    "pt": "Cole o link do post do X (Twitter)…",
+    "ar": "الصق رابط منشور X (تويتر)…"
+  },
+  "p.twitter-x.stepsTitle": {
+    "fr": "Comment télécharger une vidéo X (Twitter)",
+    "en": "How to download an X (Twitter) video",
+    "es": "Cómo descargar un video de X (Twitter)",
+    "pt": "Como baixar um vídeo do X (Twitter)",
+    "ar": "كيفية تحميل فيديو من X (تويتر)"
+  },
+  "p.twitter-x.stepsAccent": {
+    "fr": "en 3 étapes.",
+    "en": "in 3 steps.",
+    "es": "en 3 pasos.",
+    "pt": "em 3 passos.",
+    "ar": "في 3 خطوات."
+  },
+  "p.twitter-x.stepsSub": {
+    "fr": "Aucun compte ni application à installer : tout se passe dans ton navigateur.",
+    "en": "No account or application to install: everything happens in your browser.",
+    "es": "Sin cuenta ni aplicación que instalar: todo ocurre en tu navegador.",
+    "pt": "Sem conta nem aplicativo para instalar: tudo acontece no seu navegador.",
+    "ar": "لا حاجة لحساب أو تطبيق للتثبيت: كل شيء يحدث في متصفحك."
+  },
+  "p.twitter-x.steps.0.title": {
+    "fr": "Copie le lien du post",
+    "en": "Copy the post link",
+    "es": "Copia el enlace de la publicación",
+    "pt": "Copie o link do post",
+    "ar": "انسخ رابط المنشور"
+  },
+  "p.twitter-x.steps.0.text": {
+    "fr": "Sous le post, touche l'icône Partager puis « Copier le lien ». Sur ordinateur, copie l'adresse de la page du post (elle ressemble à x.com/compte/status/…).",
+    "en": "Under the post, tap the Share icon then \"Copy link\". On a computer, copy the post page address (it looks like x.com/account/status/…).",
+    "es": "Bajo la publicación, toca el icono Compartir y luego «Copiar enlace». En ordenador, copia la dirección de la página de la publicación (se parece a x.com/cuenta/status/…).",
+    "pt": "Abaixo do post, toque no ícone Compartilhar e depois \"Copiar link\". No computador, copie o endereço da página do post (parece x.com/conta/status/…).",
+    "ar": "أسفل المنشور، اضغط على أيقونة مشاركة ثم \"نسخ الرابط\". على الكمبيوتر، انسخ عنوان صفحة المنشور (يبدو مثل x.com/account/status/…)."
+  },
+  "p.twitter-x.steps.1.title": {
+    "fr": "Colle-le et analyse",
+    "en": "Paste it and analyze",
+    "es": "Pégalo y analiza",
+    "pt": "Cole e analise",
+    "ar": "الصقه وحلله"
+  },
+  "p.twitter-x.steps.1.text": {
+    "fr": "Colle le lien dans le champ en haut de cette page et clique sur Analyser. StreamLoaders repère la vidéo du post et affiche les formats.",
+    "en": "Paste the link in the field at the top of this page and click Analyze. StreamLoaders finds the video in the post and displays the formats.",
+    "es": "Pega el enlace en el campo en la parte superior de esta página y haz clic en Analizar. StreamLoaders localiza el video de la publicación y muestra los formatos.",
+    "pt": "Cole o link no campo no topo desta página e clique em Analisar. O StreamLoaders localiza o vídeo do post e exibe os formatos.",
+    "ar": "الصق الرابط في الحقل أعلى هذه الصفحة وانقر على تحليل. يحدد StreamLoaders الفيديو في المنشور ويعرض التنسيقات."
+  },
+  "p.twitter-x.steps.2.title": {
+    "fr": "Choisis et télécharge",
+    "en": "Choose and download",
+    "es": "Elige y descarga",
+    "pt": "Escolha e baixe",
+    "ar": "اختر وحمّل"
+  },
+  "p.twitter-x.steps.2.text": {
+    "fr": "Sélectionne la qualité MP4 qui te convient, ou « Audio MP3 » pour ne garder que le son, puis clique sur Télécharger.",
+    "en": "Select the MP4 quality that suits you, or \"Audio MP3\" to keep only the sound, then click Download.",
+    "es": "Selecciona la calidad MP4 que te convenga, o «Audio MP3» para quedarte solo con el sonido, luego haz clic en Descargar.",
+    "pt": "Selecione a qualidade MP4 que lhe convier, ou \"Áudio MP3\" para manter apenas o som, depois clique em Baixar.",
+    "ar": "اختر جودة MP4 التي تناسبك، أو \"صوت MP3\" للاحتفاظ بالصوت فقط، ثم انقر على تحميل."
+  },
+  "p.twitter-x.sections.0.title": {
+    "fr": "Télécharger une vidéo ou un GIF de X (Twitter)",
+    "en": "Download a video or GIF from X (Twitter)",
+    "es": "Descargar un video o GIF de X (Twitter)",
+    "pt": "Baixar um vídeo ou GIF do X (Twitter)",
+    "ar": "تحميل فيديو أو GIF من X (تويتر)"
+  },
+  "p.twitter-x.sections.0.html": {
+    "fr": "<p>Une vidéo vue dans ta timeline peut disparaître si son auteur supprime le post. StreamLoaders te permet d'en garder une copie en MP4, dans la meilleure qualité que le post propose. Les liens <strong>x.com</strong> et <strong>twitter.com</strong> sont en général tous deux reconnus.</p><p>Les GIF animés de X sont en réalité de courtes vidéos : tu peux généralement les récupérer de la même façon, au format MP4.</p><p>Pour ne garder que la voix ou le son d'une interview, choisis « Audio MP3 ».</p>",
+    "en": "<p>A video seen in your timeline can disappear if its author deletes the post. StreamLoaders lets you keep a copy in MP4, in the best quality the post offers. Both <strong>x.com</strong> and <strong>twitter.com</strong> links are generally recognized.</p><p>X's animated GIFs are actually short videos: you can generally retrieve them the same way, in MP4 format.</p><p>To keep only the voice or sound of an interview, choose \"Audio MP3\".</p>",
+    "es": "<p>Un video visto en tu timeline puede desaparecer si su autor elimina la publicación. StreamLoaders te permite guardar una copia en MP4, en la mejor calidad que ofrece la publicación. Los enlaces <strong>x.com</strong> y <strong>twitter.com</strong> generalmente se reconocen ambos.</p><p>Los GIF animados de X son en realidad videos cortos: generalmente puedes recuperarlos de la misma forma, en formato MP4.</p><p>Para quedarte solo con la voz o el sonido de una entrevista, elige «Audio MP3».</p>",
+    "pt": "<p>Um vídeo visto na sua timeline pode desaparecer se seu autor excluir o post. O StreamLoaders permite guardar uma cópia em MP4, na melhor qualidade que o post oferece. Os links <strong>x.com</strong> e <strong>twitter.com</strong> geralmente são ambos reconhecidos.</p><p>Os GIFs animados do X são na verdade vídeos curtos: você geralmente pode recuperá-los da mesma forma, em formato MP4.</p><p>Para manter apenas a voz ou o som de uma entrevista, escolha \"Áudio MP3\".</p>",
+    "ar": "<p>قد يختفي الفيديو الذي تراه في خطك الزمني إذا حذف مؤلفه المنشور. يتيح لك StreamLoaders الاحتفاظ بنسخة بصيغة MP4، بأفضل جودة يقدمها المنشور. عادةً ما يتم التعرف على روابط <strong>x.com</strong> و<strong>twitter.com</strong> معًا.</p><p>GIFs المتحركة في X هي في الواقع فيديوهات قصيرة: يمكنك عادةً استردادها بنفس الطريقة، بصيغة MP4.</p><p>للاحتفاظ فقط بالصوت أو صوت مقابلة، اختر \"صوت MP3\".</p>"
+  },
+  "p.twitter-x.sections.1.title": {
+    "fr": "Bon à savoir avant de télécharger",
+    "en": "Good to know before downloading",
+    "es": "Bueno saber antes de descargar",
+    "pt": "Bom saber antes de baixar",
+    "ar": "من الجيد معرفته قبل التحميل"
+  },
+  "p.twitter-x.sections.1.html": {
+    "fr": "<ul><li>Il faut le lien du post précis qui contient la vidéo, pas celui du profil.</li><li>Les posts de comptes protégés, ou certains posts au contenu sensible, peuvent ne pas être accessibles.</li><li>Les vidéos appartiennent à leurs auteurs. Télécharger pour un usage personnel est une chose ; republier ou réutiliser une vidéo demande l'accord de son créateur.</li></ul>",
+    "en": "<ul><li>You need the link of the specific post containing the video, not the profile link.</li><li>Posts from protected accounts, or certain posts with sensitive content, may not be accessible.</li><li>Videos belong to their authors. Downloading for personal use is one thing; republishing or reusing a video requires the creator's permission.</li></ul>",
+    "es": "<ul><li>Se necesita el enlace de la publicación precisa que contiene el video, no el del perfil.</li><li>Las publicaciones de cuentas protegidas, o ciertas publicaciones con contenido sensible, pueden no ser accesibles.</li><li>Los videos pertenecen a sus autores. Descargar para uso personal es una cosa; republicar o reutilizar un video requiere el permiso de su creador.</li></ul>",
+    "pt": "<ul><li>É necessário o link do post específico que contém o vídeo, não o do perfil.</li><li>Posts de contas protegidas, ou certos posts com conteúdo sensível, podem não estar acessíveis.</li><li>Os vídeos pertencem aos seus autores. Baixar para uso pessoal é uma coisa; republicar ou reutilizar um vídeo requer a permissão do criador.</li></ul>",
+    "ar": "<ul><li>تحتاج إلى رابط المنشور المحدد الذي يحتوي على الفيديو، وليس رابط الملف الشخصي.</li><li>منشورات الحسابات المحمية، أو بعض المنشورات ذات المحتوى الحساس، قد لا تكون متاحة.</li><li>الفيديوهات ملك لمؤلفيها. التحميل للاستخدام الشخصي شيء؛ إعادة نشر أو إعادة استخدام فيديو تتطلب إذن منشئه.</li></ul>"
+  },
+  "p.twitter-x.faq.0.q": {
+    "fr": "Comment télécharger une vidéo Twitter (X) sur téléphone ?",
+    "en": "How to download a Twitter (X) video on phone?",
+    "es": "¿Cómo descargar un video de Twitter (X) en el teléfono?",
+    "pt": "Como baixar um vídeo do Twitter (X) no celular?",
+    "ar": "كيف تحميل فيديو تويتر (X) على الهاتف؟"
+  },
+  "p.twitter-x.faq.0.a": {
+    "fr": "Touche l'icône Partager sous le post puis « Copier le lien », ouvre StreamLoaders dans ton navigateur, colle le lien, clique sur Analyser puis sur Télécharger.",
+    "en": "Tap the Share icon under the post then \"Copy link\", open StreamLoaders in your browser, paste the link, click Analyze then Download.",
+    "es": "Toca el icono Compartir debajo de la publicación y luego «Copiar enlace», abre StreamLoaders en tu navegador, pega el enlace, haz clic en Analizar y luego en Descargar.",
+    "pt": "Toque no ícone Compartilhar abaixo do post e depois \"Copiar link\", abra o StreamLoaders no seu navegador, cole o link, clique em Analisar e depois em Baixar.",
+    "ar": "اضغط على أيقونة مشاركة أسفل المنشور ثم \"نسخ الرابط\"، افتح StreamLoaders في متصفحك، الصق الرابط، انقر على تحليل ثم على تحميل."
+  },
+  "p.twitter-x.faq.1.q": {
+    "fr": "Peut-on télécharger un GIF depuis X ?",
+    "en": "Can you download a GIF from X?",
+    "es": "¿Se puede descargar un GIF desde X?",
+    "pt": "Pode-se baixar um GIF do X?",
+    "ar": "هل يمكن تحميل GIF من X؟"
+  },
+  "p.twitter-x.faq.1.a": {
+    "fr": "Oui, en général. Les GIF de X sont des vidéos MP4 très courtes : colle le lien du post et télécharge-le comme une vidéo.",
+    "en": "Yes, generally. X's GIFs are very short MP4 videos: paste the post link and download it like a video.",
+    "es": "Sí, en general. Los GIF de X son videos MP4 muy cortos: pega el enlace de la publicación y descárgalo como un video.",
+    "pt": "Sim, geralmente. Os GIFs do X são vídeos MP4 muito curtos: cole o link do post e baixe-o como um vídeo.",
+    "ar": "نعم، عادةً. GIFs في X هي فيديوهات MP4 قصيرة جدًا: الصق رابط المنشور وحمّله كفيديو."
+  },
+  "p.twitter-x.faq.2.q": {
+    "fr": "Pourquoi le lien de mon post X n'est-il pas reconnu ?",
+    "en": "Why isn't my X post link recognized?",
+    "es": "¿Por qué no se reconoce el enlace de mi publicación de X?",
+    "pt": "Por que o link do meu post do X não é reconhecido?",
+    "ar": "لماذا لا يتم التعرف على رابط منشوري على X؟"
+  },
+  "p.twitter-x.faq.2.a": {
+    "fr": "Vérifie que le post contient bien une vidéo, que le compte n'est pas protégé et que tu as copié le lien du post et non celui du profil. Un post supprimé ne peut plus être analysé.",
+    "en": "Check that the post contains a video, that the account isn't protected and that you copied the post link and not the profile link. A deleted post can no longer be analyzed.",
+    "es": "Verifica que la publicación contenga un video, que la cuenta no esté protegida y que copiaste el enlace de la publicación y no el del perfil. Una publicación eliminada ya no puede analizarse.",
+    "pt": "Verifique se o post contém um vídeo, se a conta não está protegida e se você copiou o link do post e não o do perfil. Um post excluído não pode mais ser analisado.",
+    "ar": "تحقق من أن المنشور يحتوي على فيديو، وأن الحساب غير محمي، وأنك نسخت رابط المنشور وليس رابط الملف الشخصي. المنشور المحذوف لم يعد يمكن تحليله."
+  },
+  "p.twitter-x.faq.3.q": {
+    "fr": "StreamLoaders fonctionne-t-il avec les anciens liens twitter.com ?",
+    "en": "Does StreamLoaders work with old twitter.com links?",
+    "es": "¿StreamLoaders funciona con los antiguos enlaces twitter.com?",
+    "pt": "O StreamLoaders funciona com os antigos links twitter.com?",
+    "ar": "هل يعمل StreamLoaders مع روابط twitter.com القديمة؟"
+  },
+  "p.twitter-x.faq.3.a": {
+    "fr": "Oui, en général. Les liens twitter.com et les liens x.com sont reconnus de la même façon.",
+    "en": "Yes, generally. twitter.com links and x.com links are recognized the same way.",
+    "es": "Sí, en general. Los enlaces twitter.com y los enlaces x.com se reconocen de la misma forma.",
+    "pt": "Sim, geralmente. Links twitter.com e links x.com são reconhecidos da mesma forma.",
+    "ar": "نعم، عادةً. يتم التعرف على روابط twitter.com وروابط x.com بنفس الطريقة."
+  }
+}

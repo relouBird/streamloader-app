@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="fr">
+<!-- build/platform.template.html -->
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Page générée par _build/build-pages.js : ne pas modifier à la main -->
 
-    <title>Télécharger vidéo Facebook en MP4 ou MP3 – StreamLoaders</title>
+    <title data-i18n="p.facebook.title">Télécharger vidéo Facebook en MP4 ou MP3 – StreamLoaders</title>
     <meta name="description" content="Colle le lien d'une vidéo Facebook publique et télécharge-la en MP4, ou récupère uniquement le son en MP3. Gratuit, sans inscription ni application.">
     <meta name="author" content="StreamLoaders">
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
@@ -275,18 +276,18 @@
     </nav>
 
     <main>
-        <!-- ═══ HERO + OUTIL ═══ -->
         <section class="hero">
             <div class="hero-inner">
                 <div class="breadcrumb" role="navigation" aria-label="Fil d'Ariane">
-                    <a href="/">Accueil</a> <span aria-hidden="true">›</span> <span aria-current="page">Vidéo Facebook</span>
+                    <a href="/" data-i18n="pg.home">Accueil</a> <span aria-hidden="true">›</span> <span
+                        aria-current="page" data-i18n="p.facebook.label">Vidéo Facebook</span>
                 </div>
 
                 <h1 class="hero-title">
-                    <span class="hl-1">Télécharge tes vidéos Facebook</span>
-                    <span class="hl-2">en MP4 ou en MP3.</span>
+                    <span class="hl-1" data-i18n="p.facebook.h1">Télécharge tes vidéos Facebook</span>
+                    <span class="hl-2" data-i18n="p.facebook.h1Accent">en MP4 ou en MP3.</span>
                 </h1>
-                <p class="hero-sub">Colle le lien d'une vidéo Facebook publique (publication, Reel ou rediffusion d'un direct), choisis la qualité et télécharge-la en MP4, ou garde uniquement le son en MP3. Pas de compte requis, pas d'application à installer.</p>
+                <p class="hero-sub" data-i18n="p.facebook.intro">Colle le lien d'une vidéo Facebook publique (publication, Reel ou rediffusion d'un direct), choisis la qualité et télécharge-la en MP4, ou garde uniquement le son en MP3. Pas de compte requis, pas d'application à installer.</p>
 
                 <div class="url-widget">
                 <svg class="url-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
@@ -294,7 +295,7 @@
                     <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
                     <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
                 </svg>
-                <input type="url" id="urlInput"
+                <input type="url" id="urlInput" data-i18n-placeholder="p.facebook.placeholder"
                     placeholder="Colle le lien de la vidéo Facebook…" autocomplete="off" spellcheck="false">
                 <button class="btn-analyze" id="analyzeBtn">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
@@ -411,36 +412,35 @@
                 </div>
             </div>
 
-                <p class="url-disclaimer">StreamLoaders est un outil technique. Tu restes responsable de disposer des
-                    droits nécessaires sur les médias téléchargés.</p>
+                <p class="url-disclaimer" data-i18n="hero.disclaimer">StreamLoaders est un outil technique. Vous êtes
+                    responsable de disposer des droits nécessaires sur les médias téléchargés.</p>
 
                 <div id="container-8d98744dc408b0db5e089b7bcc209169"></div>
             </div>
         </section>
 
-        <!-- ═══ MODE D'EMPLOI ═══ -->
         <section class="section" id="how">
             <div class="section-inner">
                 <div class="sec-head reveal">
                     <div>
-                        <div class="sec-label">Mode d'emploi</div>
-                        <h2 class="sec-title"><span class="hl-1">Comment télécharger une vidéo Facebook</span><span
-                                class="hl-2">en 3 étapes.</span></h2>
+                        <div class="sec-label" data-i18n="pg.how">Mode d'emploi</div>
+                        <h2 class="sec-title"><span class="hl-1" data-i18n="p.facebook.stepsTitle">Comment télécharger une vidéo Facebook</span><span
+                                class="hl-2" data-i18n="p.facebook.stepsAccent">en 3 étapes.</span></h2>
                     </div>
-                    <p class="sec-sub">Aucun compte ni application à installer : tout se passe dans ton navigateur.</p>
+                    <p class="sec-sub" data-i18n="p.facebook.stepsSub">Aucun compte ni application à installer : tout se passe dans ton navigateur.</p>
                 </div>
                 <div class="steps reveal">
                     <div class="step"><span class="step-num">01</span>
-                    <h3 class="step-title">Copie le lien de la vidéo</h3>
-                    <div class="step-desc">Dans l'application, touche Partager sous la vidéo puis « Copier le lien ». Sur ordinateur, fais un clic droit sur la date de publication de la vidéo et choisis « Copier l'adresse du lien ».</div>
+                    <h3 class="step-title" data-i18n="p.facebook.steps.0.title">Copie le lien de la vidéo</h3>
+                    <div class="step-desc" data-i18n="p.facebook.steps.0.text">Dans l'application, touche Partager sous la vidéo puis « Copier le lien ». Sur ordinateur, fais un clic droit sur la date de publication de la vidéo et choisis « Copier l'adresse du lien ».</div>
                 </div>
                 <div class="step"><span class="step-num">02</span>
-                    <h3 class="step-title">Colle-le et analyse</h3>
-                    <div class="step-desc">Colle le lien dans le champ en haut de cette page et clique sur Analyser. Les formats disponibles s'affichent.</div>
+                    <h3 class="step-title" data-i18n="p.facebook.steps.1.title">Colle-le et analyse</h3>
+                    <div class="step-desc" data-i18n="p.facebook.steps.1.text">Colle le lien dans le champ en haut de cette page et clique sur Analyser. Les formats disponibles s'affichent.</div>
                 </div>
                 <div class="step"><span class="step-num">03</span>
-                    <h3 class="step-title">Choisis et télécharge</h3>
-                    <div class="step-desc">Choisis la qualité MP4 qui te convient ou « Audio MP3 », puis clique sur Télécharger.</div>
+                    <h3 class="step-title" data-i18n="p.facebook.steps.2.title">Choisis et télécharge</h3>
+                    <div class="step-desc" data-i18n="p.facebook.steps.2.text">Choisis la qualité MP4 qui te convient ou « Audio MP3 », puis clique sur Télécharger.</div>
                 </div>
                 </div>
             </div>
@@ -449,8 +449,8 @@
 
         <section class="section">
         <div class="section-inner">
-            <h2 class="sec-title prose-title reveal">Télécharger une vidéo Facebook en MP4 ou en MP3</h2>
-            <div class="prose reveal">
+            <h2 class="sec-title prose-title reveal" data-i18n="p.facebook.sections.0.title">Télécharger une vidéo Facebook en MP4 ou en MP3</h2>
+            <div class="prose reveal" data-i18n-html="p.facebook.sections.0.html">
                 <p>StreamLoaders enregistre les vidéos <strong>publiques</strong> de Facebook : publications de pages ou de personnes qui partagent en mode public, Reels et rediffusions de directs terminés. Le fichier est en MP4, lisible sur tous les appareils, dans la qualité proposée par la vidéo (en HD quand elle existe).</p><p>Pour une interview, une chanson ou un discours dont tu ne veux que le son, l'option « Audio MP3 » extrait la piste audio.</p><p>C'est pratique pour garder la vidéo d'un événement que tu as toi-même publiée, regarder un tutoriel sans connexion, ou archiver la rediffusion de ton propre direct.</p>
             </div>
         </div>
@@ -458,38 +458,38 @@
 
     <section class="section">
         <div class="section-inner">
-            <h2 class="sec-title prose-title reveal">Bon à savoir avant de télécharger</h2>
-            <div class="prose reveal">
+            <h2 class="sec-title prose-title reveal" data-i18n="p.facebook.sections.1.title">Bon à savoir avant de télécharger</h2>
+            <div class="prose reveal" data-i18n-html="p.facebook.sections.1.html">
                 <ul><li>Les vidéos de groupes privés, de profils non publics ou visibles uniquement par des amis ne sont pas accessibles à StreamLoaders.</li><li>Prends le lien de la vidéo elle-même. Les liens courts du type fb.watch sont en général reconnus.</li><li>Tu restes responsable des droits sur ce que tu télécharges : ne republie pas la vidéo d'un autre sans son accord.</li></ul>
             </div>
         </div>
     </section>
 
-        <!-- ═══ FAQ ═══ -->
         <section class="section" id="faq">
             <div class="section-inner">
                 <div class="faq-layout">
                     <div class="reveal">
-                        <div class="sec-label">Questions fréquentes</div>
-                        <h2 class="sec-title"><span class="hl-1">Questions sur</span><span class="hl-2">Facebook.</span>
+                        <div class="sec-label" data-i18n="faq.label">Questions fréquentes</div>
+                        <h2 class="sec-title"><span class="hl-1" data-i18n="pg.faqAbout">Questions sur</span><span
+                                class="hl-2">Facebook.</span>
                         </h2>
                     </div>
                     <div class="faq-list reveal">
                         <details class="faq-item">
-                        <summary>Comment télécharger une vidéo Facebook sur Android ou iPhone ?</summary>
-                        <p>Touche Partager sous la vidéo puis « Copier le lien ». Ouvre StreamLoaders dans ton navigateur, colle le lien, clique sur Analyser puis sur Télécharger.</p>
+                        <summary data-i18n="p.facebook.faq.0.q">Comment télécharger une vidéo Facebook sur Android ou iPhone ?</summary>
+                        <p data-i18n="p.facebook.faq.0.a">Touche Partager sous la vidéo puis « Copier le lien ». Ouvre StreamLoaders dans ton navigateur, colle le lien, clique sur Analyser puis sur Télécharger.</p>
                     </details>
                     <details class="faq-item">
-                        <summary>Peut-on télécharger une vidéo d'un groupe Facebook privé ?</summary>
-                        <p>Non. Seules les vidéos publiques sont prises en charge. Une vidéo de groupe privé, de profil restreint ou réservée à tes amis ne peut pas être analysée.</p>
+                        <summary data-i18n="p.facebook.faq.1.q">Peut-on télécharger une vidéo d'un groupe Facebook privé ?</summary>
+                        <p data-i18n="p.facebook.faq.1.a">Non. Seules les vidéos publiques sont prises en charge. Une vidéo de groupe privé, de profil restreint ou réservée à tes amis ne peut pas être analysée.</p>
                     </details>
                     <details class="faq-item">
-                        <summary>Comment obtenir une vidéo Facebook en HD ?</summary>
-                        <p>Après l'analyse, choisis la meilleure qualité proposée dans la liste (1080p ou 720p). Elle dépend de la qualité à laquelle la vidéo a été publiée : une vidéo mise en ligne en basse définition ne peut pas être améliorée.</p>
+                        <summary data-i18n="p.facebook.faq.2.q">Comment obtenir une vidéo Facebook en HD ?</summary>
+                        <p data-i18n="p.facebook.faq.2.a">Après l'analyse, choisis la meilleure qualité proposée dans la liste (1080p ou 720p). Elle dépend de la qualité à laquelle la vidéo a été publiée : une vidéo mise en ligne en basse définition ne peut pas être améliorée.</p>
                     </details>
                     <details class="faq-item">
-                        <summary>Mon lien Facebook ne fonctionne pas, que faire ?</summary>
-                        <p>Vérifie que la vidéo est publique et que le lien est complet. Essaie de l'ouvrir dans ton navigateur sans être connecté : si elle s'affiche, elle peut en général être analysée. Réessaie quelques instants plus tard aux heures de forte affluence.</p>
+                        <summary data-i18n="p.facebook.faq.3.q">Mon lien Facebook ne fonctionne pas, que faire ?</summary>
+                        <p data-i18n="p.facebook.faq.3.a">Vérifie que la vidéo est publique et que le lien est complet. Essaie de l'ouvrir dans ton navigateur sans être connecté : si elle s'affiche, elle peut en général être analysée. Réessaie quelques instants plus tard aux heures de forte affluence.</p>
                     </details>
                     </div>
                 </div>
@@ -500,22 +500,22 @@
         <div class="section-inner">
             <div class="sec-head reveal">
                 <div>
-                    <div class="sec-label">Autres sites</div>
-                    <h2 class="sec-title"><span class="hl-1">Télécharger depuis</span><span class="hl-2">d'autres sites.</span></h2>
+                    <div class="sec-label" data-i18n="pg.otherLabel">Autres sites</div>
+                    <h2 class="sec-title"><span class="hl-1" data-i18n="pg.otherT1">Télécharger depuis</span><span class="hl-2" data-i18n="pg.otherT2">d'autres sites.</span></h2>
                 </div>
             </div>
             <div class="feat-grid reveal">
                 <div class="feat-card">
-                    <h3 class="feat-title"><a href="/telecharger/instagram/">Vidéo Instagram</a></h3>
-                    <p class="feat-desc">Enregistre un Reel ou une vidéo Instagram publique en MP4 ou en MP3.</p>
+                    <h3 class="feat-title"><a href="/telecharger/instagram/" data-i18n="p.instagram.label">Vidéo Instagram</a></h3>
+                    <p class="feat-desc" data-i18n="p.instagram.card">Enregistre un Reel ou une vidéo Instagram publique en MP4 ou en MP3.</p>
                 </div>
                 <div class="feat-card">
-                    <h3 class="feat-title"><a href="/telecharger/youtube/">Vidéo YouTube</a></h3>
-                    <p class="feat-desc">Télécharge une vidéo ou un Short YouTube en MP4, de 480p à la 4K avec Premium.</p>
+                    <h3 class="feat-title"><a href="/telecharger/youtube/" data-i18n="p.youtube.label">Vidéo YouTube</a></h3>
+                    <p class="feat-desc" data-i18n="p.youtube.card">Télécharge une vidéo ou un Short YouTube en MP4, de 480p à la 4K avec Premium.</p>
                 </div>
                 <div class="feat-card">
-                    <h3 class="feat-title"><a href="/telecharger/twitter-x/">Vidéo X (Twitter)</a></h3>
-                    <p class="feat-desc">Récupère la vidéo ou le GIF d'un post X (Twitter) en MP4.</p>
+                    <h3 class="feat-title"><a href="/telecharger/twitter-x/" data-i18n="p.twitter-x.label">Vidéo X (Twitter)</a></h3>
+                    <p class="feat-desc" data-i18n="p.twitter-x.card">Récupère la vidéo ou le GIF d'un post X (Twitter) en MP4.</p>
                 </div>
             </div>
         </div>
@@ -575,13 +575,13 @@
                         data-i18n="foot.telegram">Bot Telegram</a>
                 </div>
                 <div class="footer-col">
-                    <h3>Télécharger</h3>
-                    <a href="/telecharger/youtube/">Vidéo YouTube</a>
-                    <a href="/telecharger/youtube-mp3/">YouTube en MP3</a>
-                    <a href="/telecharger/tiktok/">Vidéo TikTok</a>
-                    <a href="/telecharger/instagram/">Vidéo Instagram</a>
-                    <a href="/telecharger/facebook/">Vidéo Facebook</a>
-                    <a href="/telecharger/twitter-x/">Vidéo X (Twitter)</a>
+                    <h3 data-i18n="foot.download">Télécharger</h3>
+                    <a href="/telecharger/youtube/" data-i18n="p.youtube.label">Vidéo YouTube</a>
+                    <a href="/telecharger/youtube-mp3/" data-i18n="p.youtube-mp3.label">YouTube en MP3</a>
+                    <a href="/telecharger/tiktok/" data-i18n="p.tiktok.label">Vidéo TikTok</a>
+                    <a href="/telecharger/instagram/" data-i18n="p.instagram.label">Vidéo Instagram</a>
+                    <a href="/telecharger/facebook/" data-i18n="p.facebook.label">Vidéo Facebook</a>
+                    <a href="/telecharger/twitter-x/" data-i18n="p.twitter-x.label">Vidéo X (Twitter)</a>
                 </div>
                 <div class="footer-col">
                     <h3 data-i18n="foot.legalTitle">Informations légales</h3>

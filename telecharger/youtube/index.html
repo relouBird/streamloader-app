@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="fr">
+<!-- build/platform.template.html -->
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Page générée par _build/build-pages.js : ne pas modifier à la main -->
 
-    <title>Télécharger vidéo YouTube en MP4 jusqu'en 4K – StreamLoaders</title>
+    <title data-i18n="p.youtube.title">Télécharger vidéo YouTube en MP4 jusqu'en 4K – StreamLoaders</title>
     <meta name="description" content="Colle le lien d'une vidéo YouTube ou d'un Short et télécharge-la en MP4, du 480p au 1080p gratuitement, jusqu'en 4K avec Premium. Sans inscription.">
     <meta name="author" content="StreamLoaders">
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
@@ -283,18 +284,18 @@
     </nav>
 
     <main>
-        <!-- ═══ HERO + OUTIL ═══ -->
         <section class="hero">
             <div class="hero-inner">
                 <div class="breadcrumb" role="navigation" aria-label="Fil d'Ariane">
-                    <a href="/">Accueil</a> <span aria-hidden="true">›</span> <span aria-current="page">Vidéo YouTube</span>
+                    <a href="/" data-i18n="pg.home">Accueil</a> <span aria-hidden="true">›</span> <span
+                        aria-current="page" data-i18n="p.youtube.label">Vidéo YouTube</span>
                 </div>
 
                 <h1 class="hero-title">
-                    <span class="hl-1">Télécharge tes vidéos YouTube</span>
-                    <span class="hl-2">en MP4, jusqu'en 4K.</span>
+                    <span class="hl-1" data-i18n="p.youtube.h1">Télécharge tes vidéos YouTube</span>
+                    <span class="hl-2" data-i18n="p.youtube.h1Accent">en MP4, jusqu'en 4K.</span>
                 </h1>
-                <p class="hero-sub">Colle le lien d'une vidéo YouTube ou d'un Short, choisis ta qualité (du 480p à la 4K avec Premium) et récupère le fichier en MP4. Tout se passe dans ton navigateur, sans logiciel ni extension à installer.</p>
+                <p class="hero-sub" data-i18n="p.youtube.intro">Colle le lien d'une vidéo YouTube ou d'un Short, choisis ta qualité (du 480p à la 4K avec Premium) et récupère le fichier en MP4. Tout se passe dans ton navigateur, sans logiciel ni extension à installer.</p>
 
                 <div class="url-widget">
                 <svg class="url-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
@@ -302,7 +303,7 @@
                     <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
                     <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
                 </svg>
-                <input type="url" id="urlInput"
+                <input type="url" id="urlInput" data-i18n-placeholder="p.youtube.placeholder"
                     placeholder="Colle le lien de la vidéo YouTube…" autocomplete="off" spellcheck="false">
                 <button class="btn-analyze" id="analyzeBtn">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
@@ -419,36 +420,35 @@
                 </div>
             </div>
 
-                <p class="url-disclaimer">StreamLoaders est un outil technique. Tu restes responsable de disposer des
-                    droits nécessaires sur les médias téléchargés.</p>
+                <p class="url-disclaimer" data-i18n="hero.disclaimer">StreamLoaders est un outil technique. Vous êtes
+                    responsable de disposer des droits nécessaires sur les médias téléchargés.</p>
 
                 <div id="container-8d98744dc408b0db5e089b7bcc209169"></div>
             </div>
         </section>
 
-        <!-- ═══ MODE D'EMPLOI ═══ -->
         <section class="section" id="how">
             <div class="section-inner">
                 <div class="sec-head reveal">
                     <div>
-                        <div class="sec-label">Mode d'emploi</div>
-                        <h2 class="sec-title"><span class="hl-1">Comment télécharger une vidéo YouTube</span><span
-                                class="hl-2">en 3 étapes.</span></h2>
+                        <div class="sec-label" data-i18n="pg.how">Mode d'emploi</div>
+                        <h2 class="sec-title"><span class="hl-1" data-i18n="p.youtube.stepsTitle">Comment télécharger une vidéo YouTube</span><span
+                                class="hl-2" data-i18n="p.youtube.stepsAccent">en 3 étapes.</span></h2>
                     </div>
-                    <p class="sec-sub">Aucun compte ni application à installer : tout se passe dans ton navigateur.</p>
+                    <p class="sec-sub" data-i18n="p.youtube.stepsSub">Aucun compte ni application à installer : tout se passe dans ton navigateur.</p>
                 </div>
                 <div class="steps reveal">
                     <div class="step"><span class="step-num">01</span>
-                    <h3 class="step-title">Copie le lien YouTube</h3>
-                    <div class="step-desc">Dans l'application, touche Partager sous la vidéo puis « Copier le lien ». Sur ordinateur, copie l'adresse de la page dans la barre du navigateur. Les liens courts youtu.be et les Shorts sont en général reconnus.</div>
+                    <h3 class="step-title" data-i18n="p.youtube.steps.0.title">Copie le lien YouTube</h3>
+                    <div class="step-desc" data-i18n="p.youtube.steps.0.text">Dans l'application, touche Partager sous la vidéo puis « Copier le lien ». Sur ordinateur, copie l'adresse de la page dans la barre du navigateur. Les liens courts youtu.be et les Shorts sont en général reconnus.</div>
                 </div>
                 <div class="step"><span class="step-num">02</span>
-                    <h3 class="step-title">Colle-le et analyse</h3>
-                    <div class="step-desc">Colle le lien dans le champ en haut de cette page et clique sur Analyser. StreamLoaders affiche la miniature, la durée et les formats disponibles.</div>
+                    <h3 class="step-title" data-i18n="p.youtube.steps.1.title">Colle-le et analyse</h3>
+                    <div class="step-desc" data-i18n="p.youtube.steps.1.text">Colle le lien dans le champ en haut de cette page et clique sur Analyser. StreamLoaders affiche la miniature, la durée et les formats disponibles.</div>
                 </div>
                 <div class="step"><span class="step-num">03</span>
-                    <h3 class="step-title">Choisis ta qualité</h3>
-                    <div class="step-desc">Sélectionne 480p, 720p ou 1080p, ou la 4K avec Premium, puis clique sur Télécharger. Le fichier MP4 est enregistré sur ton appareil.</div>
+                    <h3 class="step-title" data-i18n="p.youtube.steps.2.title">Choisis ta qualité</h3>
+                    <div class="step-desc" data-i18n="p.youtube.steps.2.text">Sélectionne 480p, 720p ou 1080p, ou la 4K avec Premium, puis clique sur Télécharger. Le fichier MP4 est enregistré sur ton appareil.</div>
                 </div>
                 </div>
             </div>
@@ -457,8 +457,8 @@
 
         <section class="section">
         <div class="section-inner">
-            <h2 class="sec-title prose-title reveal">Choisir la bonne qualité pour une vidéo YouTube</h2>
-            <div class="prose reveal">
+            <h2 class="sec-title prose-title reveal" data-i18n="p.youtube.sections.0.title">Choisir la bonne qualité pour une vidéo YouTube</h2>
+            <div class="prose reveal" data-i18n-html="p.youtube.sections.0.html">
                 <p>Plus la résolution est élevée, plus le fichier est lourd. Le <strong>480p</strong> convient pour économiser tes données mobiles ou regarder sur un petit écran. Le <strong>720p</strong> offre une image nette sur un téléphone ou une tablette. Le <strong>1080p</strong> (Full HD) est le bon choix pour un ordinateur ou une télévision, et il est disponible gratuitement.</p><p>La <strong>4K</strong> (2160p ou 1440p selon la vidéo) est réservée aux abonnés Premium. Elle n'apparaît que si la vidéo a été publiée dans cette qualité : une vidéo mise en ligne en 1080p ne peut pas être téléchargée en 4K.</p><p>Dans tous les cas, le fichier est livré en MP4, un format lisible sur tous les appareils.</p>
             </div>
         </div>
@@ -466,8 +466,8 @@
 
     <section class="section">
         <div class="section-inner">
-            <h2 class="sec-title prose-title reveal">Sous-titres et extraits : deux options utiles</h2>
-            <div class="prose reveal">
+            <h2 class="sec-title prose-title reveal" data-i18n="p.youtube.sections.1.title">Sous-titres et extraits : deux options utiles</h2>
+            <div class="prose reveal" data-i18n-html="p.youtube.sections.1.html">
                 <p>Pour une vidéo dans une langue étrangère, active l'option « Télécharger avec sous-titres » et choisis la langue : français, anglais, espagnol, portugais ou arabe. Les sous-titres sont intégrés directement dans la vidéo. Le plan gratuit permet 5 téléchargements avec sous-titres par jour.</p><p>Tu n'as besoin que d'un passage d'un long cours ou d'une conférence ? Avec « Extraire une scène précise », indique un début et une fin (par exemple 00:10 et 00:25) pour ne récupérer que cet extrait. Cette option demande un compte gratuit et offre 3 essais, puis elle est illimitée avec Premium.</p>
             </div>
         </div>
@@ -475,42 +475,42 @@
 
     <section class="section">
         <div class="section-inner">
-            <h2 class="sec-title prose-title reveal">Bon à savoir avant de télécharger</h2>
-            <div class="prose reveal">
+            <h2 class="sec-title prose-title reveal" data-i18n="p.youtube.sections.2.title">Bon à savoir avant de télécharger</h2>
+            <div class="prose reveal" data-i18n-html="p.youtube.sections.2.html">
                 <ul><li>Seules les vidéos publiques sont prises en charge. Une vidéo privée, réservée aux membres ou soumise à une restriction d'âge ne peut en général pas être analysée.</li><li>Beaucoup de vidéos YouTube sont protégées par le droit d'auteur. Utilise cette page pour tes propres vidéos, des contenus libres de droits ou sous licence Creative Commons, ou avec l'accord du créateur.</li><li>Le téléchargement est prévu pour un usage personnel. Tu restes responsable de disposer des droits nécessaires avant de réutiliser ou de republier une vidéo.</li></ul>
             </div>
         </div>
     </section>
 
-        <!-- ═══ FAQ ═══ -->
         <section class="section" id="faq">
             <div class="section-inner">
                 <div class="faq-layout">
                     <div class="reveal">
-                        <div class="sec-label">Questions fréquentes</div>
-                        <h2 class="sec-title"><span class="hl-1">Questions sur</span><span class="hl-2">YouTube.</span>
+                        <div class="sec-label" data-i18n="faq.label">Questions fréquentes</div>
+                        <h2 class="sec-title"><span class="hl-1" data-i18n="pg.faqAbout">Questions sur</span><span
+                                class="hl-2">YouTube.</span>
                         </h2>
                     </div>
                     <div class="faq-list reveal">
                         <details class="faq-item">
-                        <summary>Comment télécharger une vidéo YouTube en 1080p ?</summary>
-                        <p>Colle le lien, clique sur Analyser, puis choisis « 1080p Full HD » dans la liste des formats avant de cliquer sur Télécharger. Le 1080p est disponible gratuitement.</p>
+                        <summary data-i18n="p.youtube.faq.0.q">Comment télécharger une vidéo YouTube en 1080p ?</summary>
+                        <p data-i18n="p.youtube.faq.0.a">Colle le lien, clique sur Analyser, puis choisis « 1080p Full HD » dans la liste des formats avant de cliquer sur Télécharger. Le 1080p est disponible gratuitement.</p>
                     </details>
                     <details class="faq-item">
-                        <summary>Peut-on télécharger un Short YouTube ?</summary>
-                        <p>Oui, en général. Copie le lien du Short depuis le bouton Partager, colle-le sur StreamLoaders et suis les mêmes étapes que pour une vidéo classique.</p>
+                        <summary data-i18n="p.youtube.faq.1.q">Peut-on télécharger un Short YouTube ?</summary>
+                        <p data-i18n="p.youtube.faq.1.a">Oui, en général. Copie le lien du Short depuis le bouton Partager, colle-le sur StreamLoaders et suis les mêmes étapes que pour une vidéo classique.</p>
                     </details>
                     <details class="faq-item">
-                        <summary>Comment ne télécharger qu'un extrait d'une vidéo YouTube ?</summary>
-                        <p>Après l'analyse du lien, active l'option « Extraire une scène précise », saisis le début et la fin au format minutes:secondes, puis télécharge. Il faut un compte gratuit : tu disposes de 3 essais, puis l'option est illimitée avec Premium.</p>
+                        <summary data-i18n="p.youtube.faq.2.q">Comment ne télécharger qu'un extrait d'une vidéo YouTube ?</summary>
+                        <p data-i18n="p.youtube.faq.2.a">Après l'analyse du lien, active l'option « Extraire une scène précise », saisis le début et la fin au format minutes:secondes, puis télécharge. Il faut un compte gratuit : tu disposes de 3 essais, puis l'option est illimitée avec Premium.</p>
                     </details>
                     <details class="faq-item">
-                        <summary>Pourquoi la qualité 4K est-elle verrouillée ?</summary>
-                        <p>La qualité 4K est réservée aux abonnés Premium. Elle n'est de toute façon proposée que si la vidéo d'origine a été publiée en 4K ou en 1440p.</p>
+                        <summary data-i18n="p.youtube.faq.3.q">Pourquoi la qualité 4K est-elle verrouillée ?</summary>
+                        <p data-i18n="p.youtube.faq.3.a">La qualité 4K est réservée aux abonnés Premium. Elle n'est de toute façon proposée que si la vidéo d'origine a été publiée en 4K ou en 1440p.</p>
                     </details>
                     <details class="faq-item">
-                        <summary>Ai-je le droit de télécharger n'importe quelle vidéo YouTube ?</summary>
-                        <p>Cela dépend de la vidéo et de ton usage. Télécharger tes propres vidéos ou un contenu sous licence libre ne pose en principe pas de problème ; copier ou republier le travail d'autrui sans son accord, si. StreamLoaders est un outil technique : tu restes responsable de disposer des droits nécessaires.</p>
+                        <summary data-i18n="p.youtube.faq.4.q">Ai-je le droit de télécharger n'importe quelle vidéo YouTube ?</summary>
+                        <p data-i18n="p.youtube.faq.4.a">Cela dépend de la vidéo et de ton usage. Télécharger tes propres vidéos ou un contenu sous licence libre ne pose en principe pas de problème ; copier ou republier le travail d'autrui sans son accord, si. StreamLoaders est un outil technique : tu restes responsable de disposer des droits nécessaires.</p>
                     </details>
                     </div>
                 </div>
@@ -521,22 +521,22 @@
         <div class="section-inner">
             <div class="sec-head reveal">
                 <div>
-                    <div class="sec-label">Autres sites</div>
-                    <h2 class="sec-title"><span class="hl-1">Télécharger depuis</span><span class="hl-2">d'autres sites.</span></h2>
+                    <div class="sec-label" data-i18n="pg.otherLabel">Autres sites</div>
+                    <h2 class="sec-title"><span class="hl-1" data-i18n="pg.otherT1">Télécharger depuis</span><span class="hl-2" data-i18n="pg.otherT2">d'autres sites.</span></h2>
                 </div>
             </div>
             <div class="feat-grid reveal">
                 <div class="feat-card">
-                    <h3 class="feat-title"><a href="/telecharger/youtube-mp3/">YouTube en MP3</a></h3>
-                    <p class="feat-desc">Convertis une vidéo YouTube en MP3 320 kbps pour l'écouter hors ligne.</p>
+                    <h3 class="feat-title"><a href="/telecharger/youtube-mp3/" data-i18n="p.youtube-mp3.label">YouTube en MP3</a></h3>
+                    <p class="feat-desc" data-i18n="p.youtube-mp3.card">Convertis une vidéo YouTube en MP3 320 kbps pour l'écouter hors ligne.</p>
                 </div>
                 <div class="feat-card">
-                    <h3 class="feat-title"><a href="/telecharger/tiktok/">Vidéo TikTok</a></h3>
-                    <p class="feat-desc">Télécharge une vidéo TikTok en MP4 ou récupère uniquement son audio en MP3.</p>
+                    <h3 class="feat-title"><a href="/telecharger/tiktok/" data-i18n="p.tiktok.label">Vidéo TikTok</a></h3>
+                    <p class="feat-desc" data-i18n="p.tiktok.card">Télécharge une vidéo TikTok en MP4 ou récupère uniquement son audio en MP3.</p>
                 </div>
                 <div class="feat-card">
-                    <h3 class="feat-title"><a href="/telecharger/instagram/">Vidéo Instagram</a></h3>
-                    <p class="feat-desc">Enregistre un Reel ou une vidéo Instagram publique en MP4 ou en MP3.</p>
+                    <h3 class="feat-title"><a href="/telecharger/instagram/" data-i18n="p.instagram.label">Vidéo Instagram</a></h3>
+                    <p class="feat-desc" data-i18n="p.instagram.card">Enregistre un Reel ou une vidéo Instagram publique en MP4 ou en MP3.</p>
                 </div>
             </div>
         </div>
@@ -596,13 +596,13 @@
                         data-i18n="foot.telegram">Bot Telegram</a>
                 </div>
                 <div class="footer-col">
-                    <h3>Télécharger</h3>
-                    <a href="/telecharger/youtube/">Vidéo YouTube</a>
-                    <a href="/telecharger/youtube-mp3/">YouTube en MP3</a>
-                    <a href="/telecharger/tiktok/">Vidéo TikTok</a>
-                    <a href="/telecharger/instagram/">Vidéo Instagram</a>
-                    <a href="/telecharger/facebook/">Vidéo Facebook</a>
-                    <a href="/telecharger/twitter-x/">Vidéo X (Twitter)</a>
+                    <h3 data-i18n="foot.download">Télécharger</h3>
+                    <a href="/telecharger/youtube/" data-i18n="p.youtube.label">Vidéo YouTube</a>
+                    <a href="/telecharger/youtube-mp3/" data-i18n="p.youtube-mp3.label">YouTube en MP3</a>
+                    <a href="/telecharger/tiktok/" data-i18n="p.tiktok.label">Vidéo TikTok</a>
+                    <a href="/telecharger/instagram/" data-i18n="p.instagram.label">Vidéo Instagram</a>
+                    <a href="/telecharger/facebook/" data-i18n="p.facebook.label">Vidéo Facebook</a>
+                    <a href="/telecharger/twitter-x/" data-i18n="p.twitter-x.label">Vidéo X (Twitter)</a>
                 </div>
                 <div class="footer-col">
                     <h3 data-i18n="foot.legalTitle">Informations légales</h3>

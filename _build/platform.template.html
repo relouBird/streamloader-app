@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="fr">
+<!-- build/platform.template.html -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {{{generated}}}
+
+    <title data-i18n="{{kTitle}}">{{title}}</title>
+    <meta name="description" content="{{description}}">
+    <meta name="author" content="StreamLoaders">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <link rel="canonical" href="{{canonical}}">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{canonical}}">
+    <meta property="og:site_name" content="StreamLoaders">
+    <meta property="og:title" content="{{title}}">
+    <meta property="og:description" content="{{description}}">
+    <meta property="og:image" content="{{ogImage}}">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="fr_FR">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{title}}">
+    <meta name="twitter:description" content="{{description}}">
+    <meta name="twitter:image" content="{{ogImage}}">
+
+    <script type="application/ld+json">
+{{{jsonld}}}
+    </script>
+
+    {{block:head}}
+</head>
+
+<body>
+
+    {{block:bg}}
+
+    {{block:nav}}
+
+    <main>
+        <section class="hero">
+            <div class="hero-inner">
+                <div class="breadcrumb" role="navigation" aria-label="Fil d'Ariane">
+                    <a href="/" data-i18n="pg.home">Accueil</a> <span aria-hidden="true">›</span> <span
+                        aria-current="page" data-i18n="{{kLabel}}">{{label}}</span>
+                </div>
+
+                <h1 class="hero-title">
+                    <span class="hl-1" data-i18n="{{kH1}}">{{h1}}</span>
+                    <span class="hl-2" data-i18n="{{kH1Accent}}">{{h1Accent}}</span>
+                </h1>
+                <p class="hero-sub" data-i18n="{{kIntro}}">{{intro}}</p>
+
+                {{block:widget}}
+
+                <p class="url-disclaimer" data-i18n="hero.disclaimer">StreamLoaders est un outil technique. Vous êtes
+                    responsable de disposer des droits nécessaires sur les médias téléchargés.</p>
+
+                <div id="container-8d98744dc408b0db5e089b7bcc209169"></div>
+            </div>
+        </section>
+
+        <section class="section" id="how">
+            <div class="section-inner">
+                <div class="sec-head reveal">
+                    <div>
+                        <div class="sec-label" data-i18n="pg.how">Mode d'emploi</div>
+                        <h2 class="sec-title"><span class="hl-1" data-i18n="{{kStepsTitle}}">{{stepsTitle}}</span><span
+                                class="hl-2" data-i18n="{{kStepsAccent}}">{{stepsAccent}}</span></h2>
+                    </div>
+                    <p class="sec-sub" data-i18n="{{kStepsSub}}">{{stepsSub}}</p>
+                </div>
+                <div class="steps reveal">
+                    {{{steps}}}
+                </div>
+            </div>
+            <div id="adsterra-display-728x90" style="text-align: center; margin: 20px auto;"></div>
+        </section>
+
+        {{{sections}}}
+
+        <section class="section" id="faq">
+            <div class="section-inner">
+                <div class="faq-layout">
+                    <div class="reveal">
+                        <div class="sec-label" data-i18n="faq.label">Questions fréquentes</div>
+                        <h2 class="sec-title"><span class="hl-1" data-i18n="pg.faqAbout">Questions sur</span><span
+                                class="hl-2">{{name}}.</span>
+                        </h2>
+                    </div>
+                    <div class="faq-list reveal">
+                        {{{faq}}}
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        {{{related}}}
+    </main>
+
+    {{block:footer}}
+
+    {{block:modal}}
+
+    <script type="module" src="/scripts/main.js"></script>
+
+    {{block:pwa}}
+
+    {{block:inline-js}}
+</body>
+
+</html>

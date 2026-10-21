@@ -3,6 +3,7 @@
 // ─────────────────────────────────────────────────────────────────
 
 import { state } from "./state.js";
+import { PLATFORM_TR } from "./i18n-platforms.js";
 
 const TR = {
   fr: {
@@ -224,8 +225,7 @@ const TR = {
     "nav.pricing": "Pricing",
     "nav.faq": "FAQ",
     "nav.cta": "Log in",
-    "hero.line1":
-      "Download your videos",
+    "hero.line1": "Download your videos",
     "hero.line2": "from a single link.",
     "hero.sub":
       "Paste a link from YouTube, TikTok, Instagram, X or Facebook, pick the quality, and get your file.",
@@ -1076,23 +1076,42 @@ function detectLang() {
   return "fr";
 }
 
+/** Cherche une clé dans la langue courante, puis en français. Renvoie undefined si absente. */
+function lookup(key) {
+  return (TR[state.lang] && TR[state.lang][key]) || TR.fr[key];
+}
+
 /** Traduit une clé pour la langue courante, avec repli sur le français. */
 export function t(key) {
-  return (TR[state.lang] || TR.fr)[key] || TR.fr[key] || key;
+  return lookup(key) || key;
+}
+
+/* ─── Traductions des pages plateformes (chargées à la demande) ─── */
+let platformLoaded = false;
+async function loadPlatformTR() {
+  if (platformLoaded) return;
+  try {
+    for (const lang of Object.keys(PLATFORM_TR)) {
+      TR[lang] = { ...(TR[lang] || {}), ...PLATFORM_TR[lang] };
+    }
+    platformLoaded = true;
+  } catch (e) {
+    console.warn("[i18n] i18n-platforms.js indisponible :", e);
+  }
 }
 
 /** Applique les traductions à tous les éléments [data-i18n] / [data-i18n-html] / [data-i18n-placeholder]. */
 export function applyI18n() {
   document.querySelectorAll("[data-i18n]").forEach((el) => {
-    const v = t(el.dataset.i18n);
+    const v = lookup(el.dataset.i18n);
     if (v) el.textContent = v;
   });
   document.querySelectorAll("[data-i18n-html]").forEach((el) => {
-    const v = t(el.dataset.i18nHtml);
+    const v = lookup(el.dataset.i18nHtml);
     if (v) el.innerHTML = v;
   });
   document.querySelectorAll("[data-i18n-placeholder]").forEach((el) => {
-    const v = t(el.dataset.i18nPlaceholder);
+    const v = lookup(el.dataset.i18nPlaceholder);
     if (v) el.placeholder = v;
   });
   const label = document.getElementById("langLabel");
@@ -1104,10 +1123,14 @@ export function applyI18n() {
 export function initI18n() {
   state.lang = detectLang();
   applyI18n();
+  // Le HTML est déjà en français : on ne charge les traductions des pages que si besoin.
+  if (state.lang !== "fr") loadPlatformTR().then(applyI18n);
+
   const langBtn = document.getElementById("langBtn");
-  langBtn?.addEventListener("click", () => {
+  langBtn?.addEventListener("click", async () => {
     state.lang = LANGS[(LANGS.indexOf(state.lang) + 1) % LANGS.length];
     localStorage.setItem(LANG_KEY, state.lang);
+    await loadPlatformTR();
     applyI18n();
   });
 }
