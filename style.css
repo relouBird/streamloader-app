@@ -2540,6 +2540,9 @@ footer {
   font-size: 13px;
   color: var(--text-muted);
   margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .breadcrumb a {
   color: var(--text-dim);
@@ -2547,6 +2550,12 @@ footer {
 }
 .breadcrumb a:hover {
   color: var(--text);
+}
+
+.breadcrumb span:not(:last-child) {
+  display: block;
+  margin-top: 6px;
+  padding-inline-start: 4px;
 }
 
 .prose-title {
