@@ -1495,8 +1495,8 @@ footer {
 }
 .footer-top {
   display: grid;
-  grid-template-columns: minmax(0, 1.7fr) repeat(3, minmax(0, 1fr));
-  gap: 40px 32px;
+  grid-template-columns: minmax(0, 1.7fr) repeat(4, minmax(0, 1fr));
+  gap: 35px 28px;
 }
 .footer-tagline {
   font-size: 14px;
@@ -2529,4 +2529,48 @@ footer {
   padding-inline-start: 0;
   padding-inline-end: 22px;
   text-align: right;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   StreamLoaders — BUILD GENERIQUE : styles communs aux pages plateformes (FAQ, CGU, etc.)
+   ═══════════════════════════════════════════════════════════════ */
+
+/* Pages plateformes */
+.breadcrumb {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-bottom: 20px;
+}
+.breadcrumb a {
+  color: var(--text-dim);
+  text-decoration: none;
+}
+.breadcrumb a:hover {
+  color: var(--text);
+}
+
+.prose-title {
+  margin-bottom: 24px;
+}
+.prose {
+  max-width: 720px;
+  font-size: 16px;
+  color: var(--text-dim);
+  line-height: 1.75;
+}
+.prose p {
+  margin-bottom: 16px;
+}
+.prose ul {
+  padding-inline-start: 22px;
+}
+.prose li {
+  margin-bottom: 10px;
+}
+
+.feat-title a {
+  text-decoration: none;
+}
+.feat-title a:hover {
+  text-decoration: underline;
 }

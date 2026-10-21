@@ -76,6 +76,7 @@
     }
     </script>
 
+    <!-- build:head:start -->
     <!-- ===== PERFORMANCE ===== -->
     <link rel="preload" href="/fonts/bricolage_grotesque_latin.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/fonts/instrument_sans_latin.woff2" as="font" type="font/woff2" crossorigin>
@@ -100,10 +101,12 @@
     <link rel="icon" href="/favicon.ico" sizes="48x48">
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     <link rel="icon" type="image/png" href="/icons/icon-192.png" sizes="192x192">
+    <!-- build:head:end -->
 </head>
 
 <body>
 
+    <!-- build:bg:start -->
     <!-- ═══ DÉCOR D'ARRIÈRE-PLAN : motifs vidéo/audio flottants ═══ -->
     <div class="bg-motifs" aria-hidden="true">
         <div class="bg-motifs-layer" id="prlxLayer">
@@ -197,7 +200,9 @@
             </svg>
         </div>
     </div>
+    <!-- build:bg:end -->
 
+    <!-- build:nav:start -->
     <!-- ═══ NAVIGATION ═══ -->
     <nav>
         <div class="nav-inner">
@@ -244,6 +249,7 @@
             </div>
         </div>
     </nav>
+    <!-- build:nav:end -->
 
     <!-- ═══ HERO ═══ -->
     <section class="hero">
@@ -255,6 +261,7 @@
             <p class="hero-sub" data-i18n="hero.sub">Colle le lien d’une vidéo YouTube, TikTok, Instagram, X ou
                 Facebook, choisis la qualité, et récupère ton fichier.</p>
 
+            <!-- build:widget:start -->
             <div class="url-widget">
                 <svg class="url-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                     aria-hidden="true">
@@ -377,6 +384,7 @@
                     </div>
                 </div>
             </div>
+            <!-- build:widget:end -->
 
             <div class="site-chips">
                 <span class="site-chips-label" data-i18n="hero.supports">Fonctionne avec</span>
@@ -689,19 +697,22 @@
                     </details>
                     <details class="faq-item">
                         <summary data-i18n="faq.q7">Comment télécharger une vidéo YouTube en MP3 ?</summary>
-                        <p data-i18n="faq.a7">Colle le lien de la vidéo YouTube en haut de la page, clique sur Analyser, choisis « Audio
+                        <p data-i18n="faq.a7">Colle le lien de la vidéo YouTube en haut de la page, clique sur Analyser,
+                            choisis « Audio
                             MP3 » dans la liste des formats, puis clique sur Télécharger. Le fichier est enregistré sur
                             ton appareil.</p>
                     </details>
                     <details class="faq-item">
                         <summary data-i18n="faq.q8">Comment télécharger une vidéo TikTok ou Instagram ?</summary>
-                        <p data-i18n="faq.a8">Dans l'application, touche « Partager » puis « Copier le lien ». Colle ensuite ce lien sur
+                        <p data-i18n="faq.a8">Dans l'application, touche « Partager » puis « Copier le lien ». Colle
+                            ensuite ce lien sur
                             StreamLoaders, choisis la qualité et télécharge. Seules les vidéos publiques sont prises en
                             charge.</p>
                     </details>
                     <details class="faq-item">
                         <summary data-i18n="faq.q9">Quelle qualité vidéo choisir ?</summary>
-                        <p data-i18n="faq.a9">Le 1080p convient à la plupart des écrans. Le 720p et le 480p sont plus légers, pratiques
+                        <p data-i18n="faq.a9">Le 1080p convient à la plupart des écrans. Le 720p et le 480p sont plus
+                            légers, pratiques
                             avec une connexion lente. La 4K est réservée aux abonnés Premium.</p>
                     </details>
                 </div>
@@ -709,6 +720,7 @@
         </div>
     </section>
 
+    <!-- build:footer:start -->
     <!-- ═══ PIED DE PAGE ═══ -->
     <footer>
         <div class="footer-inner">
@@ -762,6 +774,17 @@
                         data-i18n="foot.telegram">Bot Telegram</a>
                 </div>
                 <div class="footer-col">
+                    <h3>Télécharger</h3>
+                    <!-- build:platforms:start -->
+                    <a href="/telecharger/youtube/">Vidéo YouTube</a>
+                    <a href="/telecharger/youtube-mp3/">YouTube en MP3</a>
+                    <a href="/telecharger/tiktok/">Vidéo TikTok</a>
+                    <a href="/telecharger/instagram/">Vidéo Instagram</a>
+                    <a href="/telecharger/facebook/">Vidéo Facebook</a>
+                    <a href="/telecharger/twitter-x/">Vidéo X (Twitter)</a>
+                    <!-- build:platforms:end -->
+                </div>
+                <div class="footer-col">
                     <h3 data-i18n="foot.legalTitle">Informations légales</h3>
                     <a href="/mentions-legales.html" data-i18n="foot.legal">Mentions légales</a>
                     <a href="/confidentialite.html" data-i18n="foot.privacy">Confidentialité</a>
@@ -778,7 +801,9 @@
             </div>
         </div>
     </footer>
+    <!-- build:footer:end -->
 
+    <!-- build:modal:start -->
     <!-- ═══ MODALE : AUTH / PREMIUM / PROFIL ═══ -->
     <div class="modal-backdrop" id="modalBackdrop">
         <div class="modal" id="modalBox" role="dialog" aria-modal="true">
@@ -987,10 +1012,12 @@
             </div>
         </div>
     </div>
+    <!-- build:modal:end -->
 
     <script type="module" src="./scripts/main.js"></script>
 
 
+    <!-- build:pwa:start -->
     <!-- PWA : bannière d'installation (Android / Chrome) -->
     <div class="pwa-banner" id="pwaInstallBanner">
         <img src="/icons/icon-192.png" alt="Logo StreamLoaders" class="pwa-banner-icon">
@@ -1016,7 +1043,9 @@
             <button class="pwa-btn-close-ios" id="pwaIosClose" data-i18n="pwa.ios_close">J'ai compris</button>
         </div>
     </div>
+    <!-- build:pwa:end -->
 
+    <!-- build:inline-js:start -->
     <!-- Petit script inline : toggle oeil des mots de passe (indépendant des modules) -->
     <script>
         function setPasswordVisible(btn, visible) {
@@ -1029,6 +1058,7 @@
             setPasswordVisible(btn, btn.getAttribute('aria-pressed') !== 'true');
         }
     </script>
+    <!-- build:inline-js:end -->
 </body>
 
 </html>
