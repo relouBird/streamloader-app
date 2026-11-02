@@ -3,8 +3,8 @@
    mécanisme (mêmes clés localStorage) que public/index.html, pour que le
    choix de thème et la session restent cohérents entre toutes les pages. */
 
-export const API_BASE = "http://localhost:5101/api";
-// export const API_BASE = "https://back.streamloaders.net/api";
+// export const API_BASE = "http://localhost:5101/api";
+export const API_BASE = "https://back.streamloaders.net/api";
 
 (function () {
   function applyTheme(th) {
