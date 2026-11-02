@@ -37,3 +37,23 @@ Par sécurité, les workflows n'envoient pas les fichiers de documentation,
 
 Ouvrir [`index.html`](./index.html) dans un navigateur ou utiliser un serveur
 HTTP statique local. Aucune compilation n'est nécessaire.
+
+## Branches et environnements
+
+- `dev` est réservée au développement local et utilise
+  `http://localhost:5101/api` ;
+- `main` est la branche de production et utilise
+  `https://back.streamloaders.net/api` ;
+- seul `main` est déployé automatiquement vers `~/public_html`.
+
+Le changement d'API se fait donc par le contenu versionné de chaque branche,
+pas en modifiant un fichier directement sur le serveur. Pour promouvoir une
+fonctionnalité :
+
+1. développer et tester sur `dev` ;
+2. vérifier que les deux fichiers de configuration utilisent l'API dev ;
+3. fusionner `dev` vers `main` ;
+4. vérifier avant le push que `main` utilise uniquement l'URL de production.
+
+Ne jamais déployer la branche `dev` dans `~/public_html` : elle écraserait le
+site de production avec une configuration inaccessible aux visiteurs.
