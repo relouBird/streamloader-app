@@ -1,0 +1,76 @@
+name: First website deployment
+
+on:
+  workflow_dispatch:
+
+concurrency:
+  group: streamloader-website-production
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    name: Initialize and deploy website
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Initialize production through SSH
+        uses: appleboy/ssh-action@v1
+        with:
+          host: ${{ secrets.SERVER_HOST }}
+          username: ${{ secrets.SERVER_USER }}
+          key: ${{ secrets.SERVER_SSH_KEY }}
+          port: ${{ secrets.SERVER_SSH_PORT || 5022 }}
+          script_stop: true
+          script: |
+            set -e
+
+            CHECKOUT_DIR="$HOME/.streamloader-web"
+            PUBLIC_DIR="$HOME/public_html"
+            REPOSITORY="https://github.com/relouBird/streamloader-app.git"
+            BRANCH="main"
+            DEPLOY_LOCK="$HOME/.streamloaders-deploy.lock"
+
+            if [ ! -d "$PUBLIC_DIR" ]; then
+              echo "ERROR: Public directory not found: $PUBLIC_DIR"
+              exit 1
+            fi
+
+            if [ -e "$CHECKOUT_DIR" ]; then
+              echo "ERROR: Checkout directory already exists: $CHECKOUT_DIR"
+              exit 1
+            fi
+
+            if ! ( set -o noclobber; mkdir "$DEPLOY_LOCK" ) 2>/dev/null; then
+              echo "ERROR: Another deployment is already running."
+              exit 1
+            fi
+            trap 'rmdir "$DEPLOY_LOCK"' EXIT
+
+            command -v rsync >/dev/null 2>&1 || {
+              echo "ERROR: rsync is required on the server."
+              exit 1
+            }
+
+            git clone --branch "$BRANCH" "$REPOSITORY" "$CHECKOUT_DIR"
+
+            rm -rf -- \
+              "$PUBLIC_DIR/_build" \
+              "$PUBLIC_DIR/README.md" \
+              "$PUBLIC_DIR/readme.md" \
+              "$PUBLIC_DIR/api.md" \
+              "$PUBLIC_DIR/read-migration.md"
+
+            rsync -a --delete \
+              --exclude='.git/' \
+              --exclude='.github/' \
+              --exclude='.htaccess' \
+              --exclude='.well-known/' \
+              --exclude='_build/' \
+              --exclude='*.md' \
+              --exclude='README.md' \
+              --exclude='readme.md' \
+              --exclude='api.md' \
+              --exclude='read-migration.md' \
+              "$CHECKOUT_DIR/" "$PUBLIC_DIR/"
+
+            echo "First deployment successful."
