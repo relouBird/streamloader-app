@@ -168,7 +168,7 @@ jobs:
     name: Verify HTTP behaviour
     needs: deploy
     runs-on: ubuntu-latest
-    continue-on-error: true
+    # continue-on-error: true
 
     steps:
       - name: Check redirects and status codes
