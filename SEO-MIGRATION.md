@@ -1,6 +1,6 @@
 # Plan de migration SEO — StreamLoaders
 
-**Date du diagnostic :** 4 novembre 2026  
+**Date de mise à jour :** 6 novembre 2026
 **Domaine canonique cible :** `https://streamloaders.net/`  
 **Objectif :** supprimer les doublons d'URL, clarifier les pages indexables et stabiliser le déploiement avant de relancer la validation dans Google Search Console.
 
@@ -24,6 +24,10 @@ Les contrôles du site en production montrent plusieurs URL accessibles pour une
 | URL inexistante | `404` | conserver une vraie réponse `404` |
 
 Le [sitemap.xml](./sitemap.xml) ne contient pas les pages `noindex`, ce qui est correct. Les pages publiques ont déjà des balises `canonical` et `robots` cohérentes dans le code source.
+
+La nouvelle page [`from-telegram/`](./from-telegram/index.html) est une page de parcours
+promotionnel et contient volontairement `noindex, nofollow`. Elle ne doit donc pas être
+ajoutée au sitemap ni demandée à l'indexation dans Google Search Console.
 
 ---
 
@@ -102,20 +106,20 @@ Ne pas ajouter de règles serveur au hasard dans le dépôt sans confirmer le se
 
 ---
 
-## 4. Phase B — corriger la génération du site
+## 4. Phase B — corriger et contrôler la génération du site
 
-Le site possède un générateur dans [_build/build-pages.js](./_build/build-pages.js). Il génère les pages plateforme et met à jour le sitemap, mais le workflow [.github/workflows/main.yml](./.github/workflows/main.yml) ne lance pas explicitement ce générateur avant la synchronisation.
+Le site possède un générateur dans [_build/build-pages.js](./_build/build-pages.js). Il génère les pages plateforme et met à jour le sitemap. Le workflow [.github/workflows/main.yml](./.github/workflows/main.yml) lance maintenant ce générateur dans un job GitHub `build` avant le déploiement.
 
 ### Actions
 
-1. Ajouter une étape de génération avant le déploiement :
+1. Conserver l'étape de génération avant le déploiement :
 
    ```bash
    node _build/build-pages.js
    ```
 
 2. Vérifier que la commande termine sans avertissement bloquant.
-3. Vérifier que les fichiers générés sont bien présents dans le checkout déployé.
+3. Vérifier que les pages générées sont commitées avant le déploiement.
 4. Vérifier que le sitemap publié correspond aux fichiers effectivement déployés.
 5. Ne jamais modifier manuellement une page générée dans `telecharger/`; modifier plutôt [_build/platforms.json](./_build/platforms.json), [_build/platform.template.html](./_build/platform.template.html) ou les sources communes.
 
@@ -127,6 +131,7 @@ Avant chaque publication :
 - chaque page publique possède un seul `canonical` ;
 - chaque canonical utilise `https://streamloaders.net` ;
 - aucune URL `noindex` n'est dans le sitemap ;
+- `from-telegram/` reste hors du sitemap et en `noindex, nofollow` ;
 - aucun lien interne ne pointe vers `index.html` ;
 - aucun lien interne ne pointe vers une URL sans slash ;
 - les titres et descriptions sont uniques ;
@@ -151,6 +156,16 @@ Avant chaque publication :
 ```
 
 C'est approprié pour une interface d'administration. Elle ne doit pas être ajoutée au sitemap ni liée depuis les pages publiques. Si elle contient des données sensibles, `noindex` ne suffit pas : ajouter une authentification serveur ou limiter son accès.
+
+La page [`from-telegram/`](./from-telegram/index.html) doit également rester hors index :
+
+```html
+<meta name="robots" content="noindex, nofollow">
+```
+
+Elle sert uniquement de point d'arrivée depuis Telegram. Ses paramètres de campagne,
+ses publicités et son contenu promotionnel ne constituent pas une page SEO à exposer
+dans les résultats de recherche.
 
 ### Cohérence de marque
 
@@ -258,6 +273,7 @@ Les anciennes URLs peuvent rester visibles temporairement dans Search Console. I
 - [ ] vérifier `sitemap.xml` ;
 - [ ] vérifier les canoniques HTML ;
 - [ ] vérifier les données structurées.
+- [ ] vérifier que `from-telegram/` répond en `200` mais reste `noindex` et absent du sitemap.
 
 ### Lot 4 — Search Console
 
@@ -280,5 +296,5 @@ La migration est considérée comme stable lorsque :
 - aucune page publique indexable n'est en `noindex` ;
 - aucune page `noindex` n'est dans le sitemap ;
 - les canoniques, liens internes et données structurées utilisent les mêmes URLs ;
+- la page `from-telegram/` est exclue de l'indexation par conception ;
 - Search Console ne signale plus de nouvelles variantes dupliquées après le prochain cycle d'exploration.
-
