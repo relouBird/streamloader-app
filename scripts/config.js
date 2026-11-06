@@ -18,6 +18,7 @@ export const ENDPOINTS = {
   mediaFile: (jobId, token) =>
     `${API_BASE}/media/file/${jobId}${token ? "?token=" + encodeURIComponent(token) : ""}`,
   adClick: `${API_BASE}/ad-click`,
+  offerVerify: `${API_BASE}/bot/verify-offer`,
 
   paymentInitiate: `${API_BASE}/payment/initiate`,
   paymentStatus: (txId) => `${API_BASE}/payment/status/${txId}`,

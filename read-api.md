@@ -298,6 +298,12 @@ Le site reçoit le paramètre `t` sur sa page `/from-telegram`, puis vérifie
 le token côté serveur. Le navigateur ne contacte pas directement l'API avec
 un secret.
 
+Dans ce dépôt statique, [`/from-telegram/`](./from-telegram/index.html) porte
+l'interface et envoie uniquement `{ "token": "..." }`. Le secret
+`x-site-offer-secret` doit rester dans l'API ou dans un reverse-proxy
+serveur-à-serveur : il ne doit jamais être ajouté à JavaScript, au HTML ou à
+une variable exposée au navigateur.
+
 ### `POST /api/bot/verify-offer`
 
 **Auth** : secret serveur-à-serveur `x-site-offer-secret`
