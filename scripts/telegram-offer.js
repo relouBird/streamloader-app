@@ -1,17 +1,22 @@
 import { ENDPOINTS } from "./config.js";
+import { initTheme } from "./theme.js";
 
 const modalBackdrop = document.getElementById("offerModalBackdrop");
 const modalTitle = document.getElementById("offerModalTitle");
 const modalMessage = document.getElementById("offerModalMessage");
 const modalKicker = document.getElementById("offerModalKicker");
 const resultIcon = document.getElementById("offerResultIcon");
+const resultIconPath = document.getElementById("offerResultIconPath");
 const closeButton = document.getElementById("offerModalClose");
 
 function showResult(valid, message) {
   modalKicker.textContent = valid ? "Invitation confirmée" : "Invitation indisponible";
   modalTitle.textContent = valid ? "Merci pour ta visite !" : "Lien non valide ou expiré";
   modalMessage.textContent = message;
-  resultIcon.textContent = valid ? "✓" : "!";
+  resultIconPath.setAttribute(
+    "d",
+    valid ? "m5 12 4 4L19 6" : "M12 8v4m0 4h.01M10.3 3.8 2.8 17a2 2 0 0 0 1.7 3h15a2 2 0 0 0 1.7-3l-7.5-13.2a2 2 0 0 0-3.4 0Z",
+  );
   resultIcon.classList.toggle("success", valid);
   resultIcon.classList.toggle("error", !valid);
   modalBackdrop.classList.add("open");
@@ -79,6 +84,7 @@ function loadAds() {
 }
 
 function init() {
+  initTheme();
   closeButton.addEventListener("click", closeModal);
   modalBackdrop.addEventListener("click", (event) => {
     if (event.target === modalBackdrop) closeModal();

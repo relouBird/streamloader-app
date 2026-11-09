@@ -10,32 +10,98 @@
 </head>
 
 <body class="telegram-offer-page">
-    <main class="telegram-offer-shell">
-        <a class="telegram-offer-brand" href="/" aria-label="Retour à StreamLoaders">
-            <img src="/icons/icon-192.png" alt="" width="42" height="42">
-            <span>StreamLoaders</span>
+    <div class="telegram-offer-glow telegram-offer-glow-one" aria-hidden="true"></div>
+    <div class="telegram-offer-glow telegram-offer-glow-two" aria-hidden="true"></div>
+
+    <header class="telegram-offer-header">
+        <a class="nav-logo" href="/" aria-label="StreamLoaders">
+            <svg class="brand-mark" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M13 2L4.5 13.5H11L10.5 22L19.5 10.5H13L13 2Z" fill="url(#slBoltOffer)" />
+                <defs>
+                    <linearGradient id="slBoltOffer" x1="4.5" y1="2" x2="19.5" y2="22" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#C4A5FF" />
+                        <stop offset="1" stop-color="#7B5FF5" />
+                    </linearGradient>
+                </defs>
+            </svg>
+            <span class="nav-wordmark">StreamLoaders</span>
         </a>
+        <div class="telegram-offer-header-actions">
+            <button class="nav-icon-btn" id="themeBtn" type="button" title="Thème clair / sombre"
+                aria-label="Changer de thème">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                    <circle cx="12" cy="12" r="8.5" />
+                    <path d="M12 3.5v17a8.5 8.5 0 0 0 0-17z" fill="currentColor" stroke="none" />
+                </svg>
+            </button>
+            <a class="telegram-offer-header-link" href="/">Découvrir le site <span aria-hidden="true">↗</span></a>
+        </div>
+    </header>
 
-        <section class="telegram-offer-card" aria-labelledby="offerTitle">
-            <div class="telegram-offer-icon" aria-hidden="true">✦</div>
-            <p class="telegram-offer-kicker">Depuis Telegram</p>
-            <h1 id="offerTitle">Bienvenue sur StreamLoaders</h1>
-            <p>Découvre notre service et les nouveautés proposées par StreamLoaders.</p>
+    <main class="telegram-offer-main">
+        <section class="telegram-offer-hero" aria-labelledby="offerTitle">
+            <div class="telegram-offer-eyebrow">
+                <span class="telegram-offer-eyebrow-dot" aria-hidden="true"></span>
+                Une invitation de Telegram
+            </div>
+            <h1 class="telegram-offer-title" id="offerTitle">
+                <span>Le streaming,</span>
+                <span class="telegram-offer-title-accent">en toute simplicité.</span>
+            </h1>
+            <p class="telegram-offer-intro">
+                Ton téléchargement est terminé. Profite-en pour découvrir StreamLoaders,
+                l’outil simple et rapide pour tes vidéos.
+            </p>
+            <a class="telegram-offer-cta" href="/">
+                <span>Découvrir StreamLoaders</span>
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path d="M5 12h14m-6-6 6 6-6 6" stroke="currentColor" stroke-width="1.8"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </a>
+            <div class="telegram-offer-caption">
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path d="M12 5v14m-7-7h14" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
+                </svg>
+                Une visite simple, sans obligation
+            </div>
+        </section>
 
-            <div class="telegram-ad-slot" id="adsterra-display-728x90" aria-label="Publicité"></div>
-            <div class="telegram-ad-slot" id="container-8d98744dc408b0db5e089b7bcc209169" aria-label="Publicité"></div>
-
-            <a class="btn-submit telegram-offer-home" href="/">Utiliser StreamLoaders</a>
+        <section class="telegram-offer-ad-section" aria-label="Publicités">
+            <div class="telegram-offer-ad-heading">
+                <span>À découvrir</span>
+                <span class="telegram-offer-ad-label">Publicité</span>
+            </div>
+            <div class="telegram-offer-ad-card">
+                <div class="telegram-ad-slot" id="adsterra-display-728x90" aria-label="Publicité"></div>
+                <div class="telegram-ad-slot" id="container-8d98744dc408b0db5e089b7bcc209169" aria-label="Publicité"></div>
+            </div>
         </section>
     </main>
 
+    <footer class="telegram-offer-footer">
+        <span>© 2026 StreamLoaders</span>
+        <a href="/">Retour à l’accueil</a>
+    </footer>
+
     <div class="telegram-offer-modal-backdrop" id="offerModalBackdrop" role="presentation">
         <section class="telegram-offer-modal" role="dialog" aria-modal="true" aria-labelledby="offerModalTitle">
-            <div class="telegram-offer-result-icon" id="offerResultIcon" aria-hidden="true"></div>
+            <div class="telegram-offer-result-icon" id="offerResultIcon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                    <path id="offerResultIconPath" d="m5 12 4 4L19 6" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </div>
             <p class="telegram-offer-kicker" id="offerModalKicker">Vérification</p>
             <h2 id="offerModalTitle">Vérification en cours…</h2>
             <p id="offerModalMessage">Nous vérifions ton invitation.</p>
-            <button class="btn-submit" id="offerModalClose" type="button">Continuer</button>
+            <button class="telegram-offer-cta telegram-offer-modal-cta" id="offerModalClose" type="button">
+                <span>Continuer</span>
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path d="M5 12h14m-6-6 6 6-6 6" stroke="currentColor" stroke-width="1.8"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </button>
         </section>
     </div>
 
